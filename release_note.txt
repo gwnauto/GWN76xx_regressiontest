@@ -1,3 +1,7 @@
+v6.0.3(2018.03.28)
+dsfasdfasdfasdfasfsadfasdf
+
+
 v6.0.2(2018.03.28)
 1.76xx regression test版本，基于GWN7610版本1.0.6.27,GWN7600/LR版本1.0.6.27,测试用例835个。
 2.添加wirless client limit,SSID Band两个功能
