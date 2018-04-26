@@ -57,16 +57,25 @@ class SSIDControl(PublicControl):
     def del_all_button(self):
         try:
             elements = self.driver.find_elements_by_class_name("delbutton")
-            for element in elements:
-                try:
-                    if element.is_enabled():
-                        element.click()
-                        PublicControl.notice_ok(self)
-                except:
-                    print "webpage has not found 'title' or 'notice_ok' attribute"
+            for i in range(len(elements)-1):
+                time.sleep(5)
+                elements1 = self.driver.find_elements_by_class_name("delbutton")
+                elements1[1].click()
+                PublicControl.notice_ok(self)
             self.driver.implicitly_wait(20)
         except Exception as e:
             raise Exception("webpage has not found 'del_all_button' element! The reason is %s"%e)
+
+#依次点击所有ssid的删除按钮
+    def del_all_button_backup(self,n):
+        for i in range (1,n):
+            try:
+                element = self.driver.find_element_by_id("del_ssid%s"%i)
+                element.click()
+                PublicControl.notice_ok(self)
+            except:
+                print "webpage has not found 'title' or 'notice_ok' attribute"
+                self.driver.implicitly_wait(20)
 
 
     #获取第一个ssid的开启状态
@@ -779,7 +788,7 @@ class SSIDControl(PublicControl):
     def add_special_device(self,mac):
         try:
             self.driver.implicitly_wait(10)
-            time.sleep(3)
+            time.sleep(5)
             MAC = mac.upper()
             print MAC
             i = 1

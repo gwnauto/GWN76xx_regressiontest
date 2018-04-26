@@ -2,8 +2,8 @@
 #描述:本模块用来调用数据，方便测试用例来调用
 #作者：曾祥卫
 #时间：2017.03.10
-
 import random
+import csv
 import xlrd,xlwt
 from xlutils.copy import copy
 PATH = './data/data.xlsx'
@@ -525,7 +525,7 @@ def data_bandwidth():
         #获取不存在的内容字符串
         data['upstream'] = table.cell_value(1,0)
         data['downstream'] = table.cell_value(1,1)
-        #负数
+                #负数
         data['upstream_neg'] = table.cell_value(2,0)
         data['downstream_neg'] = table.cell_value(2,1)
         #大于1000
@@ -550,6 +550,9 @@ def data_bandwidth():
         #边界值
         data['upstream_less'] = table.cell_value(9,0)
         data['downstream_less'] = table.cell_value(9,1)
+        #
+        data['upstream_middle'] = table.cell_value(10,0)
+        data['downstream_middle'] = table.cell_value(10,1)
 
 
 
@@ -575,6 +578,7 @@ def data_bandwidth():
         data['ip_rule'] = table.cell_value(24,1)
         #带vlan的网段
         data['ip_vlan'] = table.cell_value(25,1)
+
         return data
     except IOError,e:
         print u"文件信息错误,具体信息：\n%s"%e
@@ -606,6 +610,16 @@ def create_excel(excel_name,row0):
     f.save('%s.xls'%excel_name) #保存文件
     print "create excel successfully!"
 
+#创建一个空的excel
+#创建excel
+#输入：excel_name:excel表格名称;
+def create_excel_black(excel_name,sheet_name):
+    #创建工作簿
+    f = xlwt.Workbook()
+    #创建sheet1
+    sheet1 = f.add_sheet(sheet_name,cell_overwrite_ok=True)
+    f.save('%s.xls'%excel_name) #保存文件
+    print "create excel successfully!"
 
 
 #追加写excel-增加一行
@@ -622,7 +636,46 @@ def add_excel_row(excel_name,row_m):
     #生成第m行
     table.write(rows,0,rows,set_style())
     for i in range(len(row_m)):
-        table.write(rows,i+1,row_m[i],set_style())
+        table.write(rows,i,row_m[i],set_style())
+
+    excel.save('%s.xls'%excel_name) #保存文件
+    print "add to write excel successfully!"
+
+#追加写excel-增加一行,并将前面加一个空行
+#输入：excel_name:excel表格名称;row_m:第m次要输入的结果（为列表）
+def add_excel_row_add(excel_name,row_m):
+    #用xlrd提供的方法打开文件的工作空间
+    f = xlrd.open_workbook('%s.xls'%excel_name)
+    #用xlrd提供的方法获得现在已有的行数
+    row = f.sheets()[0].nrows
+    rows = row+1
+    #用xlutils提供的copy方法将xlrd的对象转化为xlwt的对象
+    excel = copy(f)
+    #用xlwt对象的方法获得要操作的sheet
+    table = excel.get_sheet(0)
+    #生成第m行
+    table.write(rows,0,rows,set_style())
+    for i in range(len(row_m)):
+        table.write(rows,i,row_m[i],set_style())
+
+    excel.save('%s.xls'%excel_name) #保存文件
+    print "add to write excel successfully!"
+
+#追加写excel-增加一行,并将前面加一个空行
+#输入：excel_name:excel表格名称;row_m:第m次要输入的结果（为列表）
+def add_excel_row_add_backup(excel_name,row_m):
+    #用xlrd提供的方法打开文件的工作空间
+    f = xlrd.open_workbook('%s.xls'%excel_name)
+    #用xlrd提供的方法获得现在已有的行数
+    rows = f.sheets()[0].nrows
+    #用xlutils提供的copy方法将xlrd的对象转化为xlwt的对象
+    excel = copy(f)
+    #用xlwt对象的方法获得要操作的sheet
+    table = excel.get_sheet(0)
+    #生成第m行
+    table.write(rows,0,rows,set_style())
+    for i in range(len(row_m)):
+        table.write(rows,i,row_m[i],set_style())
 
     excel.save('%s.xls'%excel_name) #保存文件
     print "add to write excel successfully!"
@@ -640,6 +693,94 @@ def add_excel_content(excel_name,row_n,column_n,content):
     table.write(row_n,column_n,content,set_style())
     excel.save('%s.xls'%excel_name) #保存文件
     print "add to write excel successfully!"
+
+def csv_to_xlsx(csv_name,sheet_name):
+    with open(csv_name,'r') as f:
+        read = csv.reader(f)
+        work = xlwt.Workbook()
+        sheet = work.add_sheet(sheet_name)
+        l=0
+        for line in read:
+            print(line)
+            r =0
+            for i in line:
+                print(i)
+                sheet.write(l,r,i)#一个一个将单元格数据写入
+                r = r+1
+            l = l+1
+        work.save('./data/tmp.xls')
+
+def csv_to_xlsx_back1(i,sheet_name):
+    with open('/home/tjiang/tftp/csv/memdatadigital%s.csv'%i,'r') as f:
+        read = csv.reader(f)
+        work = xlwt.Workbook()
+        sheet = work.add_sheet(sheet_name)
+        l=0
+        for line in read:
+            print(line)
+            r =0
+            for i in line:
+                print(i)
+                sheet.write(l,r,i)#一个一个将单元格数据写入
+                r = r+1
+            l = l+1
+        work.save('./data/tmp.xls')
+
+def csv_to_xlsx_back2(csv_name,sheet_name):
+    with open('/home/tjiang/tftp/csv/memdataletter%s.csv'%csv_name,'r') as f:
+        read = csv.reader(f)
+        work = xlwt.Workbook()
+        sheet = work.add_sheet(sheet_name)
+        l=0
+        for line in read:
+            print(line)
+            r =0
+            for i in line:
+                print(i)
+                sheet.write(l,r,i)#一个一个将单元格数据写入
+                r = r+1
+            l = l+1
+        work.save('./data/tmp.xls')
+
+#从excel中读取一行数据，这里的path写绝对路径
+def read_excel_content(excel_name,sheet_name):
+    #用xlrd提供的方法打开文件的工作空间
+    f = xlrd.open_workbook('%s.xls'%excel_name)
+    #获取对应的表-basic_conf
+    table = f.sheet_by_name(sheet_name)
+    print sheet_name
+    print table
+    print table.nrows
+    result = table.row_values(0)
+    print result
+    return result
+
+#从excel中读取一行数据，这里的path写绝对路径
+def read_excel_content_add(excel_name,sheet_name):
+    #用xlrd提供的方法打开文件的工作空间
+    f = xlrd.open_workbook('%s.xls'%excel_name)
+    #获取对应的表-basic_conf
+    table = f.sheet_by_name(sheet_name)
+    print sheet_name
+    print table
+    print table.nrows
+    result = table.row_values(1)
+    print result
+    return result
+
+#从excel中读取一行数据，这里的path写绝对路径
+def read_excel_content_add2(excel_name,sheet_name):
+    #用xlrd提供的方法打开文件的工作空间
+    f = xlrd.open_workbook('%s.xls'%excel_name)
+    #获取对应的表-basic_conf
+    table = f.sheet_by_name(sheet_name)
+    print sheet_name
+    print table
+    print table.nrows
+    result = table.row_values(2)
+    print result
+    return result
+
 
 
 

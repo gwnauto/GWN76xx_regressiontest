@@ -30,7 +30,7 @@ data_AP = data.data_AP()
 data_bandwidth = data.data_bandwidth()
 
 class TestBandwidth(unittest.TestCase):
-    u"""测试ssid的用例集(runtime:10h)"""
+    u"""测试BandWidth Rules的用例集"""
     def setUp(self):
         # firefox_profile = webdriver.FirefoxProfile(data_basic['firefox_profile'])
         # self.driver = webdriver.Firefox(firefox_profile=firefox_profile)
@@ -42,9 +42,9 @@ class TestBandwidth(unittest.TestCase):
         Lg = LoginBusiness(self.driver)
         Lg.login(data_basic['superUser'],data_login['all'])
 
-    #在页面上把AP恢复出厂设置(testlink_ID:773)
+    #在页面上把AP恢复出厂设置
     def test_001_factory_reset(self):
-        u"""在页面上把AP恢复出厂设置(testlink_ID:773)"""
+        u"""在页面上把AP恢复出厂设置"""
         #如果登录没有成功，再次使用默认密码登录;如果登录成功则直接退出
         Lg = LoginBusiness(self.driver)
         Lg.login_again()
@@ -405,7 +405,7 @@ class TestBandwidth(unittest.TestCase):
 
     #创建规则后，重启配置不丢失
     def test_036_bandwidth_reboot(self):
-        u"""创建规则后，重启配置不丢失(testlink_ID:584)"""
+        u"""创建规则后，重启配置不丢失(testlink_ID:584,647)"""
         tmp = BandwidthBusiness(self.driver)
         tmp1 = SSIDBusiness(self.driver)
         tmp2 = LoginBusiness(self.driver)
@@ -415,7 +415,13 @@ class TestBandwidth(unittest.TestCase):
         tmp2.refresh_login_ap()
         #检查带宽规则是否还存在
         result = tmp.check_bandwidth_n(1)
+        result1 = tmp.check_upstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result2 = tmp.check_downstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result3 = abs(result1-10)
+        result4 = abs(result2-10)
         self.assertTrue(result)
+        self.assertLess(result3,1)
+        self.assertLess(result4,1)
 
     #验证all规则上下行带宽生效kbps
     def test_037_bandwidth_kbps(self):
@@ -459,12 +465,12 @@ class TestBandwidth(unittest.TestCase):
         result1 = tmp.check_downstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
         result2 = abs(result-1)
         #检查上行速率被限制，下行速率没有限制
-        self.assertGreater(result1,2)
+        self.assertGreater(result1,5)
         self.assertLessEqual(result2,1)
 
     #验证all规则下行带宽生效，上行带宽不受限制
     def test_040_bandwidth_downstream(self):
-        u"""验证all规则下行带宽生效，上行带宽不受限制(testlink_ID:589)"""
+        u"""验证all规则下行带宽生效，上行带宽不受限制(testlink_ID:589,619)"""
         tmp = BandwidthBusiness(self.driver)
         tmp.del_bandwidth_rule()
         #新增一条规则只限制下行速率
@@ -583,7 +589,7 @@ class TestBandwidth(unittest.TestCase):
 
       #验证mac规则上下行生效 mbps,无线终端mac地址规则生效
     def test_047_mac_bandwidth_up_downstream(self):
-        u"""验证mac规则上下行生效 mbps(testlink_ID:593,600)"""
+        u"""验证mac规则上下行生效 mbps(testlink_ID:593,599,600)"""
         tmp = BandwidthBusiness(self.driver)
         tmp.del_bandwidth_rule()
         mac = tmp.get_wlan_mac(data_basic['wlan_pc'])
@@ -608,7 +614,7 @@ class TestBandwidth(unittest.TestCase):
         result1 = tmp.check_downstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
         result2 = abs(result-1)
         #检查上行速率被限制，下行速率不被限制
-        self.assertGreater(result1,2)
+        self.assertGreater(result1,5)
         self.assertLessEqual(result2,1)
 
     #验证mac规则下行带宽生效，上行带宽不受限制
@@ -620,9 +626,9 @@ class TestBandwidth(unittest.TestCase):
         #获取上下行速率
         result = tmp.check_upstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
         result1 = tmp.check_downstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
-        result2 = abs(result-1)
+        result2 = abs(result1-1)
         #检查下行速率被限制，上行速率不被限制
-        self.assertGreater(result1,2)
+        self.assertGreater(result,5)
         self.assertLessEqual(result2,1)
 
     #验证mac规则，设置非终端连接的mac,速率不受限制
@@ -751,8 +757,8 @@ class TestBandwidth(unittest.TestCase):
         #获取上下行速率
         result = tmp.check_upstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
         result1 = tmp.check_downstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
-        self.assertGreater(result,5)
-        self.assertGreater(result1,5)
+        self.assertGreater(result,10)
+        self.assertGreater(result1,10)
 
     #ip+最小上行带宽规则生效
     def test_058_ip_min_upstream(self):
@@ -826,7 +832,7 @@ class TestBandwidth(unittest.TestCase):
     def test_063_del_ip_rule(self):
         u"""删除ip规则，客户端速率不受影响(testlink_ID:618)"""
         tmp = BandwidthBusiness(self.driver)
-        tmp.del_bandwidth_rule()
+        tmp.del_bandwidth_rule_save()
         result = tmp.check_upstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
         result1 = tmp.check_downstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
         self.assertGreater(result,10)
@@ -842,10 +848,14 @@ class TestBandwidth(unittest.TestCase):
         result1 = tmp.check_downstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
         result2 = tmp.check_upstream_iperf(data_wireless['all_ssid']+"2",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
         result3 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"2",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
-        self.assertGreater(result,5)
-        self.assertGreater(result1,5)
-        self.assertGreater(result2,5)
-        self.assertGreater(result3,5)
+        result4 = abs(result-1)
+        result5 = abs(result1-1)
+        result6 = abs(result2-1)
+        result7 = abs(result3-1)
+        self.assertLessEqual(result4,1)
+        self.assertLessEqual(result5,1)
+        self.assertLessEqual(result6,1)
+        self.assertLessEqual(result7,1)
 
     #开启vlan的ssid生效
     def test_065_vlan_ssid(self):
@@ -890,7 +900,22 @@ class TestBandwidth(unittest.TestCase):
     def test_068_no_vlan_ssid(self):
         u"""不开vlan的ssid生效(testlink_ID:623)"""
         tmp = BandwidthBusiness(self.driver)
-          #分别连接并判断group0的带宽限制生效
+        tmp.del_bandwidth_rule()
+        tmp.add_bandwidth_rule_range_select_ssid(1,data_bandwidth['upstream_less'],data_bandwidth['downstream_less'])
+        #分别连接并判断group0的带宽限制生效
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result2 = abs(result-1)
+        result3 = abs(result1-1)
+        self.assertLessEqual(result2,1)
+        self.assertLessEqual(result3,1)
+
+    #ssid修改后,新规则生效
+    def test_069_edit_ssid_bandwidth(self):
+        u"""ssid修改后,新规则生效(testlink_ID:626)"""
+        tmp = BandwidthBusiness(self.driver)
+        tmp.edit_bandwidth_up_downstream(1,data_bandwidth['upstream'],data_bandwidth['downstream'])
+         #分别连接并判断group0的带宽限制生效
         result = tmp.check_upstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
         result1 = tmp.check_downstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
         result2 = abs(result-10)
@@ -898,25 +923,239 @@ class TestBandwidth(unittest.TestCase):
         self.assertLessEqual(result2,1)
         self.assertLessEqual(result3,1)
 
-    #开启vlan的ssid规则生效
-    def test_069_vlan_ssid(self):
-        u"""开启vlan的ssid规则生效(testlink_ID:624)"""
+    #设置ssid规则后，改变ssid名字,连接到该ssid,速率也会被限制
+    def test_070_edit_ssid_name(self):
+        u"""ssid修改后,新规则生效(testlink_ID:628)"""
         tmp = BandwidthBusiness(self.driver)
-          #分别连接并判断group0的带宽限制生效
-        result = tmp.check_upstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
-        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid'],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        tmp1 = SSIDBusiness(self.driver)
+        tmp1.modify_ssid(data_wireless['all_ssid']+"-9")
+        tmp1.del_all_NG()
+        #分别连接并判断group0的带宽限制生效
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
         result2 = abs(result-10)
         result3 = abs(result1-10)
         self.assertLessEqual(result2,1)
         self.assertLessEqual(result3,1)
 
-    def test_10002_ending(self):
-         #测试完毕，禁用无线网卡，使pc能够上网
+    #删除ssid规则修改后，连接该ssid的客户端速率不受限制
+    def test_071_del_ssid_rule(self):
+        u"""删除ssid规则修改后，连接该ssid的客户端速率不受限制(testlink_ID:629)"""
         tmp = BandwidthBusiness(self.driver)
+        tmp.del_bandwidth_rule_save()
+        #分别连接并判断group0的带宽限制生效
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        self.assertGreater(result,10)
+        self.assertGreater(result1,10)
+
+    #规则优先级mac>ip>all
+    def test_072_priority1_mac_ip_all(self):
+        u"""删除ssid规则修改后，连接该ssid的客户端速率不受限制(testlink_ID:630)"""
+        tmp = BandwidthBusiness(self.driver)
+        mac = tmp.get_wlan_mac(data_basic['wlan_pc'])
+        tmp.add_bandwidth_rule_up_downstream(data_bandwidth['upstream_less'],data_bandwidth['downstream_less'])
+        tmp.add_bandwidth_ip_rule("IP Address",data_bandwidth['ip_rule'],data_bandwidth['upstream_middle'],data_bandwidth['downstream_middle'])
+        tmp.add_bandwidth_rule_range_mac("MAC",mac,data_bandwidth['upstream'],data_bandwidth['downstream'])
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = abs(result-10)
+        #删除mac规则
+        tmp.del_special_bandwidth_ssid(3)
+        result2 = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result3 = abs(result2-5)
+        #删除ip规则
+        tmp.del_special_bandwidth_ssid(2)
+        result4 = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result5 = abs(result4-1)
+        self.assertLessEqual(result1,1)
+        self.assertLessEqual(result3,1)
+        self.assertLessEqual(result5,1)
+
+    #slave ap ssid带宽规则生效
+    def test_073_slave_ap_ssid_rule(self):
+        u"""slave ap ssid带宽规则生效(testlink_ID:631)"""
+        tmp = BandwidthBusiness(self.driver)
+        tmp1 = SSIDBusiness(self.driver)
+        tmp2 = APSBusiness(self.driver)
+        tmp2.search_pair_AP(data_AP["slave:mac1"],data_AP["slave:mac2"])
+        tmp1.del_all_ap()
+        tmp1.add_special_ap(0,data_AP["slave:mac1"])
+         #分别连接并判断group0的带宽限制生效
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result2 = abs(result-10)
+        result3 = abs(result1-10)
+        self.assertLessEqual(result2,1)
+        self.assertLessEqual(result3,1)
+
+    #slave ap 开启vlan的ssid规则生效
+    def test_074_slave_ap_vlan(self):
+        u"""slave ap 开启vlan的ssid规则生效(testlink_ID:632)"""
+        tmp = BandwidthBusiness(self.driver)
+        tmp1 = SSIDBusiness(self.driver)
+        tmp1.new_vlan_ssid(data_wireless['all_ssid']+"-2",data_wireless["short_wpa"],"2")
+        tmp1.add_special_ap(1,data_AP["slave:mac2"])
+        tmp.del_bandwidth_rule()
+        tmp.add_bandwidth_rule_up_downstream(data_bandwidth['upstream_middle'],data_bandwidth['downstream_middle'])
+         #分别连接并判断group1的带宽限制生效
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-2",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"-2",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result2 = abs(result-5)
+        result3 = abs(result1-5)
+        self.assertLessEqual(result2,1)
+        self.assertLessEqual(result3,1)
+
+    #slave ap的mac规则生效
+    def test_075_slave_mac_rule(self):
+        u"""slave ap的mac规则生效_no vlan(testlink_ID:633_01)"""
+        tmp = BandwidthBusiness(self.driver)
+        mac = tmp.get_wlan_mac(data_basic['wlan_pc'])
+        tmp.del_bandwidth_rule()
+        tmp.add_bandwidth_rule_range_mac("MAC",mac,data_bandwidth['upstream_less'],data_bandwidth['downstream_less'])
+        #分别连接并判断group0的mac规则带宽限制生效
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result2 = abs(result-1)
+        result3 = abs(result1-1)
+        self.assertLessEqual(result2,1)
+        self.assertLessEqual(result3,1)
+
+    #slave ap的mac规则生效
+    def test_076_slave_mac_rule(self):
+        u"""slave ap的mac规则生效_vlan(testlink_ID:633_02)"""
+        tmp = BandwidthBusiness(self.driver)
+        #分别连接并判断group的mac规则带宽限制生效
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-2",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"-2",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result2 = abs(result-1)
+        result3 = abs(result1-1)
+        self.assertLessEqual(result2,1)
+        self.assertLessEqual(result3,1)
+
+    #slave ap的ip规则生效
+    def test_076_slave_ip_rule(self):
+        u"""slave ap的ip规则生效_no vlan(testlink_ID:634_01)"""
+        tmp = BandwidthBusiness(self.driver)
+        tmp.del_bandwidth_rule()
+        tmp.add_bandwidth_ip_rule("IP Address",data_bandwidth['ip_rule'],data_bandwidth['upstream_middle'],data_bandwidth['downstream_middle'])
+        #分别连接并判断group0的mac规则带宽限制生效
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result2 = abs(result-5)
+        result3 = abs(result1-5)
+        self.assertLessEqual(result2,1)
+        self.assertLessEqual(result3,1)
+
+    #slave ap的ip规则生效
+    def test_077_slave_ip_rule(self):
+        u"""slave ap的ip规则生效_vlan(testlink_ID:634_02)"""
+        tmp = BandwidthBusiness(self.driver)
+        tmp.del_bandwidth_rule()
+        tmp.add_bandwidth_ip_rule("IP Address",data_bandwidth['ip_vlan'],data_bandwidth['upstream_middle'],data_bandwidth['downstream_middle'])
+        #分别连接并判断group1的mac规则带宽限制生效
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-2",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"-2",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result2 = abs(result-5)
+        result3 = abs(result1-5)
+        self.assertLessEqual(result2,1)
+        self.assertLessEqual(result3,1)
+
+    #删除规则，连在slave ap上的客户端速率不受限制
+    def test_078_del_salve_ap_rule(self):
+        u"""删除规则，连在slave ap上的客户端速率不受限制 no vlan(testlink_ID:635_01)"""
+        tmp = BandwidthBusiness(self.driver)
+        tmp.del_bandwidth_rule()
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        self.assertGreater(result,10)
+        self.assertGreater(result1,10)
+
+    #删除规则，连在slave ap上的客户端速率不受限制
+    def test_079_del_salve_ap_rule(self):
+        u"""删除规则，连在slave ap上的客户端速率不受限制 vlan(testlink_ID:635_02)"""
+        tmp = BandwidthBusiness(self.driver)
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-2",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"-2",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        self.assertGreater(result,10)
+        self.assertGreater(result1,10)
+
+    #无线<-->有线生效slave
+    def test_080_wireless_to_wired_slave(self):
+        u"""无线<-->有线生效slave(testlink_ID:639)"""
+        tmp = BandwidthBusiness(self.driver)
+        tmp.add_bandwidth_rule_up_downstream(data_bandwidth['upstream_less'],data_bandwidth['downstream_less'])
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-2",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"-2",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result2 = abs(result-1)
+        result3 = abs(result1-1)
+        self.assertLessEqual(result2,1)
+        self.assertLessEqual(result3,1)
+
+    #无线<-->有线生效master
+    def test_081_wireless_to_wired_master(self):
+        u"""无线<-->有线生效master(testlink_ID:638)"""
+        tmp = BandwidthBusiness(self.driver)
+        tmp1 = SSIDBusiness(self.driver)
+        tmp1.del_all_ap()
+        tmp1.add_special_ap(0,data_AP["master:mac"])
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result2 = abs(result-1)
+        result3 = abs(result1-1)
+        self.assertLessEqual(result2,1)
+        self.assertLessEqual(result3,1)
+
+    #设置带宽规则，验证可限制2.4G客户端速率
+    def test_082_2G_client_bandwidth(self):
+        u"""设置带宽规则，验证可限制2.4G客户端速率(testlink_ID:640)"""
+        tmp = BandwidthBusiness(self.driver)
+        tmp1 = SSIDBusiness(self.driver)
+        tmp1.change_AP_Freq("2.4G")
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result2 = abs(result-1)
+        result3 = abs(result1-1)
+        self.assertLessEqual(result2,1)
+        self.assertLessEqual(result3,1)
+
+    #设置带宽规则，验证可限制5G客户端速率
+    def test_083_5G_client_bandwidth(self):
+        u"""设置带宽规则，验证可限制5G客户端速率(testlink_ID:641,644)"""
+        tmp = BandwidthBusiness(self.driver)
+        tmp1 = SSIDBusiness(self.driver)
+        tmp1.change_AP_Freq("5G")
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid']+"-9",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result2 = abs(result-1)
+        result3 = abs(result1-1)
+        self.assertLessEqual(result2,1)
+        self.assertLessEqual(result3,1)
+
+        #设置带宽规则，验证可限制5G客户端速率
+    def test_084_16_ssid_bandwidth(self):
+        u"""设置带宽规则，验证可限制5G客户端速率(testlink_ID:642)"""
+        tmp = BandwidthBusiness(self.driver)
+        tmp1 = SSIDBusiness(self.driver)
+        tmp.del_bandwidth_rule()
+        tmp1.change_wifi_ssid_key(data_wireless['all_ssid'],data_wireless["short_wpa"])
+        tmp1.add_SSID_max_16(data_basic['DUT_ip'],data_basic['sshUser'],\
+                       data_login['all'],data_wireless['all_ssid'],\
+                       data_wireless['short_wpa'])
+        tmp.add_bandwidth_rule_up_downstream(data_bandwidth['upstream_less'],data_bandwidth['downstream_less'])
+        result = tmp.check_upstream_iperf(data_wireless['all_ssid']+"-5",data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result1 = tmp.check_downstream_iperf(data_wireless['all_ssid'+"-8"],data_wireless["short_wpa"],data_basic['wlan_pc'],data_basic['lan_pc'])
+        result2 = abs(result-1)
+        result3 = abs(result1-1)
+        #删除7000上的group1
+        tmp2 = NGBusiness(self.driver)
+        tmp2.mixed_7000_del_NG()
+        #测试完毕，禁用无线网卡，使pc能够上网
         tmp.dhcp_release_wlan(data_basic['wlan_pc'])
         tmp.wlan_disable(data_basic['wlan_pc'])
-        #rsyslog服务器完成工作
         tmp.finish_rsyslog("Bandwidth")
+        #rsyslog服务器完成工作
+        self.assertLessEqual(result2,1)
+        self.assertLessEqual(result3,1)
 
     def tearDown(self):
         self.driver.quit()

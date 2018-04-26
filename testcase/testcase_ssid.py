@@ -2623,14 +2623,14 @@ class TestSSID(unittest.TestCase):
 
 
     #SSID的创建数量限制(testlink_ID:425)
-    def test_192_max_addSSID(self):
+    def test_191_max_addSSID1(self):
         u"""additional SSID的创建数量限制(testlink_ID:425)"""
         tmp = SSIDBusiness(self.driver)
         #增加到最大的额外ssid
         result1,result2 = tmp.add_SSID_max_16(data_basic['DUT_ip'],data_basic['sshUser'],\
                        data_login['all'],data_wireless['all_ssid'],\
                        data_wireless['short_wpa'])
-        assert (result1==False) and ("='ssid31'" in result2),\
+        assert (result1==False) and ("='ssid15'" in result2),\
             "check max ssid number,test fail!"
         print "check max ssid number,test pass!"
 

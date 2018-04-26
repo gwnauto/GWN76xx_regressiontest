@@ -107,10 +107,9 @@ class TestAccessPoints(unittest.TestCase):
                         data_wireless["short_wpa"],data_basic["wlan_pc"])
         #禁用启用有线网卡，以便无线网卡能够在ap的client页面显示在线
         tmp.wlan_disable(data_basic['lan_pc'])
-        tmp.wlan_enable(data_basic['lan_pc'])
         time.sleep(120)
-        tmp.dhcp_release_wlan(data_basic["wlan_pc"])
-        tmp.disconnect_ap()
+        tmp.dhcp_release_wlan_backup(data_basic["wlan_pc"])
+        tmp.wlan_enable(data_basic['lan_pc'])
         assert data_wireless['all_ssid'] in result,"using wireless card to connect the ssid of group0,test fail!"
         print "using wireless card to connect the ssid of group0,test pass!"
 
@@ -1172,7 +1171,7 @@ class TestAccessPoints(unittest.TestCase):
             data_basic['sshUser'], data_login['all'],"31")
 
         #测试完毕，禁用无线网卡，使pc能够上网
-        tmp.dhcp_release_wlan(data_basic['wlan_pc'])
+        tmp.dhcp_release_wlan_backup(data_basic['wlan_pc'])
         tmp.wlan_disable(data_basic['wlan_pc'])
         #rsyslog服务器完成工作
         tmp.finish_rsyslog("AccessPoints")

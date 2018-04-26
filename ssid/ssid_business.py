@@ -1436,6 +1436,14 @@ class SSIDBusiness(SSIDControl):
         #点击弹出窗口中的应用
         SSIDControl.apply(self)
 
+    #删除所有ssid
+    def del_all_NG_backup(self,n):
+        #点击ssid菜单
+        SSIDBusiness.SSID_menu(self)
+        SSIDControl.del_all_button_backup(self,n)
+        #点击弹出窗口中的应用
+        SSIDControl.apply(self)
+
 
     #增加到最大的ssid--32个
     def add_SSID_max(self,host,user,pwd,add_ssid,key):
@@ -1494,6 +1502,69 @@ class SSIDBusiness(SSIDControl):
         print "result1 = %s"%result1
         print "result2 = %s"%result2
         return result1,result2
+
+
+         #增加到最大的ssid--16个
+    def add_SSID_max_16_device(self,host,user,pwd,add_ssid,key):
+        #点击ssid菜单
+        SSIDBusiness.SSID_menu(self)
+        for i in range(15):
+            #点击添加
+            SSIDControl.add_button(self)
+            #设置开启ssid
+            SSIDControl.set_enable_disable(self)
+            #设置ssid
+            SSIDControl.set_ssid(self,"%s-%s"%(add_ssid,(i+2)))
+            #点击VLAN的勾选
+            SSIDControl.set_VLAN(self)
+            #输入VLAN ID
+            SSIDControl.set_VLANID(self,"%s"%(i+2))
+            #设置wpa的密码
+            SSIDControl.wifi_wpa_key(self,key)
+            #添加窗口中，点击设备管理
+            SSIDControl.add_ssid_device(self)
+            #添加窗口中，设备管理，可添加设备，添加所有设备
+            SSIDControl.add_Available_device_all(self)
+            #添加窗口中，点击保存
+            SSIDControl.save(self)
+            time.sleep(5)
+        #弹出窗口中，点击应用
+        SSIDControl.apply(self)
+        element = self.driver.find_element_by_id("newssid")
+        result1 = element.is_enabled()
+        ssh = SSH(host,pwd)
+        result2 = ssh.ssh_cmd(user,"uci show grandstream.ssid15.id")
+        print "result1 = %s"%result1
+        print "result2 = %s"%result2
+        return result1,result2
+
+
+    #增加到最大的ssid--8个
+    def add_SSID_8_device(self,add_ssid,key):
+        #点击ssid菜单
+        SSIDBusiness.SSID_menu(self)
+        for i in range(7):
+            #点击添加
+            SSIDControl.add_button(self)
+            #设置开启ssid
+            SSIDControl.set_enable_disable(self)
+            #设置ssid
+            SSIDControl.set_ssid(self,"%s-%s"%(add_ssid,(i+2)))
+            #点击VLAN的勾选
+            SSIDControl.set_VLAN(self)
+            #输入VLAN ID
+            SSIDControl.set_VLANID(self,"%s"%(i+2))
+            #设置wpa的密码
+            SSIDControl.wifi_wpa_key(self,key)
+            #添加窗口中，点击设备管理
+            SSIDControl.add_ssid_device(self)
+            #添加窗口中，设备管理，可添加设备，添加所有设备
+            SSIDControl.add_Available_device_all(self)
+            #添加窗口中，点击保存
+            SSIDControl.save(self)
+            time.sleep(5)
+        #弹出窗口中，点击应用
+        SSIDControl.apply(self)
 
     #循环增加ssid
     #作者:蒋甜

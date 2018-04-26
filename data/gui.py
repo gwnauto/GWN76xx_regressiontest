@@ -59,7 +59,9 @@ def choice_case(GWN_name):
              'K_captiveportal',
              'L_debug',
              'M_failover',
-             'N_countrycode_timezone']
+             'N_countrycode_timezone',
+             'O_bandwidth_rules'
+             ]
 
     while True:
         #测试用例选择框

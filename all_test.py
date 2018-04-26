@@ -19,7 +19,8 @@ from connect.ssh import SSH
 from testcase import testcase_login, testcase_debug, testcase_clientaccess_7600, testcase_accesspoints_7600lr, \
     testcase_maintenance_haveupgrade, testcase_navbar, testcase_countrycode_timezone, testcase_setupwizard, testcase_accesspoints_7610, \
     testcase_maintenance_noupgrade, testcase_overview, testcase_accesspoints_7600, testcase_clients, \
-    testcase_failover, testcase_captiveportal, testcase_clienttimepolicy, testcase_clientaccess_7610, testcase_ssid
+    testcase_failover, testcase_captiveportal, testcase_clienttimepolicy, testcase_clientaccess_7610, testcase_bandwidth, \
+    testcase_ssid
 from data import data, HTMLTestRunner_GWN
 from data import gui
 
@@ -72,8 +73,9 @@ dicts1 ={'A_maintenance_noupgrade':'AA',
      'K_captiveportal':'K',
      'L_debug':'L',
      'M_failover':'M',
-     'N_countrycode_timezone':'N'
-         }
+     'N_countrycode_timezone':'N',
+     'O_bandwidth_rules':'O'
+    }
 
 #定义一个字典对应creatsuite1()中的测试用例类
 dicts={
@@ -94,10 +96,9 @@ dicts={
        'K': testcase_captiveportal.TestCaptivePortal,
        'L': testcase_debug.TestDebug,
        'M': testcase_failover.TestFailover,
-       'N': testcase_countrycode_timezone.TestCountryCodeTimeZone
+       'N': testcase_countrycode_timezone.TestCountryCodeTimeZone,
+       'O': testcase_bandwidth.TestBandwidth
      }
-
-
 
 #制定testcase文件夹路径
 list = './testcase'
@@ -285,8 +286,8 @@ def tar_log_core(now):
 
 #测试机的准备工作
 def ready_test():
-    subprocess.call('echo %s |sudo -S rm -rf ~/.ssh ./data/log/* ./data/core_file/* ./data/testresultdata/* \
-    ./*.tgz \
+    subprocess.call('echo %s |sudo -S rm -rf ~/.ssh ./data/log/*.log ./data/core_file/*.tgz ./data/testresultdata/*.txt \
+    ./data/testresultdata/*.png ./*.tgz \
     /var/log/%s.log /var/log/%s.log /var/log/%s.log'%(d["PC_pwd"],d['DUT_ip'],d['slave_ip1'],d['slave_ip2']),shell=True)
 
 if __name__ == '__main__':

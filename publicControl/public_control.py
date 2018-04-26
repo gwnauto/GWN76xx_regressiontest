@@ -1675,6 +1675,21 @@ class PublicControl:
         except Exception,e:
             raise Exception("dhcp release wlan ip address fail! The reason is %s"%e)
 
+    def dhcp_release_wlan_backup(self,wlan):
+        try:
+            self.disconnect_ap()
+            #获取测试主机密码
+            d = data.data_basic()
+            #输入无线网卡获取IP地址的命令
+            down = pexpect.spawn('sudo dhclient -r %s'%wlan,timeout=5)
+            down.expect([':',pexpect.TIMEOUT,pexpect.EOF])
+            down.sendline(d["PC_pwd"])
+            time.sleep(30)
+            print "release %s ip successfully!"%wlan
+        except Exception,e:
+            raise Exception("dhcp release wlan ip address fail! The reason is %s"%e)
+
+
     #判断使用无线网卡能够连接上ssid,并正常使用
     def connect_DHCP_WPA_AP(self,ssid,password,wlan):
         result = PublicControl.connect_WPA_AP(self,ssid,password,wlan)
@@ -1748,7 +1763,7 @@ class PublicControl:
         d_login = data.data_login()
         #将该用例集的syslog拷贝到./data/log,并根据用例集重命名
         subprocess.call('echo %s |sudo -S cp /var/log/%s.log \
-        #     ./data/log/syslog_%s.log'%(d["PC_pwd"],d['DUT_ip'],cases),shell=True)
+        ./data/log/syslog_%s.log'%(d["PC_pwd"],d['DUT_ip'],cases),shell=True)
         if PublicControl.check_AP_core_file(self,d['DUT_ip'],d['sshUser'],d_login['all']):
             #将core file从AP中拷出，并传到/data/core中
             PublicControl.cp_core_file(self,d['DUT_ip'],d['sshUser'],d_login['all'],cases)

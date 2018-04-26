@@ -47,8 +47,6 @@ class APSBusiness(APSControl):
         tmp.syslog_uri()
         return result
 
-
-
     #解除最后n个slave AP的配对
     def unpair_last_slave_ap(self,n):
         ##解除最后一个slave AP的配对

@@ -527,39 +527,48 @@ class BandwidthBusiness(BandwidthControl):
             tmp = BandwidthControl.get_ping(self,d['iperf_ip'])
             if tmp == 0:
                 #描述：使用iperf3进行上传
-                tmp1 = subprocess.check_output("iperf3 -c %s -t60"%d['iperf_ip'],shell=True)
-                print tmp1
-                a = tmp1.split("\n")
-                print a
-                b = a[-4].split("bits/sec")
-                print b
-                c = b[0].split(" ")
-                print c
-                print c[-2],c[-1]
-                if float(c[-2])>500:
-                    result1 = float(c[-2])/1000
-                    result2 = "%sbits/sec"%c[-1]
-                    print result1,result2
-                else:
-                    result1 = float(c[-2])
-                #启用有线网卡
-                BandwidthControl.wlan_enable(self,lan)
-                #使无线网卡释放IP地址
-                BandwidthControl.dhcp_release_wlan(self,wlan)
-                self.driver.refresh()
-                self.driver.implicitly_wait(10)
-                time.sleep(60)
-                return float(result1)
+                try:
+                    tmp1 = subprocess.check_output("iperf3 -c %s -t60"%d['iperf_ip'],shell=True)
+                    print tmp1
+                    a = tmp1.split("\n")
+                    print a
+                    b = a[-4].split("bits/sec")
+                    print b
+                    c = b[0].split(" ")
+                    print c
+                    print c[-2],c[-1]
+                    if float(c[-2])>500:
+                        result1 = float(c[-2])/1000
+                        result2 = "%sbits/sec"%c[-1]
+                        print result1,result2
+                    else:
+                        result1 = float(c[-2])
+                    #使无线网卡释放IP地址
+                    BandwidthControl.dhcp_release_wlan(self,wlan)
+                    #启用有线网卡
+                    BandwidthControl.wlan_enable(self,lan)
+                    self.driver.refresh()
+                    self.driver.implicitly_wait(10)
+                    time.sleep(60)
+                    return float(result1)
+                except:
+                    print "iperf3 occur error "
+                    #使无线网卡释放IP地址
+                    BandwidthControl.dhcp_release_wlan(self,wlan)
+                    #启用有线网卡
+                    BandwidthControl.wlan_enable(self,lan)
+                    time.sleep(10)
+                    return 500.00
             else:
-                BandwidthControl.wlan_enable(self,lan)
                 BandwidthControl.dhcp_release_wlan(self,wlan)
+                BandwidthControl.wlan_enable(self,lan)
                 BandwidthControl.dhcp_wlan(self,wlan)
                 BandwidthControl.wlan_disable(self,lan)
                 print "run iperf3 fail,try %s again!"%(i+1)
                 i = i+1
                 continue
 
-    #上行流量
+    #下行流量
     def check_downstream_iperf(self,ssid,password,wlan,lan):
         #无线网卡连接ssid
         BandwidthControl.connect_DHCP_WPA_AP(self,ssid,password,wlan)
@@ -570,32 +579,39 @@ class BandwidthBusiness(BandwidthControl):
             tmp = BandwidthControl.get_ping(self,d['iperf_ip'])
             if tmp == 0:
                 #描述：使用iperf3进行上传
-                tmp1 = subprocess.check_output("iperf3 -c %s -t60 -R"%d['iperf_ip'],shell=True)
-                print tmp1
-                a = tmp1.split("\n")
-                print a
-                b = a[-4].split("bits/sec")
-                print b
-                c = b[0].split(" ")
-                print c
-                print c[-2],c[-1]
-                if float(c[-2])>500:
-                    result1 = float(c[-2])/1000
-                    result2 = "%sbits/sec"%c[-1]
-                    print result1,result2
-                else:
-                    result1 = float(c[-2])
-                #启用有线网卡
-                BandwidthControl.wlan_enable(self,lan)
-                #使无线网卡释放IP地址
-                BandwidthControl.dhcp_release_wlan(self,wlan)
-                self.driver.refresh()
-                self.driver.implicitly_wait(10)
-                time.sleep(60)
-                return float(result1)
+                try:
+                    tmp1 = subprocess.check_output("iperf3 -c %s -t60 -R"%d['iperf_ip'],shell=True)
+                    print tmp1
+                    a = tmp1.split("\n")
+                    print a
+                    b = a[-4].split("bits/sec")
+                    print b
+                    c = b[0].split(" ")
+                    print c
+                    print c[-2],c[-1]
+                    if float(c[-2])>500:
+                        result1 = float(c[-2])/1000
+                        result2 = "%sbits/sec"%c[-1]
+                        print result1,result2
+                    else:
+                        result1 = float(c[-2])
+                    #使无线网卡释放IP地址
+                    BandwidthControl.dhcp_release_wlan(self,wlan)
+                    #启用有线网卡
+                    BandwidthControl.wlan_enable(self,lan)
+                    self.driver.refresh()
+                    self.driver.implicitly_wait(10)
+                    time.sleep(60)
+                    return float(result1)
+                except:
+                    #使无线网卡释放IP地址
+                    BandwidthControl.dhcp_release_wlan(self,wlan)
+                    #启用有线网卡
+                    BandwidthControl.wlan_enable(self,lan)
+                    time.sleep(10)
             else:
-                BandwidthControl.wlan_enable(self,lan)
                 BandwidthControl.dhcp_release_wlan(self,wlan)
+                BandwidthControl.wlan_enable(self,lan)
                 BandwidthControl.dhcp_wlan(self,wlan)
                 BandwidthControl.wlan_disable(self,lan)
                 print "run iperf3 fail,try %s again!"%(i+1)
