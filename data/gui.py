@@ -254,6 +254,14 @@ def choose_timing_or_download_FW():
 
 
 
+#设置每个用例集是否需要逐个测试并发送邮件
+def testcase_onebyone():
+    msg='是否需要逐个测试并发送邮件'
+    title='请确定每个用例集是否需要逐个测试并发送邮件'
+    choice=["不需要","需要"]
+    onebyone = easygui.ccbox(msg,title,choices=choice)
+    return onebyone
+
 
 __author__ = 'zeng'
 

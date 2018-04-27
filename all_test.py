@@ -40,6 +40,8 @@ GWN_name = gui.GWN_name()
 gui.welcome()
 #选择测试用例框
 cases = gui.choice_case(GWN_name)
+#设置每个用例集是否需要逐个测试并发送邮件
+onebyone = gui.testcase_onebyone()
 #输入发送测试报告的email地址和密码
 #sender = gui.send_email()
 sender = ['gwn-automation@grandstream.cn','grandstream@1']
@@ -103,10 +105,10 @@ dicts={
 #制定testcase文件夹路径
 list = './testcase'
 #构造测试集
-def creatsuite1():
+def creatsuite1(all_cases):
     testunit = unittest.TestSuite()
     #将测试用例加入到测试容器中
-    for case in cases:
+    for case in all_cases:
         print case
         testunit.addTest(unittest.makeSuite(dicts[dicts1[case]]))
     print testunit
@@ -290,12 +292,8 @@ def ready_test():
     ./data/testresultdata/*.png ./*.tgz \
     /var/log/%s.log /var/log/%s.log /var/log/%s.log'%(d["PC_pwd"],d['DUT_ip'],d['slave_ip1'],d['slave_ip2']),shell=True)
 
-if __name__ == '__main__':
-    for i in range(int(loop_times)):
-        #测试机的准备工作
-        ready_test()
-        alltestnames = creatsuite1()
-        #now = time.strftime('%Y-%m-%d-%H_%M_%S',time.localtime(time.time()))
+#设置测试报告名字，并运行用例集，然后发送邮件
+def run_testcase_send_mail(alltestnames):
         now = time.strftime('%Y%m%d%H%M',time.localtime(time.time()))
         #filename = './report/'+now+'result.html'
         if int(loop_times) == 1:
@@ -305,7 +303,7 @@ if __name__ == '__main__':
         #测试报告名字
         filename =subject+now+'.html'
         fp = file(filename, 'wb')
-        Auto_version = '6.0.2'
+        Auto_version = '6.0.3'
         runner = HTMLTestRunner_GWN.HTMLTestRunner(
             stream=fp,
             description='The Result of TestCase Execution:',
@@ -325,6 +323,24 @@ if __name__ == '__main__':
         log_name = tar_log_core(now)
         #发送测试报告
         send(filename,log_name)
+
+
+
+if __name__ == '__main__':
+    for i in range(int(loop_times)):
+        #设置每个用例集是否需要逐个测试并发送邮件
+        if onebyone == 1:
+            #测试机的准备工作
+            ready_test()
+            alltestnames = creatsuite1(cases)
+            run_testcase_send_mail(alltestnames)
+        else:
+            for c in cases:
+                #测试机的准备工作
+                ready_test()
+                testname = creatsuite1([c])
+                run_testcase_send_mail(testname)
+
 
 
 
