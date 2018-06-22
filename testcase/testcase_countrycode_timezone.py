@@ -92,6 +92,7 @@ class TestCountryCodeTimeZone(unittest.TestCase):
 
         #测试完毕，禁用无线网卡，使pc能够上网
         tmp.dhcp_release_wlan(data_basic['wlan_pc'])
+        tmp.disconnect_ap()
         tmp.wlan_disable(data_basic['wlan_pc'])
         #rsyslog服务器完成工作
         tmp.finish_rsyslog("countrycodetimezone")

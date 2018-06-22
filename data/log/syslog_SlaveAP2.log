@@ -1,0 +1,1165 @@
+2018-06-19T10:36:20+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: ACCOUNT: libgs_crypto[account]: Invalid crypto key
+2018-06-19T10:36:20+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:36:20+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: pf_get_remote_master_info: get device master_ip failed
+2018-06-19T10:36:20+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: pf_get_remote_master_info: get device master_ip failed
+2018-06-19T10:36:20+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: init_base_info:  get remote master info failed
+2018-06-19T10:36:20+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: init_base_info:  get remote master info failed
+2018-06-19T10:36:20+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: main: base_info init failed, waiting for next tring...
+2018-06-19T10:36:20+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: main: base_info init failed, waiting for next tring...
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: STOPPED EVENT for vap 0 (c9d10000)
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_down_cmd_non_tlv for vap 0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start +
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: VDEV START
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start -
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_vap_set_param: Now supported MGMT RATE is 1000(kbps) and rate code: 0x43
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_vdev_start_resp_ev for vap 0 (c9d10000)
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: su bfee 1 mu bfee 0 su bfer 1 mu bfer 1 impl bf 0 sounding dim 1
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_up_cmd_non_tlv for vap 0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: __ieee80211_smart_ant_init: Smart Antenna is not supported 
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: STOPPED EVENT for vap 0 (c9d10000)
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_down_cmd_non_tlv for vap 0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [UNSPECIFIED] ol_scan_unregister_event_handler: Failed to unregister evhandler=bfcce538 arg=c9d714c0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [UNSPECIFIED] ol_scan_unregister_event_handler: Failed to unregister evhandler=bfcce538 arg=c9d714c0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [UNSPECIFIED] ol_scan_unregister_event_handler: Failed to unregister evhandler=bfcceb08 arg=c9d714c0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_delete_cmd_non_tlv for vap 0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_vap_delete: wmi_unified_vdev_delete_send done ID = 0 vap (c6030000) VAP Addr = 00:0b:82:c4:ff:35:
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ieee80211_mbo_vdetach: MBO terminated
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ieee80211_oce_vdetach: OCE terminated
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: STOPPED EVENT for vap 0 (cb6ce000)
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_down_cmd_non_tlv for vap 0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start +
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: VDEV START
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start -
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [2743164] WAL_DBGID_SECURITY_MCAST_KEY_SET ( 0x1 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743165] VDEV_MGR_HP_START_TIME ( 0x1, 0x1671, 0x9f7f4001 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743165] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743165] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743165] VDEV_MGR_HP_START_TIME ( 0x1, 0x1671, 0x9f7f4000 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743165] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743165] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743165] VDEV_MGR_AP_TBTT_CONFIG ( 0x1, 0x1671, 0x0, 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743166] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743166] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743166] VDEV_MGR_HP_START_TIME ( 0x1, 0x1671, 0x9f7f4001 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743166] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743166] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743166] VDEV_MGR_AP_TBTT_CONFIG ( 0x1, 0x1671, 0x0, 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743188] vap-0 VDEV_MGR_VDEV_START ( 0x1671, 0x2, 0x0, 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: vap0: Init in progress. Delay vap_stop
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_vdev_start_resp_ev for vap 0 (cb6ce000)
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_wmm_update_cmd_non_tlv:
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: su bfee 1 mu bfee 0 su bfer 1 mu bfer 1 impl bf 0 sounding dim 1
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_up_cmd_non_tlv for vap 0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: vap0: Init in progress. Delay vap_stop
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: STOPPED EVENT for vap 0 (cb6ce000)
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_down_cmd_non_tlv for vap 0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=149 ipv4=eb01a8c0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [UNSPECIFIED] ol_scan_unregister_event_handler: Failed to unregister evhandler=bfcce538 arg=c9d774c0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [UNSPECIFIED] ol_scan_unregister_event_handler: Failed to unregister evhandler=bfcce538 arg=c9d774c0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [UNSPECIFIED] ol_scan_unregister_event_handler: Failed to unregister evhandler=bfcceb08 arg=c9d774c0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_delete_cmd_non_tlv for vap 0
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_vap_delete: wmi_unified_vdev_delete_send done ID = 0 vap (c60c8000) VAP Addr = 00:0b:82:c4:ff:36:
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ieee80211_mbo_vdetach: MBO terminated
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ieee80211_oce_vdetach: OCE terminated
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: STOPPED EVENT for vap 1 (cb6ce000)
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_down_cmd_non_tlv for vap 1
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start +
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: VDEV START
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start -
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_vdev_start_resp_ev for vap 1 (cb6ce000)
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: su bfee 1 mu bfee 0 su bfer 1 mu bfer 1 impl bf 0 sounding dim 1
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_up_cmd_non_tlv for vap 1
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: __ieee80211_smart_ant_init: Smart Antenna is not supported 
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [2744259] WAL_DBGID_SECURITY_MCAST_KEY_SET ( 0x1 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [2744260] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [2744260] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [2744281] vap-0 VDEV_MGR_VDEV_START ( 0x96c, 0x2, 0x0, 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [2744281] UNKNOWN 14:20 ( 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [2744281] VDEV_MGR_HP_START_TIME ( 0x0, 0x96c, 0x9f907001 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [2744281] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [2744281] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [2744281] VDEV_MGR_AP_TBTT_CONFIG ( 0x0, 0x96c, 0x0, 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [2744322] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [2744322] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: STOPPED EVENT for vap 1 (cb6ce000)
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_down_cmd_non_tlv for vap 1
+2018-06-19T10:36:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=149 ipv4=eb01a8c0
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [UNSPECIFIED] ol_scan_unregister_event_handler: Failed to unregister evhandler=bfcce538 arg=c9f15cc0
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [UNSPECIFIED] ol_scan_unregister_event_handler: Failed to unregister evhandler=bfcce538 arg=c9f15cc0
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [UNSPECIFIED] ol_scan_unregister_event_handler: Failed to unregister evhandler=bfcceb08 arg=c9f15cc0
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_delete_cmd_non_tlv for vap 1
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_vap_delete: wmi_unified_vdev_delete_send done ID = 1 vap (c6110000) VAP Addr = 06:0b:82:c4:ff:36:
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ieee80211_mbo_vdetach: MBO terminated
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ieee80211_oce_vdetach: OCE terminated
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743271] UNKNOWN 14:20 ( 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743271] VDEV_MGR_HP_START_TIME ( 0x0, 0x1671, 0x9f80d001 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743271] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x2 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743271] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743271] VDEV_MGR_AP_TBTT_CONFIG ( 0x0, 0x1671, 0x0, 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743280] VDEV_MGR_HP_START_TIME ( 0x1, 0x1671, 0x9f80d001 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743280] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743280] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743281] VDEV_MGR_HP_START_TIME ( 0x1, 0x1671, 0x9f80d001 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743281] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743281] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743281] VDEV_MGR_AP_TBTT_CONFIG ( 0x1, 0x1671, 0x0, 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743281] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743281] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743281] VDEV_MGR_HP_START_TIME ( 0x1, 0x1671, 0x9f80d001 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743281] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743281] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743281] VDEV_MGR_AP_TBTT_CONFIG ( 0x1, 0x1671, 0x0, 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [2743437] WAL_DBGID_SECURITY_MCAST_KEY_SET ( 0x1 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [2743437] WAL_DBGID_SECURITY_MCAST_KEY_SET ( 0x2 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743438] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743438] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743465] vap-1 VDEV_MGR_VDEV_START ( 0x1671, 0x2, 0x0, 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743465] UNKNOWN 14:20 ( 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743466] VDEV_MGR_HP_START_TIME ( 0x1, 0x1671, 0x9f83f000 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743466] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743466] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743466] VDEV_MGR_AP_TBTT_CONFIG ( 0x1, 0x1671, 0x0, 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743507] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [2743507] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: pf_get_remote_master_info: get device master_ip failed
+2018-06-19T10:36:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: init_base_info:  get remote master info failed
+2018-06-19T10:36:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: main: base_info init failed, waiting for next tring...
+2018-06-19T10:36:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: pf_get_remote_master_info: get device master_ip failed
+2018-06-19T10:36:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: init_base_info:  get remote master info failed
+2018-06-19T10:36:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: main: base_info init failed, waiting for next tring...
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: __sa_exit_module 
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Suspending Target - with disable_intr set :wifi1 (sc cb0f0000) scn=cb3004c0
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: waiting for target paused event from target :wifi1 (sc cb0f0000)
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath_sysfs_diag_fini: diag_fsattr 
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_thermal_mitigation_detach: ++
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_thermal_mitigation_detach: --
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath_lowi_if_netlink_delete Going to decrement current LOWI netlink ref count: 2
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_if_dfs_clist_update: called, cmd=1, nollist=  (null), nentries=0
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: channel is not 2.4G return faile#015
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ce_h2t_tx_ce_cleanup 1039 Fastpath mode ON, Cleaning up HTT Tx CEsmart_log_deinit: Smart logging Disabled
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Disabling Mcastenhance. This may take some time...
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Green-AP : Detached
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Reset complete for wifi core id : 1
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: hif_disable: X
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_detach: remove global_ic[1]..gloabl_ic ptr:bfd51690
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_detach: Peer Count 533 
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Suspending Target - with disable_intr set :wifi0 (sc cb740000) scn=cb5404c0
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: waiting for target paused event from target :wifi0 (sc cb740000)
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath_sysfs_diag_fini: diag_fsattr 
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_thermal_mitigation_detach: ++
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_thermal_mitigation_detach: --
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath_lowi_if_netlink_delete Going to decrement current LOWI netlink ref count: 1
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_if_dfs_clist_update: called, cmd=1, nollist=  (null), nentries=0
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ce_h2t_tx_ce_cleanup 1039 Fastpath mode ON, Cleaning up HTT Tx CEsmart_log_deinit: Smart logging Disabled
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Green-AP : Detached
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Reset complete for wifi core id : 0
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: hif_disable: X
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_detach: remove global_ic[0]..gloabl_ic ptr:bfd51690
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_detach: Peer Count 533 
+2018-06-19T10:36:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: rsa_verify: RSA signature OK
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] message repeated 5 times: [ kern.warn: rsa_verify: RSA signature OK]
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  *********** IPQ4019  *************Wifi0 CPU frequency 250000000
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: hif_target_sync_ahb: Got FW signal, retries = 1hif_ahb_enable_bus: X - hif_type = 0xd, target_type = 0xbhif_config_ce: ce_init donehif_config_ce: X, ret = 0hif_set_hia: Ehif_pci_bus_configure: hif_set_hia donehif_configure_irq: Ehif_enable: X OKhif_napi_create: NAPI structures initializedhif_napi_create: NAPI id 6 created for pipe 5qca_napi_create: napi instance 32 created on pipe 4
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: hif_napi_event: received evnt: CONF cmd; v = 1 (state=0x1)hif_napi_event: setting configuration to ON
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: __ol_ath_attach() Allocated scn cb5404c0
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_attach interface_id 0
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Chip id: 0xb, chip version: 0x1000000
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Target Version is 1000000
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Flash Download Address  c0000 
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_transfer_bin_file: flash data file defined
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_transfer_bin_file[3769] Get Caldata for wifi0.
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: qdf_fs_read[59], Open File /tmp/wifi0.caldata SUCCESS!!file system magic:16914836super blocksize:4096inode 3179file size:12064qc98xx_verify_checksum: flash checksum passed: 0x49e5
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_transfer_bin_file 3830: Download Flash data len 12064
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Board data initialized
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath10k_ahb a000000.wifi: Firmware loaded from user helper succesfully
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_download_firmware :First OTP download and Execute is good address:0x4000 return param 4660
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_download_firmware:##Board Id 16 , CHIP Id 0
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  wifi0: Selecting board data file name boardData_1_0_IPQ4019_Y9803_wifi0.bin
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_transfer_bin_file: Board Data File download to address=0xc0000 file name=IPQ4019/hw.1/boardData_1_0_IPQ4019_Y9803_wifi0.bin
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath10k_ahb a000000.wifi: Firmware loaded from user helper succesfully
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath10k_ahb a000000.wifi: Firmware loaded from user helper succesfully
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  [Flash] : Ignore Module param
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_download_firmware : Second OTP download and Execute is good, param=0x0 
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath10k_ahb a000000.wifi: Firmware loaded from user helper succesfully
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath10k_ahb a000000.wifi: Firmware loaded from user helper succesfully
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_swap_wlan_memory_expansion: length:165455 size_left:165475 dma_size_left:262144 fw_temp:d4a81004 fw_entry_size:165479
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_swap_wlan_memory_expansion: dma_virt_addr :d0850000 fw_temp: d4a81008 length: 165455
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_swap_wlan_memory_expansion: length:0 size_left:12 dma_size_left:96689 fw_temp:d4aa965b fw_entry_size:165479
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: bin_filename=IPQ4019/hw.1/athwlan.bin swap_filename=/lib/firmware/IPQ4019/hw.1/athwlan.codeswap.bin 
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_transfer_bin_file: Downloading firmware file: IPQ4019/hw.1/athwlan.bin
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath10k_ahb a000000.wifi: Firmware loaded from user helper succesfully
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: pf_get_remote_master_info: get device master_ip failed
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: init_base_info:  get remote master info failed
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: main: base_info init failed, waiting for next tring...
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: pf_get_remote_master_info: get device master_ip failed
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: init_base_info:  get remote master info failed
+2018-06-19T10:36:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: main: base_info init failed, waiting for next tring...
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: wmi_unified_register_event_handler: Event id 62 is unavailable
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: +htc_create ..  HIF :cb070000-htc_create: (0xcc917000)
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: hif_enable_fastpath, Enabling fastpath mode
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.alert: +HWT
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: hif_completion_thread_startup: pipe_num:0 pipe_info:0xcb074578hif_completion_thread_startup: pipe_num:3 pipe_info:0xcb074650hif_completion_thread_startup: pipe_num:4 pipe_info:0xcb074698
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.alert: -HWT
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Startup Mode-0 set
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: htt_peer_map_timer_init Enter pdev ccdb0000 hrtimer ccdb4980
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  htt_alloc_peer_map_mem : Alloc Success : host q vaddr c9d16000 paddr 89d16000
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  htt_alloc_peer_map_mem : Flush Interval Configured to 256 pkts
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Firmware_Build_Number:7 
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FW wireless modes: 0x680c
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: num_rf_chain:0x00000002  ht_cap_info:0x0000085b  vht_cap_info:0x339959b2  vht_supp_mcs:0x0000fffa
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: btcoex_support 0, wlan_prio_gpio 0, coex_gpio_pin 0 0 0
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: wmi_service_coex_gpio 1, wmi_service_4_wire_coex_support 1, coex_version 0
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending Ext resource cfg: HOST PLATFORM as 0
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: fw_feature_bitmap as 50 to TGT
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_service_ready_event: sw_cal_support_check_flag: 1
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: EXT NSS Supported
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_alloc_host_mem_chunk req_id 2 idx 0 num_units 55 unit_len 256,
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_alloc_host_mem_chunk req_id 3 idx 1 num_units 55 unit_len 1024,
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_alloc_host_mem_chunk req_id 4 idx 2 num_units 55 unit_len 4096,
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_alloc_host_mem_chunk req_id 1 idx 3 num_units 533 unit_len 744,
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_alloc_host_mem_chunk req_id 6 idx 4 num_units 35 unit_len 3072,
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_alloc_host_mem_chunk req_id 7 idx 5 num_units 1 unit_len 6144,
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_alloc_host_mem_chunk req_id 5 idx 6 num_units 533 unit_len 2028,
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Support not added yet for Service 91
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Support not added yet for Service 92
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: No EXT_MSG send INIT now
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: chunk 0 len 14080 requested , ptr  0x8cc4c000
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: chunk 1 len 56320 requested , ptr  0x8e020000
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: chunk 2 len 225280 requested , ptr  0x8e0c0000
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: chunk 3 len 396552 requested , ptr  0x8e100000
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: chunk 4 len 107520 requested , ptr  0x8e180000
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: chunk 5 len 6144 requested , ptr  0x8cd14000
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: chunk 6 len 1080924 requested , ptr  0x8e200000
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_service_ready_event[4219] WAPI MBSSID 2 
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: smart_log_init: Smart logging Enabled buf=cb0b0000 (size=65536)
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Version = 16777216 3  status = 0
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: htt_h2t_frag_desc_bank_cfg_msg - HTT_H2T_MSG_TYPE_FRAG_DESC_BANK_CFG sent to FW for radio ID = 0
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.err: spectral_init_netlink 78 NULL SKB
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_smart_ant_attach: Hardware doest not support Smart Antenna.
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: dfs_attach: event log enabled by default
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: >>>> CB Set   (null)
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_attach: Set global_ic[1] ..ptr:bf6a2690
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath_lowi_if_netlink_init LOWI Netlink successfully created
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Wrap Attached: Wrap_com =c613e800 ic->ic_wrap_com=c613e800 &wrap_com->wc_devt=c613e800 
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_thermal_mitigation_attach: --
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_ahb_probe num_radios=0, wifi_radios[0].sc = cb5404c0 wifi_radio_type = 2
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath_sysfs_diag_init: diag_fsattr 
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  *********** IPQ4019  *************Wifi1 CPU frequency 250000000
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: hif_target_sync_ahb: Got FW signal, retries = 1hif_ahb_enable_bus: X - hif_type = 0xd, target_type = 0xbhif_config_ce: ce_init donehif_config_ce: X, ret = 0hif_set_hia: Ehif_pci_bus_configure: hif_set_hia donehif_configure_irq: Ehif_enable: X OKhif_napi_create: NAPI structures initializedhif_napi_create: NAPI id 6 created for pipe 5qca_napi_create: napi instance 32 created on pipe 4
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: hif_napi_event: received evnt: CONF cmd; v = 1 (state=0x1)hif_napi_event: setting configuration to ON
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: __ol_ath_attach() Allocated scn cb2c04c0
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_attach interface_id 1
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Chip id: 0xb, chip version: 0x1000000
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Target Version is 1000000
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Flash Download Address  c0000 
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_transfer_bin_file: flash data file defined
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_transfer_bin_file[3769] Get Caldata for wifi1.
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: qdf_fs_read[59], Open File /tmp/wifi1.caldata SUCCESS!!file system magic:16914836super blocksize:4096inode 1695file size:12064qc98xx_verify_checksum: flash checksum passed: 0xe8e0
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_transfer_bin_file 3830: Download Flash data len 12064
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Board data initialized
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath10k_ahb a800000.wifi: Firmware loaded from user helper succesfully
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_download_firmware :First OTP download and Execute is good address:0x4400 return param 4660
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_download_firmware:##Board Id 17 , CHIP Id 0
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  wifi1: Selecting board data file name boardData_1_0_IPQ4019_Y9803_wifi1.bin
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_transfer_bin_file: Board Data File download to address=0xc0000 file name=IPQ4019/hw.1/boardData_1_0_IPQ4019_Y9803_wifi1.bin
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath10k_ahb a800000.wifi: Firmware loaded from user helper succesfully
+2018-06-19T10:36:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath10k_ahb a800000.wifi: Firmware loaded from user helper succesfully
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  [Flash] : Ignore Module param
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_download_firmware : Second OTP download and Execute is good, param=0x0 
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath10k_ahb a800000.wifi: Firmware loaded from user helper succesfully
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath10k_ahb a800000.wifi: Firmware loaded from user helper succesfully
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_swap_wlan_memory_expansion: length:165455 size_left:165475 dma_size_left:262144 fw_temp:d4fbd004 fw_entry_size:165479
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_swap_wlan_memory_expansion: dma_virt_addr :d09d0000 fw_temp: d4fbd008 length: 165455
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_swap_wlan_memory_expansion: length:0 size_left:12 dma_size_left:96689 fw_temp:d4fe565b fw_entry_size:165479
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: bin_filename=IPQ4019/hw.1/athwlan.bin swap_filename=/lib/firmware/IPQ4019/hw.1/athwlan.codeswap.bin 
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_transfer_bin_file: Downloading firmware file: IPQ4019/hw.1/athwlan.bin
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath10k_ahb a800000.wifi: Firmware loaded from user helper succesfully
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.err: hyfi_netlink_receive:119:hyfi: Not attached to bridge br-lan0_zone0
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [1451] WAL_DBGID_TX_AC_BUFFER_SET ( 0x3, 0x1e, 0x94c, 0x94c, 0x0 )
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [1451] WAL_DBGID_TX_AC_BUFFER_SET ( 0x12, 0x1e, 0x94c, 0x94c, 0x0 )
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [1451] WAL_DBGID_TX_AC_BUFFER_SET ( 0x45, 0x1e, 0x94c, 0x94c, 0x0 )
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [1451] WAL_DBGID_TX_AC_BUFFER_SET ( 0x67, 0x1e, 0x94c, 0x94c, 0x0 )
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [1461] UNKNOWN 22:55 ( 0x3a, 0xa10, 0x160, 0x0, 0x12 )
+2018-06-19T10:36:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [1461] UNKNOWN 22:55 ( 0x3a, 0x0, 0x12, 0x10, 0x12 )
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: wmi_unified_register_event_handler: Event id 62 is unavailable
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: +htc_create ..  HIF :c6350000-htc_create: (0xc9d74800)
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: hif_enable_fastpath, Enabling fastpath mode
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.alert: +HWT
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: hif_completion_thread_startup: pipe_num:0 pipe_info:0xc6354578hif_completion_thread_startup: pipe_num:3 pipe_info:0xc6354650hif_completion_thread_startup: pipe_num:4 pipe_info:0xc6354698
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.alert: -HWT
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Startup Mode-0 set
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: htt_peer_map_timer_init Enter pdev cade0000 hrtimer cade4980
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  htt_alloc_peer_map_mem : Alloc Success : host q vaddr cb6ca000 paddr 8b6ca000
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  htt_alloc_peer_map_mem : Flush Interval Configured to 256 pkts
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Firmware_Build_Number:7 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FW wireless modes: 0x1f9001
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: num_rf_chain:0x00000002  ht_cap_info:0x0000085b  vht_cap_info:0x339959b2  vht_supp_mcs:0x0000fffa
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: wmi_service_coex_gpio 0, wmi_service_4_wire_coex_support 0, coex_version 0
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending Ext resource cfg: HOST PLATFORM as 0
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: fw_feature_bitmap as 50 to TGT
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_service_ready_event: sw_cal_support_check_flag: 1
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: EXT NSS Supported
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_alloc_host_mem_chunk req_id 2 idx 0 num_units 55 unit_len 256,
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_alloc_host_mem_chunk req_id 3 idx 1 num_units 55 unit_len 1024,
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_alloc_host_mem_chunk req_id 4 idx 2 num_units 55 unit_len 4096,
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_alloc_host_mem_chunk req_id 1 idx 3 num_units 533 unit_len 744,
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_alloc_host_mem_chunk req_id 6 idx 4 num_units 35 unit_len 3072,
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_alloc_host_mem_chunk req_id 7 idx 5 num_units 1 unit_len 6144,
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_alloc_host_mem_chunk req_id 5 idx 6 num_units 533 unit_len 2028,
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Support not added yet for Service 91
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Support not added yet for Service 92
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: No EXT_MSG send INIT now
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: chunk 0 len 14080 requested , ptr  0x8a100000
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: chunk 1 len 56320 requested , ptr  0x8e170000
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: chunk 2 len 225280 requested , ptr  0x8e380000
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: chunk 3 len 396552 requested , ptr  0x8e400000
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: chunk 4 len 107520 requested , ptr  0x8e1a0000
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: chunk 5 len 6144 requested , ptr  0x8a104000
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: chunk 6 len 1080924 requested , ptr  0x8e600000
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_service_ready_event[4219] WAPI MBSSID 2 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: smart_log_init: Smart logging Enabled buf=ca810000 (size=65536)
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Version = 16777216 3  status = 0
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: htt_h2t_frag_desc_bank_cfg_msg - HTT_H2T_MSG_TYPE_FRAG_DESC_BANK_CFG sent to FW for radio ID = 1
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: freq=58 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: freq=106 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: freq=122 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: freq=138 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: acfg_attach: Offload using existing sock c614d800
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.err: spectral_init_netlink 78 NULL SKB
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_smart_ant_attach: Hardware doest not support Smart Antenna.
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: dfs_attach: event log enabled by default
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: >>>> CB Set   (null)
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_attach: Set global_ic[2] ..ptr:bf6a2690
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath_lowi_if_netlink_init Incremented LOWI netlink ref count: 2
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Wrap Attached: Wrap_com =c62c3a00 ic->ic_wrap_com=c62c3a00 &wrap_com->wc_devt=c62c3a00 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_thermal_mitigation_attach: --
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_ahb_probe num_radios=1, wifi_radios[1].sc = cb2c04c0 wifi_radio_type = 2
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ath_sysfs_diag_init: diag_fsattr 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: rsa_verify: RSA signature OK
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  pktlog_init: Initializing Pktlog for AR900B, pktlog_hdr_size = 16
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: +hif_update_pipe_callback pipeid 8
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: -hif_update_pipe_callback
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  pktlog_init: Initializing Pktlog for AR900B, pktlog_hdr_size = 16
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: +hif_update_pipe_callback pipeid 8
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: -hif_update_pipe_callback
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: rsa_verify: RSA signature OK
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: __sa_init_module 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: isCountryCodeValid: EEPROM regdomain 0x6a
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: set TXBF_SND_PERIOD: value 100 wmi_status 0
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Disconnect_timeout value entered:10 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  reconfiguration_timeout value entered:60 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: pf_get_remote_master_info: get device master_ip failed
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: init_base_info:  get remote master info failed
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: main: base_info init failed, waiting for next tring...
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: pf_get_remote_master_info: get device master_ip failed
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: init_base_info:  get remote master info failed
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: main: base_info init failed, waiting for next tring...
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [3337] UNKNOWN 22:55 ( 0x6a, 0x6a, 0x6a, 0x0, 0xff )
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [3358] UNKNOWN 22:55 ( 0x3a, 0xa10, 0x160, 0x0, 0x12 )
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [3358] UNKNOWN 22:55 ( 0x3a, 0x0, 0x12, 0x10, 0x12 )
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: wlan_vap_create : enter. devhandle=0xcb5404c0, opmode=IEEE80211_M_HOSTAP, flags=0x1
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_create_cmd_non_tlv: ID = 0 Type = 1, Subtype = 0 VAP Addr = 00:0b:82:c4:ff:35:
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ieee80211_mbo_vattach:MBO Initialized 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ieee80211_oce_vattach: OCE Initialized 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: wlan_vap_create : exit. devhandle=0xcb5404c0, vap=0xca8b0000, opmode=IEEE80211_M_HOSTAP, flags=0x1.
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: __ieee80211_smart_ant_init: Smart Antenna is not supported 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling TX checksum bit for the vap ath0 features 4000 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling SG bit for the vap ath0 features 4000 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling SG bit for the vap ath0 features 4000 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling TSO bit for the vap ath0 features 4000 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling LRO bit for the vap ath0 features 4000 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: VAP device ath0 created osifp: (c9f15cc0) os_if: (ca8b0000)
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: siwfreq
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  ######## rrm sample_cnt = 0
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set freq vap 0 stop send + ca8b0000
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set freq vap 0 stop send -ca8b0000
+2018-06-19T10:36:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set wait done --ca8b0000
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  DES SSID SET= 
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [DEBUG] vap-0(ath0):set SIOC80211NWID, 23 characters
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  DES SSID SET=GWN76xx-autotest-8B5D58 
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [1458] WAL_DBGID_TX_AC_BUFFER_SET ( 0x3, 0x1e, 0x94c, 0x94c, 0x0 )
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [1458] WAL_DBGID_TX_AC_BUFFER_SET ( 0x12, 0x1e, 0x94c, 0x94c, 0x0 )
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [1458] WAL_DBGID_TX_AC_BUFFER_SET ( 0x45, 0x1e, 0x94c, 0x94c, 0x0 )
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [1458] WAL_DBGID_TX_AC_BUFFER_SET ( 0x67, 0x1e, 0x94c, 0x94c, 0x0 )
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [1469] UNKNOWN 22:55 ( 0x3a, 0xa10, 0x160, 0x10, 0x0 )
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [1469] UNKNOWN 22:55 ( 0x3a, 0x10, 0x0, 0x10, 0x12 )
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  ieee80211_ioctl_siwmode: imr.ifm_active=131712, new mode=3, valid=1 
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  DEVICE IS DOWN ifname=ath0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  DEVICE IS DOWN ifname=ath0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set DSCP override 1
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 56  to tid 7
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 46  to tid 6
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 38  to tid 4
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [3626] vap-0 WMI_CMD_PARAMS ( 0xff, 0x40, 0x1 )
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [4277] WAL_DBGID_SECURITY_ENCR_EN (  )
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [4277] WAL_DBGID_SECURITY_MCAST_KEY_SET ( 0x1 )
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 36  to tid 4
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 34  to tid 4
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 32  to tid 4
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 30  to tid 3
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 28  to tid 3
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 26  to tid 3
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Switching to Tx Mode-1 Threshold 280
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 24  to tid 3
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 22  to tid 2
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 20  to tid 2
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 18  to tid 2
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 16  to tid 2
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 14  to tid 1
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 12  to tid 1
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 10  to tid 1
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: isCountryCodeValid: EEPROM regdomain 0x6a
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: freq=58 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: freq=106 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: freq=122 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: freq=138 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: set TXBF_SND_PERIOD: value 100 wmi_status 0
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Disconnect_timeout value entered:10 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  reconfiguration_timeout value entered:60 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: wlan_vap_create : enter. devhandle=0xcb2c04c0, opmode=IEEE80211_M_HOSTAP, flags=0x1
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_create_cmd_non_tlv: ID = 0 Type = 1, Subtype = 0 VAP Addr = 00:0b:82:c4:ff:36:
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ieee80211_mbo_vattach:MBO Initialized 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ieee80211_oce_vattach: OCE Initialized 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: wlan_vap_create : exit. devhandle=0xcb2c04c0, vap=0xcc570000, opmode=IEEE80211_M_HOSTAP, flags=0x1.
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: __ieee80211_smart_ant_init: Smart Antenna is not supported 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling TX checksum bit for the vap ath1 features 4000 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling SG bit for the vap ath1 features 4000 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling SG bit for the vap ath1 features 4000 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling TSO bit for the vap ath1 features 4000 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling LRO bit for the vap ath1 features 4000 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: VAP device ath1 created osifp: (c6371cc0) os_if: (cc570000)
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: siwfreq
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  ######## rrm sample_cnt = 0
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set freq vap 0 stop send + cc570000
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set freq vap 0 stop send -cc570000
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set wait done --cc570000
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  DES SSID SET= 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [DEBUG] vap-0(ath1):set SIOC80211NWID, 23 characters
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  DES SSID SET=GWN76xx-autotest-8B5D58 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: wifi down
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: user_command_process:905 debug .... action:ip_changed 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=1 ipv4=eb01a8c0
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=36 ipv4=eb01a8c0
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: set_mesh_vendorie:2041 
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: handle_vendorie:270 config_generic failed in handle_vendorie()
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_crypto[nbrd]: Invalid crypto key
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_crypto[nbrd]: Invalid crypto key
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=1 ipv4=eb01a8c0
+2018-06-19T10:36:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=36 ipv4=eb01a8c0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  ieee80211_ioctl_siwmode: imr.ifm_active=66176, new mode=3, valid=1 
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  DEVICE IS DOWN ifname=ath1
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  DEVICE IS DOWN ifname=ath1
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [3545] UNKNOWN 22:55 ( 0x6a, 0x6a, 0x6a, 0xff, 0x0 )
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [3545] UNKNOWN 22:55 ( 0x6a, 0xff, 0x0, 0xff, 0x0 )
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [3568] UNKNOWN 22:55 ( 0x3a, 0xa10, 0x160, 0x10, 0x0 )
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [3568] UNKNOWN 22:55 ( 0x3a, 0x10, 0x0, 0x10, 0x12 )
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [3868] vap-0 WMI_CMD_PARAMS ( 0xff, 0x40, 0x1 )
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [4151] WAL_DBGID_DEV_RESET ( 0xc01d, 0x384 )
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Switching to Tx Mode-1 Threshold 280
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: wifi down
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set DSCP override 1
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 56  to tid 7
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 46  to tid 6
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 38  to tid 4
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 36  to tid 4
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 34  to tid 4
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 32  to tid 4
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 30  to tid 3
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 28  to tid 3
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 26  to tid 3
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 24  to tid 3
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 22  to tid 2
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 20  to tid 2
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 18  to tid 2
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 16  to tid 2
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 14  to tid 1
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 12  to tid 1
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 10  to tid 1
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: wlan_vap_create : enter. devhandle=0xcb2c04c0, opmode=IEEE80211_M_HOSTAP, flags=0x1
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_create_cmd_non_tlv: ID = 1 Type = 1, Subtype = 0 VAP Addr = 06:0b:82:c4:ff:36:
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ieee80211_mbo_vattach:MBO Initialized 
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ieee80211_oce_vattach: OCE Initialized 
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: wlan_vap_create : exit. devhandle=0xcb2c04c0, vap=0xca8d0000, opmode=IEEE80211_M_HOSTAP, flags=0x1.
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: __ieee80211_smart_ant_init: Smart Antenna is not supported 
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling TX checksum bit for the vap mesh0 features 4000 
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling SG bit for the vap mesh0 features 4000 
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling SG bit for the vap mesh0 features 4000 
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling TSO bit for the vap mesh0 features 4000 
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enabling LRO bit for the vap mesh0 features 4000 
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=36 ipv4=eb01a8c0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: VAP device mesh0 created osifp: (c63754c0) os_if: (ca8d0000)
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: siwfreq
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  ######## rrm sample_cnt = 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set freq vap 0 stop send + cc570000
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [UNSPECIFIED] ol_scan_unregister_event_handler: Failed to unregister evhandler=bf5e2284 arg=ca040000
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: osif_vap_acs_cancel: Scan in progress.. Cancelling it vap: 0xcc570000
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_down_cmd_non_tlv for vap 0
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set freq vap 0 stop send -cc570000
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set wait done --cc570000
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set freq vap 1 stop send + ca8d0000
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set freq vap 1 stop send -ca8d0000
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set wait done --ca8d0000
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: pf_get_remote_master_info: get device master_ip failed
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: init_base_info:  get remote master info failed
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: main: base_info init failed, waiting for next tring...
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: pf_get_remote_master_info: get device master_ip failed
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: init_base_info:  get remote master info failed
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: main: base_info init failed, waiting for next tring...
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  DES SSID SET= 
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [DEBUG] vap-1(mesh0):set SIOC80211NWID, 21 characters
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  
+2018-06-19T10:36:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  DES SSID SET=GWN-MESH-000B82C4FF34 
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [4559] WAL_DBGID_SECURITY_ENCR_EN (  )
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [4559] WAL_DBGID_SECURITY_MCAST_KEY_SET ( 0x1 )
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [4951] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [4951] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  ieee80211_ioctl_siwmode: imr.ifm_active=66176, new mode=3, valid=1 
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  DEVICE IS DOWN ifname=mesh0
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  DEVICE IS DOWN ifname=mesh0
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: osif_vap_init: Scan in progress.. Cancelling it. vap: 0xca8d0000 
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set DSCP override 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 56  to tid 7
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 46  to tid 6
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 38  to tid 4
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 36  to tid 4
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 34  to tid 4
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 32  to tid 4
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 30  to tid 3
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 28  to tid 3
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 26  to tid 3
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 24  to tid 3
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 22  to tid 2
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 20  to tid 2
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 18  to tid 2
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 16  to tid 2
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 14  to tid 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 12  to tid 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set vap dscp tid map
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Configuring dscp : 10  to tid 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Setting dscp for vap id: 1
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_down_cmd_non_tlv for vap 0
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start +
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: VDEV START
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start -
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_vap_set_param: Now supported MGMT RATE is 1000(kbps) and rate code: 0x43
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_vdev_start_resp_ev for vap 0 (cca66000)
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_wmm_update_cmd_non_tlv:
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: su bfee 1 mu bfee 0 su bfer 1 mu bfer 1 impl bf 0 sounding dim 1
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_up_cmd_non_tlv for vap 0
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: __ieee80211_smart_ant_init: Smart Antenna is not supported 
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [5768] WAL_DBGID_SECURITY_ENCR_EN (  )
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [5768] WAL_DBGID_SECURITY_MCAST_KEY_SET ( 0x1 )
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [7764] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [7764] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [7764] vap-0 VDEV_MGR_VDEV_START ( 0x99e, 0x2, 0x0, 0x0 )
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [7977] UNKNOWN 14:20 ( 0x0 )
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [7977] VDEV_MGR_HP_START_TIME ( 0x0, 0x99e, 0x627001 )
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [7977] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [7977] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi0] FWLOG: [7977] VDEV_MGR_AP_TBTT_CONFIG ( 0x0, 0x99e, 0x0, 0x0 )
+2018-06-19T10:36:35+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: gsmesh[gsmesh]: starting gsmesh
+2018-06-19T10:36:35+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [ath0] Band steering events being sent to PID:22429
+2018-06-19T10:36:35+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [ath1] Band steering events being sent to PID:22429
+2018-06-19T10:36:35+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [mesh0] Band steering events being sent to PID:22429
+2018-06-19T10:36:35+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: pf_get_remote_master_info: get device master_ip failed
+2018-06-19T10:36:35+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: init_base_info:  get remote master info failed
+2018-06-19T10:36:35+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: main: base_info init failed, waiting for next tring...
+2018-06-19T10:36:35+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: pf_get_remote_master_info: get device master_ip failed
+2018-06-19T10:36:35+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: init_base_info:  get remote master info failed
+2018-06-19T10:36:35+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: main: base_info init failed, waiting for next tring...
+2018-06-19T10:36:37+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: libgs_utils[authfcgi]: Sem file for  exist already
+2018-06-19T10:36:37+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: libgs_utils[authfcgi]: Shm file exist already
+2018-06-19T10:36:37+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: afcgi: libgs_sysmgmt[authfcgi]: sys shm init success
+2018-06-19T10:36:37+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: libgs_utils[portalfcgi]: Sem file for  exist already
+2018-06-19T10:36:37+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: libgs_utils[portalfcgi]: Shm file exist already
+2018-06-19T10:36:37+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: pfcgi: libgs_sysmgmt[portalfcgi]: sys shm init success
+2018-06-19T10:36:37+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: controller: run_shell_command: Executing: /usr/bin/cportal_webroot_hash.sh local
+2018-06-19T10:36:39+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ME Pool succesfully initialized vaddr - c61c0000 paddr - 0
+2018-06-19T10:36:39+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: num_elems = 1424 buf_size - 64 pool_size = 102528
+2018-06-19T10:36:39+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Enable MCAST_TO_UCAST
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_down_cmd_non_tlv for vap 0
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ACS failed to derive the channel. So,selecting channel with least BSS 
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: random channel is 149 
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ******** ACS report ******** 
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  Channel | BSS  | minrssi | maxrssi | NF | Ch load | spect load | sec_chan 
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ---------------------------------------------------------------------
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5180( 36)   19       42        66   -100      13           0          1   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5200( 40)   22       32        43    -99      12           0          1   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5220( 44)   28       46        47   -100      15           0          1   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5240( 48)   20       28        40    -99      15           0          1   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5260( 52)    0        0         0    -99       1           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5280( 56)    0        0         0    -98       6           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5300( 60)    0        0         0    -96       1           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5320( 64)    1       33        33    -98      43           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5500(100)    0        0         0    -99      56           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5520(104)    0        0         0    -98       2           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5540(108)    0        0         0    -98      57           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5560(112)    0        0         0    -98      45           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5580(116)    0        0         0    -99       1           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5600(120)    0        0         0    -98       1           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5620(124)    0        0         0    -96      49           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5640(128)    0        0         0    -99       1           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5660(132)    0        0         0    -97       1           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5680(136)    0        0         0    -96       3           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5700(140)    0        0         0    -98       7           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5745(149)   18        7        70    -97      23           0          1   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5765(153)   20       31        77    -97      27           0          1   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5785(157)   25       35        70    -98      23           0          1   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5805(161)   18       30        75    -96      12           0          1   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  5825(165)    0        0         0    -98       3           0          0   
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start +
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: VDEV START
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start -
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start +
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: VDEV START
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start -
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] ol_vdev_start_resp_ev for vap 0 (cb054000)
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_wmm_update_cmd_non_tlv:
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: su bfee 1 mu bfee 0 su bfer 1 mu bfer 1 impl bf 0 sounding dim 1
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_up_cmd_non_tlv for vap 0
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: __ieee80211_smart_ant_init: Smart Antenna is not supported 
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [12582] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [12582] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [12583] vap-0 VDEV_MGR_VDEV_START ( 0x1671, 0x2, 0x0, 0x0 )
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_vdev_start_resp_ev for vap 1 (cb054000)
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_wmm_update_cmd_non_tlv:
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: su bfee 1 mu bfee 0 su bfer 1 mu bfer 1 impl bf 0 sounding dim 1
+2018-06-19T10:36:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_up_cmd_non_tlv for vap 1
+2018-06-19T10:36:41+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [ath0] Band steering events being sent to PID:22703
+2018-06-19T10:36:41+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [ath1] Band steering events being sent to PID:22703
+2018-06-19T10:36:41+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [mesh0] Band steering events being sent to PID:22703
+2018-06-19T10:36:41+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [12773] UNKNOWN 14:20 ( 0x0 )
+2018-06-19T10:36:41+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [12773] vap-1 VDEV_MGR_VDEV_START ( 0x1671, 0x2, 0x0, 0x0 )
+2018-06-19T10:36:41+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [12774] VDEV_MGR_HP_START_TIME ( 0x0, 0x1671, 0xa8c001 )
+2018-06-19T10:36:41+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [12774] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T10:36:41+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [12774] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:41+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [12774] VDEV_MGR_AP_TBTT_CONFIG ( 0x0, 0x1671, 0x0, 0x0 )
+2018-06-19T10:36:41+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [12774] UNKNOWN 14:20 ( 0x0 )
+2018-06-19T10:36:41+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [12774] VDEV_MGR_HP_START_TIME ( 0x0, 0x1671, 0xa8c001 )
+2018-06-19T10:36:41+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [12774] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T10:36:41+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [12774] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T10:36:41+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [12774] VDEV_MGR_AP_TBTT_CONFIG ( 0x1, 0x1671, 0x0, 0x0 )
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: wifi down
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: unset_mesh_vendorie:2013 clear vendorie
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012----------------------------------------
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Adding or updating following vendor ie
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Vendor IE info Ioctl CMD id     : 29 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: ID                              : dd
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Len (OUI+ Pcapdata) in Bytes    : 91
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: OUI                             : 000b82
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012Frame Include Mask              : 18
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012----------------------------------------
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: parse_interface:774 name:interface_name string:mesh0 data:mesh0 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: parse_interface:774 name:radio string:5g data:5g 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: parse_interface:774 name:mac string:06:0b:82:c4:ff:36 data:06:0b:82:c4:ff:36 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: parse_interface:774 name:type string:ap data:ap 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: mesh_cap_init:440 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: config_uci_get:147 0953218b5d58 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: mesh0     138 channels in total; available frequencies :
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: set_mesh_vendorie:2041 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012----------------------------------------
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Adding or updating following vendor ie
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Vendor IE info Ioctl CMD id     : 29 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: ID                              : dd
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Len (OUI+ Pcapdata) in Bytes    : 91
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: OUI                             : 000b82
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012Frame Include Mask              : 18
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012----------------------------------------
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: user_command_process:905 debug .... action:wifi_start 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: send_optimal_mesh_nbrd_to_gsmesh:1134 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: send_optimal_mesh_nbrd_to_gsmesh:1137 mesh_conf_2g and mesh_conf_5g is NULL 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: mesh0     138 channels in total; available frequencies :
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=11 ipv4=eb01a8c0
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=149 ipv4=eb01a8c0
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: set_mesh_vendorie:2041 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012----------------------------------------
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Adding or updating following vendor ie
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Vendor IE info Ioctl CMD id     : 29 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: ID                              : dd
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Len (OUI+ Pcapdata) in Bytes    : 91
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: OUI                             : 000b82
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012Frame Include Mask              : 18
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012----------------------------------------
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: user_command_process:905 debug .... action:ip_changed 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=11 ipv4=eb01a8c0
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=149 ipv4=eb01a8c0
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: set_mesh_vendorie:2041 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012----------------------------------------
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Adding or updating following vendor ie
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Vendor IE info Ioctl CMD id     : 29 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: ID                              : dd
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Len (OUI+ Pcapdata) in Bytes    : 91
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: OUI                             : 000b82
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012Frame Include Mask              : 18
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012----------------------------------------
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_crypto[nbrd]: Set shm key(id=1, key_valid=1)
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: key updated
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: update_shared_key:1886 first shared key 
+2018-06-19T10:36:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: send_shared_key_to_gsmesh:1188 
+2018-06-19T10:36:43+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [15167] WAL_DBGID_DEV_RESET ( 0xc01d, 0x379 )
+2018-06-19T10:36:43+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [15349] WAL_DBGID_DEV_RESET ( 0xc01d, 0x3ab )
+2018-06-19T10:36:43+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [15536] WAL_DBGID_DEV_RESET ( 0xc01d, 0x337 )
+2018-06-19T10:36:43+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [15740] WAL_DBGID_DEV_RESET ( 0xc01d, 0x395 )
+2018-06-19T10:36:43+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: ACCOUNT: libgs_crypto[account]: Get new crypto key from shm, old key id=0, shm key id=1
+2018-06-19T10:36:43+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: nbrd_5g_scan_timer_handler:1358 5g bgscan_param_set return < 0 ifname: freq:0 
+2018-06-19T10:36:43+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ieee80211_ioctl_siwscan:1318 last scan is not finished, Please wait ... 
+2018-06-19T10:36:44+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: register_nbrd_5g_scan:1422 invalid args: ifname: freq:0 
+2018-06-19T10:36:44+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: nbrd_5g_scan_timer_handler:1358 5g bgscan_param_set return < 0 ifname: freq:0 
+2018-06-19T10:36:45+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: user_command_process:905 debug .... action:ip_changed 
+2018-06-19T10:36:45+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=11 ipv4=eb01a8c0
+2018-06-19T10:36:45+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=149 ipv4=eb01a8c0
+2018-06-19T10:36:45+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: set_mesh_vendorie:2041 
+2018-06-19T10:36:45+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012----------------------------------------
+2018-06-19T10:36:45+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Adding or updating following vendor ie
+2018-06-19T10:36:45+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Vendor IE info Ioctl CMD id     : 29 
+2018-06-19T10:36:45+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: ID                              : dd
+2018-06-19T10:36:45+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: Len (OUI+ Pcapdata) in Bytes    : 91
+2018-06-19T10:36:45+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: OUI                             : 000b82
+2018-06-19T10:36:45+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012Frame Include Mask              : 18
+2018-06-19T10:36:45+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: #012----------------------------------------
+2018-06-19T10:36:46+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [18300] WAL_DBGID_DEV_RESET ( 0xc01d, 0x3af )
+2018-06-19T10:36:46+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: nbrd_5g_scan_timer_handler:1358 5g bgscan_param_set return < 0 ifname: freq:0 
+2018-06-19T10:36:46+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ieee80211_ioctl_siwscan:1318 last scan is not finished, Please wait ... 
+2018-06-19T10:36:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: register_nbrd_5g_scan:1422 invalid args: ifname: freq:0 
+2018-06-19T10:36:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: nbrd_5g_scan_timer_handler:1358 5g bgscan_param_set return < 0 ifname: freq:0 
+2018-06-19T10:36:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: update_mesh_nbrd_timer_handler:2776 br_mac:00:0b:82:8b:5d:58 get_uptime:2815 node->time_stamp:2788 age:27
+2018-06-19T10:36:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: update_11k_nbrd_timer_handler:2803 br_mac:00:0b:82:a4:d0:98 get_uptime:2815 node->time_stamp:1605 age:1210
+2018-06-19T10:36:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:36:51+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:36:51+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_crypto[nbrd]: Get new crypto key from shm, old key id=0, shm key id=1
+2018-06-19T10:36:59+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Restricting scan results..Restricting scan results..Sending SCAN START cmd
+2018-06-19T10:37:05+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Restricting scan results..Sending SCAN START cmd
+2018-06-19T10:37:07+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:37:15+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Restricting scan results..Sending SCAN START cmd
+2018-06-19T10:37:18+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: hostapd: libgs_crypto[hostapd]: Get new crypto key from shm, old key id=0, shm key id=1
+2018-06-19T10:37:18+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: ACCOUNT: set_station_post_auth_rule: 70:f1:1c:0d:38:f9 set_sta_acl_action ret 0
+2018-06-19T10:37:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Restricting scan results..Sending SCAN START cmd
+2018-06-19T10:37:24+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:37:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Restricting scan results..Sending SCAN START cmd
+2018-06-19T10:37:37+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Restricting scan results..Sending SCAN START cmd
+2018-06-19T10:37:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:37:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Restricting scan results..Sending SCAN START cmd
+2018-06-19T10:37:51+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: ACCOUNT: set_station_post_auth_rule: 70:f1:1c:0d:38:f9 set_sta_acl_action ret 0
+2018-06-19T10:37:51+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [84889] RATE: ChainMask 3, peer_mac 38:f9, phymode 6, ni_flags 0x00203006, vht_mcs_set 0x0000, ht_mcs_set 0xffff, legacy_rate_set 0x0ff0
+2018-06-19T10:37:51+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [84890] WAL_DBGID_PEER_EXT_STATS ( 0x8 )
+2018-06-19T10:37:51+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [84895] WAL_DBGID_SECURITY_ENCR_EN (  )
+2018-06-19T10:37:51+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [84895] WAL_DBGID_SECURITY_MCAST_KEY_SET ( 0x1 )
+2018-06-19T10:37:51+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [84934] WAL_DBGID_SECURITY_UCAST_KEY_SET ( 0x38f9, 0x0 )
+2018-06-19T10:37:51+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [84934] WAL_DBGID_SECURITY_ENCR_EN (  )
+2018-06-19T10:37:51+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [84934] WAL_DBGID_SECURITY_ALLOW_DATA ( 0x43f878 )
+2018-06-19T10:37:51+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: FWLOG: [84937] WAL_DBGID_PEER_EXT_STATS ( 0x8 )
+2018-06-19T10:37:54+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:37:56+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:38:04+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:38:10+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:38:13+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:38:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:38:27+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:38:29+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:38:37+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:38:43+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:38:45+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:38:54+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:38:59+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:39:02+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:39:10+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:39:16+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:39:18+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:39:26+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:39:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:39:35+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:39:43+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:39:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: update_11k_nbrd_timer_handler:2803 br_mac:00:0b:82:d1:b2:e4 get_uptime:2995 node->time_stamp:1703 age:1292
+2018-06-19T10:39:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: update_11k_nbrd_timer_handler:2803 br_mac:00:0b:82:b4:b5:34 get_uptime:2995 node->time_stamp:1785 age:1210
+2018-06-19T10:39:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: update_11k_nbrd_timer_handler:2817 br_mac:00:0b:82:d1:b2:e4 get_uptime:2995 node->time_stamp:1657 age:1338
+2018-06-19T10:39:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:39:51+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:39:59+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:40:05+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:40:07+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:40:15+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:40:21+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:40:24+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:40:32+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:40:38+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T10:40:40+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:00:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:00:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=1 ipv4=eb01a8c0
+2018-06-19T21:00:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=1 ipv4=eb01a8c0
+2018-06-19T21:00:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=40 ipv4=eb01a8c0
+2018-06-19T21:00:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=40 ipv4=eb01a8c0
+2018-06-19T21:00:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: user_command_process:905 debug .... action:wifi_start 
+2018-06-19T21:00:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: mesh0     no frequency information.
+2018-06-19T21:00:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: mesh0     no frequency information.
+2018-06-19T21:00:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=1 ipv4=eb01a8c0
+2018-06-19T21:00:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=1 ipv4=eb01a8c0
+2018-06-19T21:00:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=40 ipv4=eb01a8c0
+2018-06-19T21:00:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: nbrd[nbrd]: gs_set_appiebuf:807 struct size=41, chan=40 ipv4=eb01a8c0
+2018-06-19T21:00:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_crypto[nbrd]: Get new crypto key from shm, old key id=0, shm key id=1
+2018-06-19T21:00:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:00:30+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: ACCOUNT: libgs_crypto[account]: Get new crypto key from shm, old key id=0, shm key id=1
+2018-06-19T21:00:36+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Restricting scan results..Sending SCAN START cmd
+2018-06-19T21:00:39+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Restricting scan results..Sending SCAN START cmd
+2018-06-19T21:00:44+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:00:52+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Restricting scan results..Sending SCAN START cmd
+2018-06-19T21:00:55+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Restricting scan results..Sending SCAN START cmd
+2018-06-19T21:01:01+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:01:09+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Restricting scan results..Sending SCAN START cmd
+2018-06-19T21:01:11+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Restricting scan results..Sending SCAN START cmd
+2018-06-19T21:01:17+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:01:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:01:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:01:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:01:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:01:44+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:01:50+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:01:58+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:02:00+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:02:06+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:02:14+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:02:17+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:02:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:02:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:02:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:02:39+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:02:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:02:49+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:02:55+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:03:03+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:03:06+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:03:12+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:03:20+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:03:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:03:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:03:36+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:03:39+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:03:44+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:03:50+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] user.err: syslog: libgs_mesh[nbrd]: update_11k_nbrd_timer_handler:2803 br_mac:00:0b:82:c4:ff:54 get_uptime:40437 node->time_stamp:39231 age:1206
+2018-06-19T21:03:52+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:03:55+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:04:01+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:04:09+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:04:11+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:04:17+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:04:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:04:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:04:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:04:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:04:44+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: controller: process_rrm_param: RRM CMD: RRM_SET_CHN
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: controller: process_rrm_param: RRM CMD: RRM_SET_CHN
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: siwfreq
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: 
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn:  ######## rrm sample_cnt = 0
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set freq vap 0 stop send + cb1f0000
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set freq vap 0 stop send -cb1f0000
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: STOPPED EVENT for vap 0 (cc9e6000)
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_down_cmd_non_tlv for vap 0
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set wait done --cb1f0000
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set freq vap 1 stop send + cb1f8000
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set freq vap 1 stop send -cb1f8000
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: STOPPED EVENT for vap 1 (cc9e6000)
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_down_cmd_non_tlv for vap 1
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Set wait done --cb1f8000
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start +
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: VDEV START
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start -
+2018-06-19T21:04:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start +
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: VDEV START
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: OL vap_start -
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_vdev_start_resp_ev for vap 0 (cc9e6000)
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: su bfee 1 mu bfee 0 su bfer 1 mu bfer 1 impl bf 0 sounding dim 1
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_up_cmd_non_tlv for vap 0
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: __ieee80211_smart_ant_init: Smart Antenna is not supported 
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: ol_vdev_start_resp_ev for vap 1 (cc9e6000)
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_wmm_update_cmd_non_tlv:
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: su bfee 1 mu bfee 0 su bfer 1 mu bfer 1 impl bf 0 sounding dim 1
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: send_vdev_up_cmd_non_tlv for vap 1
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291354] VDEV_MGR_HP_START_TIME ( 0x1, 0x1450, 0x10dd3001 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291354] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291354] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291354] VDEV_MGR_HP_START_TIME ( 0x1, 0x1450, 0x10dd3001 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291354] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291354] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291354] VDEV_MGR_AP_TBTT_CONFIG ( 0x1, 0x1450, 0x0, 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291355] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291355] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291355] VDEV_MGR_HP_START_TIME ( 0x1, 0x1450, 0x10dd3001 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291355] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291355] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291355] VDEV_MGR_AP_TBTT_CONFIG ( 0x1, 0x1450, 0x0, 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291382] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291382] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291443] vap-0 VDEV_MGR_VDEV_START ( 0x1699, 0x2, 0x0, 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291631] UNKNOWN 14:20 ( 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291632] vap-1 VDEV_MGR_VDEV_START ( 0x1699, 0x2, 0x0, 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291633] VDEV_MGR_HP_START_TIME ( 0x0, 0x1699, 0x10e1e000 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291633] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291633] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291633] VDEV_MGR_AP_TBTT_CONFIG ( 0x0, 0x1699, 0x0, 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291633] UNKNOWN 14:20 ( 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291634] VDEV_MGR_HP_START_TIME ( 0x0, 0x1699, 0x10e1e001 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291634] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x1 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291634] RESMGR_OCS_GEN_PERIODIC_NOA ( 0x0 )
+2018-06-19T21:04:48+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: [wifi1] FWLOG: [291634] VDEV_MGR_AP_TBTT_CONFIG ( 0x1, 0x1699, 0x0, 0x0 )
+2018-06-19T21:04:50+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:04:56+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: ACCOUNT: set_station_post_auth_rule: 70:f1:1c:0d:38:f9 set_sta_acl_action ret 0
+2018-06-19T21:04:58+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:05:00+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:05:06+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:05:14+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:05:17+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:05:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:05:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:05:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:05:39+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:05:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:05:49+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:05:55+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:05:56+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: ACCOUNT: set_station_post_auth_rule: 70:f1:1c:0d:38:f9 set_sta_acl_action ret 0
+2018-06-19T21:06:03+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:06:06+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:06:12+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:06:13+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: ACCOUNT: set_station_post_auth_rule: 70:f1:1c:0d:38:f9 set_sta_acl_action ret 0
+2018-06-19T21:06:20+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:06:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:06:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:06:36+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:06:39+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:06:44+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:06:53+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:06:55+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:07:01+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:07:09+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:07:11+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:07:13+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: ACCOUNT: set_station_post_auth_rule: 70:f1:1c:0d:38:f9 set_sta_acl_action ret 0
+2018-06-19T21:07:17+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:07:25+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:07:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:07:34+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:07:42+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:07:44+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:07:50+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:07:58+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:08:00+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:08:06+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:08:13+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: ACCOUNT: set_station_post_auth_rule: 70:f1:1c:0d:38:f9 set_sta_acl_action ret 0
+2018-06-19T21:08:14+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:08:17+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:08:23+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:08:31+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:08:33+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:08:39+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:08:47+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:08:50+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:08:55+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:09:04+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:09:06+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Restricting scan results..Sending SCAN START cmd
+2018-06-19T21:09:12+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:09:14+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] daemon.err: ACCOUNT: set_station_post_auth_rule: 70:f1:1c:0d:38:f9 set_sta_acl_action ret 0
+2018-06-19T21:09:20+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:09:22+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:09:28+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:09:36+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd
+2018-06-19T21:09:39+08:00 192.168.1.235 GWN7600LR[000b82c4ff34][1.0.7.2] kern.warn: Sending SCAN START cmd

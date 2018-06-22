@@ -14,10 +14,11 @@ from system_settings.maintenance.upgrade.upgrade_business import UpgradeBusiness
 from access_points.aps_business import APSBusiness
 from ssid.ssid_business import SSIDBusiness
 from data import data
+from data.logfile import Log
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
-
+log = Log("Clients")
 data_basic = data.data_basic()
 data_login = data.data_login()
 data_wireless = data.data_wireless()
@@ -43,9 +44,9 @@ class TestClients(unittest.TestCase):
     def test_001_factory_reset(self):
         u"""在页面上把AP恢复出厂设置(testlink_ID:773)"""
         #如果登录没有成功，再次使用默认密码登录;如果登录成功则直接退出
+        log.debug("001")
         Lg = LoginBusiness(self.driver)
         Lg.login_again()
-
         tmp = APSBusiness(self.driver)
         #描述：启用无线网卡
         tmp.wlan_enable(data_basic['wlan_pc'])
@@ -56,7 +57,6 @@ class TestClients(unittest.TestCase):
         #修改默认网络组的ssid和密码
         tmp1 = SSIDBusiness(self.driver)
         tmp1.change_wifi_ssid_key(data_wireless['all_ssid'],data_wireless["short_wpa"])
-
         tmp.connect_DHCP_WPA_AP(data_wireless['all_ssid'],data_wireless['short_wpa'], data_basic['wlan_pc'])
         #禁用启用有线网卡，以便无线网卡能够在ap的client页面显示在线
         tmp.wlan_disable(data_basic['lan_pc'])
@@ -70,6 +70,7 @@ class TestClients(unittest.TestCase):
     #无线网卡连接上ap后，查看客户端信息(testlink_ID:485)
     def test_002_connect_clients_info(self):
         u"""无线网卡连接上ap后，查看客户端信息(testlink_ID:485)"""
+        log.debug("002")
         tmp = ClientsBusiness(self.driver)
         #使用无线网卡能够连接上ssid,并正常使用
         tmp.connect_DHCP_WPA_AP(data_wireless['all_ssid'],data_wireless['short_wpa'],data_basic['wlan_pc'])
@@ -84,6 +85,7 @@ class TestClients(unittest.TestCase):
     #连接方式(无线)信息核对(testlink_ID:488)
     def test_003_check_connected_info(self):
         u"""连接方式(无线)信息核对(testlink_ID:488)"""
+        log.debug("003")
         tmp = ClientsBusiness(self.driver)
         #点击客户端菜单
         tmp.clients_menu()
@@ -96,6 +98,7 @@ class TestClients(unittest.TestCase):
     #IP地址信息核对(testlink_ID:489)--bug78714
     def test_004_check_ip(self):
         u"""IP地址信息核对(testlink_ID:489)--bug78714"""
+        log.debug("004")
         tmp = ClientsBusiness(self.driver)
         #点击客户端菜单
         tmp.clients_menu()
@@ -110,6 +113,7 @@ class TestClients(unittest.TestCase):
     #连接时间信息核对--15s更新一次(testlink_ID:490)
     def test_005_check_connected_time(self):
         u"""连接时间信息核对--15s更新一次(testlink_ID:490)"""
+        log.debug("005")
         tmp = ClientsBusiness(self.driver)
         #点击客户端菜单
         tmp.clients_menu()
@@ -125,6 +129,7 @@ class TestClients(unittest.TestCase):
     #客户端离线后再上线，其连接时间重新开始更新(testlink_ID:491)
     def test_006_check_disconnect_connect_uptime(self):
         u"""客户端离线后再上线，其连接时间重新开始更新(testlink_ID:491)"""
+        log.debug("006")
         tmp = ClientsBusiness(self.driver)
         result = tmp.disconnect_connect_uptime(data_basic['wlan_pc'])
         print result
@@ -134,6 +139,7 @@ class TestClients(unittest.TestCase):
     #AP的mac地址信息核对(testlink_ID:492)
     def test_007_check_AP_mac(self):
         u"""AP的mac地址信息核对(testlink_ID:492)"""
+        log.debug("007")
         tmp = ClientsBusiness(self.driver)
         #点击客户端菜单
         tmp.clients_menu()
@@ -148,6 +154,7 @@ class TestClients(unittest.TestCase):
     #ssid0+无线+客户端显示(testlink_ID:494)
     def test_008_check_ssid0(self):
         u"""ssid0+无线+客户端显示(testlink_ID:494)"""
+        log.debug("008")
         tmp = ClientsBusiness(self.driver)
         wlan_mac = tmp.get_wlan_mac(data_basic['wlan_pc'])
         client_mac,ssid_name,connecttype,conap = tmp.check_ssid(wlan_mac)
@@ -165,6 +172,7 @@ class TestClients(unittest.TestCase):
     #新建立的ssid1+有线或无线+用户客户端显示(testlink_ID:496)
     def test_009_check_ssid1(self):
         u"""新建立的ssid1+有线或无线+用户客户端显示(testlink_ID:496)"""
+        log.debug("009")
         NG2_ssid = "%s-2"%data_ng["NG2_ssid"]
         #新建一个SSID
         tmp = SSIDBusiness(self.driver)
@@ -190,6 +198,7 @@ class TestClients(unittest.TestCase):
     #ssid的客户端信息过滤1--选择ssid0没有客户端(testlink_ID:497_1)
     def test_010_check_ssid_filter1(self):
         u"""ssid的客户端信息过滤1--选择ssid0没有客户端(testlink_ID:497_1)--bug"""
+        log.debug("010")
         tmp = ClientsBusiness(self.driver)
         result = tmp.check_ssid_filter(data_wireless['all_ssid'],data_basic['wlan_pc'])
         assert result == False,"Check client through ssid filter1,test fail!"
@@ -198,6 +207,7 @@ class TestClients(unittest.TestCase):
     #ssid的客户端信息过滤2--选择ssid1有客户端(testlink_ID:497_2)
     def test_011_check_ssid_filter2(self):
         u"""ssid的客户端信息过滤--选择ssid1有客户端(testlink_ID:497_2)--bug"""
+        log.debug("011")
         tmp = ClientsBusiness(self.driver)
         NG2_ssid = "%s-2"%data_ng["NG2_ssid"]
         result = tmp.check_ssid_filter(NG2_ssid,data_basic['wlan_pc'])
@@ -207,6 +217,7 @@ class TestClients(unittest.TestCase):
     #无线网卡断开ap后，查看客户端信息(testlink_ID:501)
     def test_012_disconnect_clients_info(self):
         u"""无线网卡断开ap后，查看客户端信息(testlink_ID:501)"""
+        log.debug("012")
         tmp = ClientsBusiness(self.driver)
         #无线网卡断开已连接的AP
         tmp.wlan_disable(data_basic['wlan_pc'])
@@ -227,6 +238,7 @@ class TestClients(unittest.TestCase):
     #设置用户名为全数字(testlink_ID:512)
     def test_013_set_client_digital(self):
         u"""设置用户名为全数字(testlink_ID:512)"""
+        log.debug("013")
         tmp = ClientsBusiness(self.driver)
         #客户端名称设置为不合法时
         wlan_mac = tmp.get_wlan_mac(data_basic['wlan_pc'])
@@ -237,6 +249,7 @@ class TestClients(unittest.TestCase):
     #设置用户名为全字母(testlink_ID:513)
     def test_014_set_client_letter(self):
         u"""设置用户名为全字母(testlink_ID:513)"""
+        log.debug("014")
         tmp = ClientsBusiness(self.driver)
         #只有一个客户端时，修改客户端名称
         wlan_mac = tmp.get_wlan_mac(data_basic['wlan_pc'])
@@ -259,6 +272,7 @@ class TestClients(unittest.TestCase):
     #设置用户名为---(testlink_ID:514)
     def test_015_set_client_err_name1(self):
         u"""设置用户名为---(testlink_ID:514)"""
+        log.debug("015")
         tmp = ClientsBusiness(self.driver)
         #客户端名称设置为不合法时
         wlan_mac = tmp.get_wlan_mac(data_basic['wlan_pc'])
@@ -269,6 +283,7 @@ class TestClients(unittest.TestCase):
     #设置用户名为___(testlink_ID:515)
     def test_016_set_client_err_name2(self):
         u"""设置用户名为___(testlink_ID:515)"""
+        log.debug("016")
         tmp = ClientsBusiness(self.driver)
         #客户端名称设置为不合法时
         wlan_mac = tmp.get_wlan_mac(data_basic['wlan_pc'])
@@ -279,6 +294,7 @@ class TestClients(unittest.TestCase):
     #设置用户名为全字母+数字(testlink_ID:512+513)
     def test_017_set_client_letter_digital(self):
         u"""设置用户名为全字母+数字(testlink_ID:512+513)"""
+        log.debug("017")
         tmp = ClientsBusiness(self.driver)
         #只有一个客户端时，修改客户端名称
         wlan_mac = tmp.get_wlan_mac(data_basic['wlan_pc'])
@@ -301,6 +317,7 @@ class TestClients(unittest.TestCase):
     #删除设置用户名称后，用户再次连接后主机名显示为用户本身名字(testlink_ID:516)
     def test_018_del_client_name(self):
         u"""删除设置用户名称后，用户再次连接后主机名显示为用户本身名字(testlink_ID:516)"""
+        log.debug("018")
         tmp = ClientsBusiness(self.driver)
         wlan_mac = tmp.get_wlan_mac(data_basic['wlan_pc'])
         #只有一个客户端时，修改客户端名称
@@ -310,6 +327,7 @@ class TestClients(unittest.TestCase):
         tmp1.web_reboot(data_basic['DUT_ip'])
         tmp1.connect_DHCP_WPA_AP(data_wireless['all_ssid'],\
                 data_wireless['short_wpa'],data_basic['wlan_pc'])
+        tmp.dhcp_release_wlan(data_basic['wlan_pc'])
         self.driver.refresh()
         self.driver.implicitly_wait(10)
         #登录AP
@@ -320,7 +338,7 @@ class TestClients(unittest.TestCase):
         #取测试平台的name
         PC_name = subprocess.check_output("hostname",shell=True).strip("\n")
         print result,PC_name
-        tmp.dhcp_release_wlan(data_basic['wlan_pc'])
+        # tmp.dhcp_release_wlan(data_basic['wlan_pc'])
         assert (result == PC_name) or (result == ""),"del client name,test fail!"
         print "del client name,test pass!"
 
@@ -328,6 +346,7 @@ class TestClients(unittest.TestCase):
     #Block client时的确认框(testlink_ID:517)
     def test_019_check_confirm_box(self):
         u"""Block client时的确认框(testlink_ID:517)"""
+        log.debug("019")
         tmp = ClientsBusiness(self.driver)
         #Block client时的确认框
         wlan_mac = tmp.get_wlan_mac(data_basic['wlan_pc'])
@@ -338,6 +357,7 @@ class TestClients(unittest.TestCase):
     #block客户端后，判断客户端不能够连接(testlink_ID:518)
     def test_020_block_client(self):
         u"""block客户端后，判断客户端不能够连接(testlink_ID:518)"""
+        log.debug("020")
         tmp = ClientsBusiness(self.driver)
         #使用无线网卡能够连接上ssid,并正常使用
         tmp.connect_WPA_AP(data_wireless['all_ssid'],data_wireless['short_wpa'],data_basic['wlan_pc'])
@@ -353,6 +373,7 @@ class TestClients(unittest.TestCase):
     #Block wireless client后MAC地址会出现在Global Blacklist MAC(testlink_ID:519)
     def test_021_check_block_client(self):
         u"""Block wireless client后MAC地址会出现在Global Blacklist MAC(testlink_ID:519)"""
+        log.debug("021")
         tmp = ClientAccessBusiness(self.driver)
         #获取Global Blacklist的mac地址
         result = tmp.get_Global_Blacklist_mac()
@@ -363,6 +384,7 @@ class TestClients(unittest.TestCase):
     #被blocked的wireless终端重连WLAN(testlink_ID:520)
     def test_022_connect_AP_again(self):
         u"""被blocked的wireless终端重连WLAN(testlink_ID:520)"""
+        log.debug("022")
         tmp = ClientsBusiness(self.driver)
         #使用无线网卡能够连接上ssid,并正常使用
         result = tmp.connect_WPA_AP_backup(data_wireless['all_ssid'],data_wireless['short_wpa'],data_basic['wlan_pc'])
@@ -372,6 +394,7 @@ class TestClients(unittest.TestCase):
     #在Global Blacklist MAC列表里删除已被block的终端MAC，判断客户端能够连接ap成功(testlink_ID:522)
     def test_023_unblock_client(self):
         u"""在Global Blacklist MAC列表里删除已被block的终端MAC，判断客户端能够连接ap成功(testlink_ID:522)"""
+        log.debug("023")
         tmp = ClientAccessBusiness(self.driver)
         #删除Global Blacklist里面的所有的mac
         tmp.del_Global_Blacklist_mac()
@@ -384,6 +407,7 @@ class TestClients(unittest.TestCase):
     #被block的终端重连WLAN后再被block(testlink_ID:523)
     def test_024_unblock_block(self):
         u"""被block的终端重连WLAN后再被block(testlink_ID:523)"""
+        log.debug("024")
         tmp = ClientsBusiness(self.driver)
         #只有一个客户端，阻塞该客户端
         wlan_mac = tmp.get_wlan_mac(data_basic['wlan_pc'])
@@ -397,6 +421,7 @@ class TestClients(unittest.TestCase):
     #被block的终端重连WLAN后再被block后Global Blacklist MAC列表验证(testlink_ID:524)
     def test_025_check_block_client_again(self):
         u"""被block的终端重连WLAN后再被block后Global Blacklist MAC列表验证(testlink_ID:524)"""
+        log.debug("025")
         tmp = ClientAccessBusiness(self.driver)
         #获取Global Blacklist的mac地址
         result = tmp.get_Global_Blacklist_mac()
@@ -412,6 +437,7 @@ class TestClients(unittest.TestCase):
     #unblock客户端，然后在ap页面上执行重启,确认无线能够连接上ap
     def test_026_web_reboot(self):
         u"""unblock客户端，然后在ap页面上执行重启,确认无线能够连接上ap"""
+        log.debug("026")
         tmp = UpgradeBusiness(self.driver)
         #在ap页面上执行重启
         tmp.web_reboot(data_basic['DUT_ip'])
@@ -419,6 +445,7 @@ class TestClients(unittest.TestCase):
         result = tmp.connect_WPA_AP(data_wireless['all_ssid'],data_wireless['short_wpa'],data_basic['wlan_pc'])
         #描述：使无线网卡释放IP地址
         tmp.dhcp_release_wlan(data_basic['wlan_pc'])
+        tmp.disconnect_ap()
         #测试完毕，禁用无线网卡，使pc能够上网
         tmp.wlan_disable(data_basic['wlan_pc'])
         #rsyslog服务器完成工作

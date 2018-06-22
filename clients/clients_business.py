@@ -183,7 +183,7 @@ class ClientsBusiness(ClientsControl):
         #弹出的提示窗口中，点击确认
         ClientsControl.notice_ok(self)
         ClientsControl.apply(self)
-        time.sleep(30)
+        time.sleep(60)
 
     #只有一个客户端被禁止时，获取该客户端的mac地址
     def check_block_client(self):

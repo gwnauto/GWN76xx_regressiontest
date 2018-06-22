@@ -16,7 +16,7 @@ from setupwizard.setupwizard_business import SWBusiness
 from clients.client_access.clientaccess_business import ClientAccessBusiness
 from data import data
 from connect.ssh import SSH
-
+from data.logfile import Log
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -25,7 +25,7 @@ data_login = data.data_login()
 data_wireless = data.data_wireless()
 data_ng = data.data_networkgroup()
 data_AP = data.data_AP()
-
+log = Log("Networkgroup")
 class TestNetworkGroup(unittest.TestCase):
     u"""测试网络组的用例集(runtime:11h)"""
     def setUp(self):
@@ -42,6 +42,7 @@ class TestNetworkGroup(unittest.TestCase):
     #在页面上把AP恢复出厂设置(testlink_ID:773)
     def test_001_factory_reset(self):
         u"""在页面上把AP恢复出厂设置(testlink_ID:773)"""
+        log.debug("001")
         #如果登录没有成功，再次使用默认密码登录;如果登录成功则直接退出
         Lg = LoginBusiness(self.driver)
         Lg.login_again()
@@ -62,6 +63,7 @@ class TestNetworkGroup(unittest.TestCase):
     #创建Network Group是否会出现对话框(testlink_ID:900_1)
     def test_002_check_create_dialog(self):
         u"""创建Network Group是否会出现对话框(testlink_ID:900_1)"""
+        log.debug("002")
         #点击添加，检查页面上是否有添加对话框
         tmp = NGBusiness(self.driver)
         result = tmp.check_create_dialog()
@@ -71,6 +73,7 @@ class TestNetworkGroup(unittest.TestCase):
     #修改Network Group是否会出现对话框(testlink_ID:901)
     def test_003_check_edit_dialog(self):
         u"""修改Network Group是否会出现对话框(testlink_ID:901)"""
+        log.debug("003")
         #点击编辑，检查页面上是否有添加对话框
         tmp = NGBusiness(self.driver)
         result = tmp.check_edit_dialog()
@@ -80,6 +83,7 @@ class TestNetworkGroup(unittest.TestCase):
     #点击网络组，添加一个新的网络组NG2(testlink_ID:900_2)
     def test_004_add_NG2(self):
         u"""测试添加一个新的网络组NG2(testlink_ID:900_2)"""
+        log.debug("004")
         NG2_name = "%s-2"%data_ng["NG2_name"]
         NG2_ssid = "%s-2"%data_ng["NG2_ssid"]
         Add = NGBusiness(self.driver)
@@ -94,6 +98,7 @@ class TestNetworkGroup(unittest.TestCase):
     #删除新增的网络组NG2，并检查是否有提示框，判断是否删除成功(testlink_ID:902)
     def test_005_remove_NG2(self):
         u"""删除新增的网络组NG2，并检查是否有提示框，判断是否删除成功(testlink_ID:902)"""
+        log.debug("005")
         NG2_name = "%s-2"%data_ng["NG2_name"]
         tmp = NGBusiness(self.driver)
         result1 = tmp.del_first_NG()
@@ -106,6 +111,7 @@ class TestNetworkGroup(unittest.TestCase):
     #删除默认Network Group(testlink_ID:903)
     def test_006_del_group0(self):
         u"""删除默认Network Group(testlink_ID:903)"""
+        log.debug("006")
         tmp = NGBusiness(self.driver)
         #删除默认的网络组
         result1,result2 = tmp.del_group0()
@@ -115,6 +121,7 @@ class TestNetworkGroup(unittest.TestCase):
     #点击网络组，添加到最大16个网络组(testlink_ID:923)
     def test_007_add_NG_max(self):
         u"""测试点击网络组，添加到最大16个网络组(testlink_ID:904)"""
+        log.debug("007")
         tmp = NGBusiness(self.driver)
         result = tmp.add_NG_max(data_basic['DUT_ip'],data_basic['sshUser'],\
                                data_login['all'],data_wireless["short_wpa"])
@@ -3052,6 +3059,7 @@ class TestNetworkGroup(unittest.TestCase):
 
         #测试完毕，禁用无线网卡，使pc够上网
         tmp.dhcp_release_wlan(data_basic['wlan_pc'])
+        tmp.disconnect_ap()
         tmp.wlan_disable(data_basic['wlan_pc'])
         #rsyslog服务器完成工作
         tmp.finish_rsyslog("NetworkGroup")

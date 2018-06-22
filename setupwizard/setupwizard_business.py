@@ -185,7 +185,7 @@ class SWBusiness(SWControl):
             SWControl.nextstep(self)
         #点击配对
         SWControl.pair(self,mac)
-        time.sleep(60)
+        time.sleep(80)
         #获取APs页面的状态信息
         result1 = SWControl.get_APs_status(self)
         print result1
@@ -376,6 +376,39 @@ class SWBusiness(SWControl):
             SWControl.nextstep(self)
          #点击配对
         SWControl.pair(self,slave_mac1)
+        #点击配对
+        SWControl.pair(self,slave_mac2)
+        time.sleep(20)
+        #点击下一步
+        SWControl.nextstep(self)
+        #设置SSID
+        SWControl.ssid(self,ssid)
+        #设置wpa的密码
+        SWControl.wpa_key(self,key)
+        #1.0.2.94已调整到每次配对后，设备自动在已添加的设备中
+        #设备管理，只有一个设备时,只添加一个设备
+        #SWControl.add_NG(self)
+        SWControl.nextstep(self)
+        time.sleep(120)
+        print "run setupwizard,pair slave ap,set ssid and key successfully!"
+        #无线网卡连接该ssid，返回连接的结果
+        result = SWControl.connect_WPA_AP(self,ssid,key,wlan)
+        #使无线网卡获取IP地址
+        #SWControl.dhcp_wlan(self,wlan)
+        if ssid in result:
+            return True
+        else:
+            return False
+
+    #完全操作：登录web界面，运行设置向导，配对slave ap，并加入默认网络组
+    #只有一个设备时,只添加一个设备到网络组
+    def complete_backup(self,ssid,key,wlan,slave_mac2):
+        n = SWBusiness.get_country_code(self)
+        #打开设置向导
+        SWControl.SW_menu(self)
+        #点击两次下一步
+        for i in range(2-n):
+            SWControl.nextstep(self)
         #点击配对
         SWControl.pair(self,slave_mac2)
         time.sleep(20)

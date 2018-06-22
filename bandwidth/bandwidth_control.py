@@ -58,6 +58,15 @@ class BandwidthControl(PublicControl):
         except Exception as e:
             raise Exception("webpage has not found 'check_all_ssid' element! The reason is %s"%e)
 
+    #16个ssid时，添加带宽规则时翻页
+    def pagedown_16ssid(self):
+        try:
+            time.sleep(3)
+            element = self.driver.find_element_by_xpath(".//*[@id='ssid_id']/label[14]/input")
+            element.send_keys(Keys.TAB)
+        except Exception as e:
+            raise Exception("webpage has not found 'pagedown_16ssid' element! The reason is %s"%e)
+
 
     #选择none ssid
     def check_none_ssid(self):
@@ -83,7 +92,7 @@ class BandwidthControl(PublicControl):
     def select_Range_Constraint(self,type):
         try:
             self.driver.implicitly_wait(10)
-            time.sleep(3)
+            time.sleep(5)
             a = self.driver.find_element_by_id("type")
             if type == 'All':
                 a.send_keys("a")
@@ -110,6 +119,7 @@ class BandwidthControl(PublicControl):
     #选择约束范围 IP后需输入IP地址
     def IP_Address(self,ip):
         try:
+            time.sleep(5)
             element = self.driver.find_element_by_id("bwRulesIp")
             element.send_keys(ip)
             self.driver.implicitly_wait(20)
@@ -119,6 +129,7 @@ class BandwidthControl(PublicControl):
     #设置上传速率
     def set_Upstream_Rate(self,rate):
         try:
+            time.sleep(3)
             element = self.driver.find_element_by_id("urate")
             element.clear()
             element.send_keys(rate)
@@ -129,6 +140,7 @@ class BandwidthControl(PublicControl):
     #清空上传速率的值
     def clear_Upstream_Rate(self):
         try:
+            time.sleep(2)
             element = self.driver.find_element_by_id("urate")
             element.clear()
             self.driver.implicitly_wait(20)
@@ -138,6 +150,7 @@ class BandwidthControl(PublicControl):
     #设置下载速率
     def set_Downstream_Rate(self,rate):
         try:
+            time.sleep(3)
             element = self.driver.find_element_by_id("drate")
             element.clear()
             element.send_keys(rate)
@@ -221,7 +234,7 @@ class BandwidthControl(PublicControl):
     #点击带宽规则界面的编辑按钮
     def click_edit_button(self,n):
         try:
-            time.sleep(3)
+            time.sleep(5)
             elements = self.driver.find_elements_by_class_name("editbutton")
             element = elements[n-1]
             element.click()

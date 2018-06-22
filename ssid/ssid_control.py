@@ -56,6 +56,7 @@ class SSIDControl(PublicControl):
     #依次点击所有ssid的删除按钮
     def del_all_button(self):
         try:
+            time.sleep(3)
             elements = self.driver.find_elements_by_class_name("delbutton")
             for i in range(len(elements)-1):
                 time.sleep(5)
@@ -64,6 +65,9 @@ class SSIDControl(PublicControl):
                 PublicControl.notice_ok(self)
             self.driver.implicitly_wait(20)
         except Exception as e:
+            current_time = time.strftime('%m%d%H%M',time.localtime(time.time()))
+            png = "error_del_ssid_button_%s.png"%str(current_time)
+            self.driver.get_screenshot_as_file("./data/testresultdata/"+png)
             raise Exception("webpage has not found 'del_all_button' element! The reason is %s"%e)
 
 #依次点击所有ssid的删除按钮
@@ -213,6 +217,12 @@ class SSIDControl(PublicControl):
         self.driver.find_element_by_id(data_ng["ssid_wifi_pagedown_id6"]).send_keys(Keys.TAB)
         self.driver.implicitly_wait(10)
 
+    #网络组页面中需要翻页操作时需要找到最底下的元素属性:网络组-编辑-wifi页面-id7
+    def wifi_pagedown7(self):
+        self.driver.find_element_by_id(data_ng["ssid_wifi_pagedown_id7"]).send_keys(Keys.TAB)
+        self.driver.implicitly_wait(10)
+
+
     #添加窗口中，点击wifi
     def add_ssid_wifi(self):
         try:
@@ -311,7 +321,7 @@ class SSIDControl(PublicControl):
             a = self.driver.find_element_by_id("encryption")
             for i in range(n):
                 a.send_keys("w")
-            a.send_keys(Keys.TAB)
+            a.send_keys(Keys.ENTER)
             self.driver.implicitly_wait(10)
             time.sleep(2)
         except Exception as e:
@@ -347,7 +357,7 @@ class SSIDControl(PublicControl):
                 a.send_keys("p")
             else:
                 a.send_keys("8")
-            a.send_keys(Keys.TAB)
+            a.send_keys(Keys.ENTER)
             self.driver.implicitly_wait(10)
         except Exception as e:
             raise Exception("webpage has not found 'wifi_wpa_mode' element! The reason is %s"%e)
@@ -827,13 +837,23 @@ class SSIDControl(PublicControl):
             return False
 
     #检查界面上新建ssid时是否有关于mesh的错误提示
-    #作者:蒋甜
     def new_ssid_tips(self):
         time.sleep(3)
         element = self.driver.find_elements_by_css_selector(".modal-header.dialogtitle.modal-title")[1]
         self.driver.implicitly_wait(20)
         if element.is_displayed()== True:
             PublicControl.notice_ok(self)
+            return True
+        else:
+            print "webpage has not found mesh ssid error tips"
+            return False
+
+     #检查界面上新建ssid时是否有关于mesh的错误提示
+    def new_ssid_tips_mesh(self):
+        time.sleep(3)
+        element = self.driver.find_element_by_id("notice_mesh")
+        self.driver.implicitly_wait(20)
+        if element.is_displayed()== True:
             return True
         else:
             print "webpage has not found mesh ssid error tips"

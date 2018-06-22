@@ -16,11 +16,11 @@ from email.mime.multipart import MIMEMultipart
 import sys
 
 from connect.ssh import SSH
-from testcase import testcase_login, testcase_debug, testcase_clientaccess_7600, testcase_accesspoints_7600lr, \
-    testcase_maintenance_haveupgrade, testcase_navbar, testcase_countrycode_timezone, testcase_setupwizard, testcase_accesspoints_7610, \
-    testcase_maintenance_noupgrade, testcase_overview, testcase_accesspoints_7600, testcase_clients, \
-    testcase_failover, testcase_captiveportal, testcase_clienttimepolicy, testcase_clientaccess_7610, testcase_bandwidth, \
-    testcase_ssid
+from testcase import testcase_login, testcase_debug, testcase_clientaccess_7600, testcase_maintenance_haveupgrade, testcase_navbar, testcase_countrycode_timezone, testcase_setupwizard, \
+    testcase_maintenance_noupgrade, testcase_accesspoints_7600, testcase_clients, \
+    testcase_clienttimepolicy, testcase_clientaccess_7610, testcase_accesspoints_7610, \
+    testcase_bandwidth, testcase_failover, \
+    testcase_captiveportal, testcase_ssid, testcase_overview, testcase_accesspoints_7600lr
 from data import data, HTMLTestRunner_GWN
 from data import gui
 
@@ -289,17 +289,29 @@ def tar_log_core(now):
 #测试机的准备工作
 def ready_test():
     subprocess.call('echo %s |sudo -S rm -rf ~/.ssh ./data/log/*.log ./data/core_file/*.tgz ./data/testresultdata/*.txt \
-    ./data/testresultdata/*.png ./*.tgz \
+    ./data/testresultdata/*.log ./*.tgz \
     /var/log/%s.log /var/log/%s.log /var/log/%s.log'%(d["PC_pwd"],d['DUT_ip'],d['slave_ip1'],d['slave_ip2']),shell=True)
 
-#设置测试报告名字，并运行用例集，然后发送邮件
-def run_testcase_send_mail(alltestnames):
+
+
+#设置测试报告名字，并运行用例集
+def run_testcase(alltestnames, case=None):
         now = time.strftime('%Y%m%d%H%M',time.localtime(time.time()))
-        #filename = './report/'+now+'result.html'
-        if int(loop_times) == 1:
-            subject ='%s_v%s_RegressionTest_AutoTestReport_'%(GWN_name,d['version'])
+        #先配置测试报告的名称
+        #1.如果需要所有用例集一起生成一个报告
+        if onebyone == 1:
+            if int(loop_times) == 1:
+                subject ='%s_v%s_RegressionTest_AutoTestReport_'%(GWN_name,d['version'])
+            else:
+                subject ='%s_v%s_RegressionTest_AutoTestReport_%s_'%(GWN_name,d['version'],(i+1))
+        #2.如果需要每个用例集单独生成报告，然后再打包
         else:
-            subject ='%s_v%s_RegressionTest_AutoTestReport_%s_'%(GWN_name,d['version'],(i+1))
+            #首先取出测试用例集的名称
+            onetestname = case[2:].strip("_").upper()
+            if int(loop_times) == 1:
+                subject ='%s_v%s_%s_AutoTestReport_'%(GWN_name,d['version'],onetestname)
+            else:
+                subject ='%s_v%s_%s_AutoTestReport_%s_'%(GWN_name,d['version'],onetestname,(i+1))
         #测试报告名字
         filename =subject+now+'.html'
         fp = file(filename, 'wb')
@@ -312,18 +324,12 @@ def run_testcase_send_mail(alltestnames):
             Tester=test_executor,
             Test_Bed=PC_name,
             Automation_Test_Version=Auto_version
-        )
-
-
+            )
         #执行测试用例
         runner.run(alltestnames)
-
         #关闭文件
         fp.close()
-        log_name = tar_log_core(now)
-        #发送测试报告
-        send(filename,log_name)
-
+        return now,filename
 
 
 if __name__ == '__main__':
@@ -332,14 +338,26 @@ if __name__ == '__main__':
         if onebyone == 1:
             #测试机的准备工作
             ready_test()
-            alltestnames = creatsuite1(cases)
-            run_testcase_send_mail(alltestnames)
+            alltestnames= creatsuite1(cases)
+            now,filename = run_testcase(alltestnames)
+            #打包log文件
+            log_name = tar_log_core(now)
+            #发送测试报告
+            send(filename, log_name)
         else:
+            #测试机的准备工作
+            ready_test()
             for c in cases:
-                #测试机的准备工作
-                ready_test()
-                testname = creatsuite1([c])
-                run_testcase_send_mail(testname)
+                testname= creatsuite1([c])
+                run_testcase(testname, c)
+            now = time.strftime('%Y%m%d%H%M',time.localtime(time.time()))
+            #打包log文件
+            log_name = tar_log_core(now)
+            filename = "%s_v%s_RegressionTest_AutoTestReport.tgz"%(GWN_name, d['version'])
+            #打包所有的测试报告
+            subprocess.call('tar czvf %s %s_v%s_*.html'%(filename, GWN_name, d['version']),shell=True)
+            #发送测试报告
+            send(filename, log_name)
 
 
 

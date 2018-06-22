@@ -3,12 +3,12 @@
 #时间：2017.05.26
 #描述：maintenance的用例集
 
-import unittest,time
+import unittest
+
 from selenium import webdriver
+
 from system_settings.maintenance.access.access_business import AccessBusiness
 from system_settings.maintenance.upgrade.upgrade_business import UpgradeBusiness
-from system_settings.maintenance.basic.basic_business import BasicBusiness
-from network_group.networkgroup_business import NGBusiness
 from ssid.ssid_business import SSIDBusiness
 from setupwizard.setupwizard_business import SWBusiness
 from login.login_business import LoginBusiness
@@ -16,8 +16,9 @@ from data import data
 from access_points.aps_business import APSBusiness
 from navbar.navbar_business import NavbarBusiness
 from connect.ssh import SSH
+from data.logfile import Log
 
-
+log = Log("Maintenance")
 data_basic = data.data_basic()
 data_login = data.data_login()
 data_wireless = data.data_wireless()
@@ -44,7 +45,7 @@ class TestMaintenance(unittest.TestCase):
         #如果登录没有成功，再次使用默认密码登录;如果登录成功则直接退出
         Lg = LoginBusiness(self.driver)
         Lg.login_again()
-
+        log.debug('001')
         tmp = APSBusiness(self.driver)
         #描述：启用无线网卡
         tmp.wlan_enable(data_basic['wlan_pc'])
@@ -55,19 +56,24 @@ class TestMaintenance(unittest.TestCase):
         #修改默认网络组的ssid和密码
         tmp1 = SSIDBusiness(self.driver)
         tmp1.change_wifi_ssid_key(data_wireless['all_ssid'],data_wireless["short_wpa"])
-
+        # log.debug("pass")
         assert result,"reset the AP defalut config in webpage,fail!"
+        assert result,log.debug("pass")
         print "reset the AP defalut config in webpage,pass!"
-
-    #测试http升级(testlink_ID:794_2)
-    def test_015_http_upgrade(self):
-        u"""测试http升级(testlink_ID:794_2)"""
-        tmp = UpgradeBusiness(self.driver)
-        #在ap页面上执行http升级固件
-        result = tmp.upgrade_web(data_basic['DUT_ip'],data_basic['sshUser'],\
-                data_login['all'],data_basic['version'],data_basic['http_new_addr'],"HTTP")
-        assert result,"test http upgrade,fail!"
-        print "test http upgrade,pass!"
+    #
+    #
+    # #测试http升级(testlink_ID:794_2)
+    # def test_015_http_upgrade(self):
+    #     u"""测试http升级(testlink_ID:794_2)"""
+    #     #log.debug('015_http_upgrade')
+    #     tmp = UpgradeBusiness(self.driver)
+    #     #在ap页面上执行http升级固件
+    #     result = tmp.upgrade_web(data_basic['DUT_ip'],data_basic['sshUser'],\
+    #             data_login['all'],data_basic['version'],data_basic['http_new_addr'],"HTTP")
+    #     assert result,"test http upgrade,fail!"
+    #     # log.debug("pass")
+    #     assert result,log.debug("fail")
+    #     print "test http upgrade,pass!"
 
     #测试slave ap的升级(testlink_ID:798)
     # def test_020_slave_ap_upgrade(self):
@@ -91,24 +97,33 @@ class TestMaintenance(unittest.TestCase):
     #webUI检查(testlink_ID:762)
     def test_025_check_reboot_reset_button(self):
         u"""webUI检查(testlink_ID:762)"""
+        log.debug('025')
         tmp = UpgradeBusiness(self.driver)
         result1,result2 = tmp.check_reboot_reset_button()
         assert result1 == (u"重启" or "Reboot") and \
                result2 == (u"重置" or "Reset"),\
             "check reboot and reset button,test fail!"
+        # assert result1 == (u"重启" or "Reboot") and \
+        #        result2 == (u"重置" or "Reset"),\
+        #     log.debug("fail")
+        # log.debug("pass")
         print "check reboot and reset button,test pass!"
 
     #重启确认(testlink_ID:764)
     def test_026_check_reboot_confirm(self):
         u"""重启确认(testlink_ID:764)"""
+        log.debug('026')
         tmp = UpgradeBusiness(self.driver)
         result = tmp.check_reboot_confirm()
         assert result,"check confirm tip after clicking reboot,test fail!"
+        # assert result,log.debug("fail")
+        # log.debug("pass")
         print "check confirm tip after clicking reboot,test fail!"
 
     #点击重启后取消(testlink_ID:765)
     def test_027_check_cancel_reboot_confirm(self):
         u"""点击重启后取消(testlink_ID:765)"""
+        log.debug('027')
         tmp = UpgradeBusiness(self.driver)
         result1,result2 = tmp.check_cancel_reboot_confirm(data_basic["DUT_ip"])
         assert (result1 == False) and (result2 == 0),"cancel reboot,test fail!"
@@ -118,6 +133,7 @@ class TestMaintenance(unittest.TestCase):
     def test_028_check_ok_reboot_confirm(self):
         u"""点击重启后取消(testlink_ID:766)"""
         #只有默认时，搜索-配对-加入网络组
+        log.debug('028')
         tmp1 = APSBusiness(self.driver)
         tmp1.search_pair_add_default(data_AP['slave:mac2'])
         tmp = UpgradeBusiness(self.driver)
@@ -128,6 +144,7 @@ class TestMaintenance(unittest.TestCase):
     #重启后配置检查(testlink_ID:767)
     def test_029_check_config(self):
         u"""重启后配置检查(testlink_ID:767)"""
+        log.debug('029')
         tmp = SSH(data_basic["DUT_ip"],data_login["all"])
         result = tmp.ssh_cmd(data_basic['sshUser'],"uci show grandstream.ssid0.ssid")
         assert data_wireless['all_ssid'] in result,"check config after rebooting,test fail!"
@@ -136,6 +153,7 @@ class TestMaintenance(unittest.TestCase):
     #Master上重启对其他设备的影响(testlink_ID:768)
     def test_030_check_slave_ap(self):
         u"""Master上重启对其他设备的影响(testlink_ID:768)"""
+        log.debug('030')
         #判断是否还有slave ap的mac
         tmp= SSH(data_basic["DUT_ip"],data_login["all"])
         result = tmp.ssh_cmd(data_basic['sshUser'],"ubus call controller.discovery get_paired_devices")
@@ -149,6 +167,7 @@ class TestMaintenance(unittest.TestCase):
     #恢复出厂确认(testlink_ID:769)
     def test_031_check_reset_confirm(self):
         u"""恢复出厂确认(testlink_ID:769)"""
+        log.debug('031')
         tmp = UpgradeBusiness(self.driver)
         result = tmp.check_reset_confirm()
         assert result,"check confirm tip after clicking reset,test fail!"
@@ -157,6 +176,7 @@ class TestMaintenance(unittest.TestCase):
     #点击重置后取消(testlink_ID:770)
     def test_032_check_cancel_reboot_confirm(self):
         u"""点击重置后取消(testlink_ID:770)"""
+        log.debug('032')
         tmp = UpgradeBusiness(self.driver)
         result1,result2 = tmp.check_cancel_reset_confirm(data_basic["DUT_ip"])
         assert (result1 == False) and (result2 == 0),"cancel reset,test fail!"
@@ -165,6 +185,7 @@ class TestMaintenance(unittest.TestCase):
     #点击重置并确认(testlink_ID:771)
     def test_033_check_ok_reset_confirm(self):
         u"""点击重置并确认(testlink_ID:771)"""
+        log.debug('033')
         #只有默认时，搜索-配对-加入网络组
         tmp = UpgradeBusiness(self.driver)
         result1,result2 = tmp.check_ok_reset_confirm(data_basic["DUT_ip"])
@@ -176,6 +197,7 @@ class TestMaintenance(unittest.TestCase):
     #恢复出厂后的系统配置情况(testlink_ID:772)
     def test_034_check_config(self):
         u"""恢复出厂后的系统配置情况(testlink_ID:772)"""
+        log.debug('034')
         tmp = SSH(data_basic["DUT_ip"],data_basic["super_defalut_pwd"])
         result = tmp.ssh_cmd(data_basic['sshUser'],"uci show grandstream.zone0.ssid")
         assert data_wireless['all_ssid'] not in result,"check config after resetting,test fail!"
@@ -184,6 +206,7 @@ class TestMaintenance(unittest.TestCase):
     #Master AP恢复出厂后状态检查(testlink_ID:773)
     def test_035_check_status(self):
         u"""Master AP恢复出厂后状态检查(testlink_ID:773)"""
+        log.debug('035')
         element = self.driver.find_element_by_id('login_as_master')
         result = element.text
         print result
@@ -194,6 +217,7 @@ class TestMaintenance(unittest.TestCase):
     #Master AP恢复出厂对Slave AP的影响(testlink_ID:774)
     def test_036_check_slave_ap(self):
         u"""Master AP恢复出厂对Slave AP的影响(testlink_ID:774)"""
+        log.debug('036')
         #判断是否还有slave ap的mac
         tmp= SSH(data_basic["DUT_ip"],data_basic["super_defalut_pwd"])
         result = tmp.ssh_cmd(data_basic['sshUser'],"ubus call controller.discovery get_paired_devices")
@@ -207,6 +231,7 @@ class TestMaintenance(unittest.TestCase):
     #检查恢复出厂对版本的影响(testlink_ID:775)
     def test_037_check_version(self):
         u"""检查恢复出厂对版本的影响(testlink_ID:775)"""
+        log.debug('037')
         tmp= SSH(data_basic["DUT_ip"],data_basic["super_defalut_pwd"])
         result = tmp.ssh_cmd(data_basic['sshUser'],"cat /tmp/gs_version")
         self.driver.refresh()
@@ -234,6 +259,7 @@ class TestMaintenance(unittest.TestCase):
     #在页面上把AP恢复出厂设置
     def test_038_factory_reset(self):
         u"""在页面上把AP恢复出厂设置"""
+        log.debug('038')
         tmp = APSBusiness(self.driver)
         result = tmp.web_factory_reset(data_basic['DUT_ip'],data_basic['sshUser'],\
                                data_basic['super_defalut_pwd'])
@@ -243,6 +269,7 @@ class TestMaintenance(unittest.TestCase):
     #确认密码默认隐藏密钥(testlink_ID:870_1)
     def test_039_check_pwd_default_disappear(self):
         u"""确认密码默认隐藏密钥(testlink_ID:870_1)"""
+        log.debug('039')
         tmp = AccessBusiness(self.driver)
         result = tmp.check_pwd_default_disappear()
         assert result == ["password","password","password","password","password"],\
@@ -252,6 +279,7 @@ class TestMaintenance(unittest.TestCase):
     #点击显示后，确认密码能够显示(testlink_ID:870_2)
     def test_040_check_pwd_display(self):
         u"""确认密码默认隐藏密钥(testlink_ID:870_2)"""
+        log.debug('040')
         tmp = AccessBusiness(self.driver)
         result = tmp.check_pwd_display()
         assert result == ["text","text","text","text","text"],\
@@ -261,6 +289,7 @@ class TestMaintenance(unittest.TestCase):
     #修改所有密码时，当前密码错误时，弹出提示(testlink_ID:871)
     def test_041_check_pass0_err(self):
         u"""修改密码时，当前密码错误时，弹出提示(testlink_ID:871)"""
+        log.debug('041')
         tmp = AccessBusiness(self.driver)
         result = tmp.check_pass0_err(data_login['letter_pwd'],data_login['digital_pwd'])
         assert result,"when changing pwd,current pwd err,test fail!"
@@ -269,6 +298,7 @@ class TestMaintenance(unittest.TestCase):
     #修改密码后，登录路由后台，验证是否修改成功
     def test_042_check_change_pwd(self):
         u"""修改密码后，登录路由后台，验证是否修改成功"""
+        log.debug('042')
         tmp = AccessBusiness(self.driver)
         result1,result2 = tmp.check_change_pwd(data_login['all'],\
             data_login['digital_pwd'],data_login['letter_pwd'],\
@@ -283,6 +313,7 @@ class TestMaintenance(unittest.TestCase):
     #修改密码后，确认密码是隐藏密钥(testlink_ID:877)
     def test_043_check_pwd_disappear_again(self):
         u"""修改密码后，确认密码是隐藏密钥(testlink_ID:877)"""
+        log.debug('043')
         tmp = AccessBusiness(self.driver)
         result = tmp.check_pwd_disappear_again(data_login['all'],\
             data_login['digital_pwd'],data_login['letter_pwd'])
@@ -296,6 +327,7 @@ class TestMaintenance(unittest.TestCase):
     #修改admin密码时，当前密码错误时，弹出提示(testlink_ID:882)
     def test_044_check_admin_pass0_err(self):
         u"""修改admin密码时，当前密码错误时，弹出提示(testlink_ID:882)"""
+        log.debug('044')
         tmp = AccessBusiness(self.driver)
         result = tmp.check_admin_pass0_err(data_login['letter_pwd'],data_login['digital_pwd'])
         assert result,"when changing admin pwd,current pwd err,test fail!"
@@ -304,6 +336,7 @@ class TestMaintenance(unittest.TestCase):
     #修改admin密码后，登录路由后台，验证是否修改成功
     def test_045_check_change_admin_pwd(self):
         u"""修改admin密码后，登录路由后台，验证是否修改成功"""
+        log.debug('045')
         tmp = AccessBusiness(self.driver)
         result1= tmp.check_change_admin_pwd(data_login['all'],\
             data_login['digital_pwd'],\
@@ -318,6 +351,7 @@ class TestMaintenance(unittest.TestCase):
     #修改admin密码后，确认密码是隐藏密钥(testlink_ID:877)
     def test_046_check_admin_pwd_disappear_again(self):
         u"""修改admin密码后，确认密码是隐藏密钥(testlink_ID:877)"""
+        log.debug('046')
         tmp = AccessBusiness(self.driver)
         result = tmp.check_admin_pwd_disappear_again(data_login['all'],\
             data_login['letter_pwd'])
@@ -331,6 +365,7 @@ class TestMaintenance(unittest.TestCase):
     #修改user密码后，登录路由后台，验证是否修改成功
     def test_047_check_change_user_pwd(self):
         u"""修改user密码后，登录路由后台，验证是否修改成功"""
+        log.debug('047')
         tmp = AccessBusiness(self.driver)
         result1= tmp.check_change_user_pwd(data_login['all'],\
             data_login['digital_pwd'],\
@@ -342,6 +377,7 @@ class TestMaintenance(unittest.TestCase):
     #修改user密码后，确认密码是隐藏密钥(testlink_ID:877)
     def test_048_check_user_pwd_disappear_again(self):
         u"""修改user密码后，确认密码是隐藏密钥(testlink_ID:877)"""
+        log.debug('048')
         tmp = AccessBusiness(self.driver)
         result = tmp.check_user_pwd_disappear_again(data_login['letter_pwd'])
         assert result == ["password","password","password","password","password"],\
@@ -351,6 +387,7 @@ class TestMaintenance(unittest.TestCase):
     #修改admin密码，修改后仍然旧密码登录，确定不能登录成功(testlink_ID:879)
     def test_049_check_old_pwd_login(self):
         u"""修改admin密码，修改后仍然旧密码登录，确定不能登录成功(testlink_ID:879)"""
+        log.debug('049')
         tmp = AccessBusiness(self.driver)
         result = tmp.use_pwd_login(data_login['all'],data_login['digital_pwd'],\
                         data_basic['superUser'],data_login['all'])
@@ -360,6 +397,7 @@ class TestMaintenance(unittest.TestCase):
     #使用修改后的密码登录，确认登录成功(testlink_ID:880)
     def test_050_check_new_pwd_login(self):
         u"""使用修改后的密码登录，确认登录成功(testlink_ID:880)"""
+        log.debug('050')
         self.driver.refresh()
         self.driver.implicitly_wait(10)
         #使用新密码登录GWN7610的web界面
@@ -377,6 +415,7 @@ class TestMaintenance(unittest.TestCase):
     #修改admin密码时输入两次不一致的新密码(testlink_ID:883)
     def test_051_check_admin_pwd_different(self):
         u"""修改admin密码时输入两次不一致的新密码(testlink_ID:883)"""
+        log.debug('051')
         tmp = AccessBusiness(self.driver)
         result = tmp.check_admin_pwd_different(data_login['all'],data_login['digital_pwd'],\
                         data_login['letter_pwd'])
@@ -387,6 +426,7 @@ class TestMaintenance(unittest.TestCase):
     #修改user密码时输入两次不一致的新密码(testlink_ID:891)
     def test_052_check_user_pwd_different(self):
         u"""修改user密码时输入两次不一致的新密码(testlink_ID:891)"""
+        log.debug('052')
         tmp = AccessBusiness(self.driver)
         result = tmp.check_user_pwd_different(data_login['digital_pwd'],\
                         data_login['letter_pwd'])
@@ -397,6 +437,7 @@ class TestMaintenance(unittest.TestCase):
     #修改admin密码时只输入一次新密码(testlink_ID:884)
     def test_053_check_admin_pwd_once(self):
         u"""修改admin密码时只输入一次新密码(testlink_ID:884)"""
+        log.debug('053')
         tmp = AccessBusiness(self.driver)
         result = tmp.check_admin_pwd_once(data_login['all'],data_login['digital_pwd'],\
                             data_basic['DUT_ip'],data_basic['sshUser'])
@@ -406,6 +447,7 @@ class TestMaintenance(unittest.TestCase):
     #修改user密码时只输入一次新密码(testlink_ID:893)
     def test_054_check_user_pwd_once(self):
         u"""修改user密码时只输入一次新密码(testlink_ID:893)"""
+        log.debug('054')
         tmp = AccessBusiness(self.driver)
         result = tmp.check_user_pwd_once(data_login['digital_pwd'],data_login['all'],\
                             data_basic['DUT_ip'],data_basic['sshUser'])
@@ -415,6 +457,7 @@ class TestMaintenance(unittest.TestCase):
     #admin密码的大小写验证(testlink_ID:885)
     def test_055_check_admin_pwd_upper_lower(self):
         u"""admin密码的大小写验证(testlink_ID:885)"""
+        log.debug('055')
         tmp = AccessBusiness(self.driver)
         result = tmp.check_admin_pwd_different(data_login['all'],\
                     data_login['letter_pwd'],data_login['letter_pwd'].upper())
@@ -425,6 +468,7 @@ class TestMaintenance(unittest.TestCase):
     #user密码的大小写验证(testlink_ID:892)
     def test_056_check_user_pwd_different(self):
         u"""user密码的大小写验证(testlink_ID:892)"""
+        log.debug('056')
         tmp = AccessBusiness(self.driver)
         result = tmp.check_user_pwd_different(data_login['letter_pwd'],\
                         data_login['letter_pwd'].upper())
@@ -436,6 +480,7 @@ class TestMaintenance(unittest.TestCase):
     def test_057_check_same_admin_pwd(self):
         u"""修改admin密码时，输入和当前密码一样的新密码(testlink_ID:886)"""
         #修改admin密码时，输入和当前密码一样的新密码
+        log.debug('057')
         tmp = AccessBusiness(self.driver)
         tmp.change_admin_pwd(data_login['all'],data_login['all'],data_login['all'])
         ssh = SSH(data_basic['DUT_ip'],data_login['all'])
@@ -446,6 +491,7 @@ class TestMaintenance(unittest.TestCase):
     #登录web时先输入密码后输入用户名(testlink_ID:887)
     def test_058_check_exchange_admin_pwd(self):
         u"""登录web时先输入密码后输入用户名(testlink_ID:887)"""
+        log.debug('058')
         tmp = AccessBusiness(self.driver)
         result = tmp.check_exchange_admin_pwd(data_basic['superUser'],data_login['all'])
         assert result,"exchange admin and pwd,test fail!"
@@ -454,6 +500,7 @@ class TestMaintenance(unittest.TestCase):
     #修改admin密码时，不输入当前密码，直接输入两次新密码(testlink_ID:888)
     def test_059_change_admin_no_current_pwd(self):
         u"""修改admin密码时，不输入当前密码，直接输入两次新密码(testlink_ID:888)"""
+        log.debug('059')
         tmp = AccessBusiness(self.driver)
         result = tmp.change_admin_no_current_pwd(data_login['digital_pwd'])
         assert result,"change admin pwd but not input current pwd,test fail!"
@@ -462,6 +509,7 @@ class TestMaintenance(unittest.TestCase):
     #修改admin密码时，不输入当前密码，直接输入1次新密码(testlink_ID:889)
     def test_060_change_once_admin_no_current_pwd(self):
         u"""修改admin密码时，不输入当前密码，直接输入1次新密码(testlink_ID:889)"""
+        log.debug('060')
         tmp = AccessBusiness(self.driver)
         result = tmp.change_once_admin_no_current_pwd(data_login['digital_pwd'])
         assert result == False,"change admin pwd but only input once pwd,test fail!"
@@ -470,6 +518,7 @@ class TestMaintenance(unittest.TestCase):
     #正确修改user密码后，用旧密码登录，确定不能登录成功(testlink_ID:894)
     def test_061_check_old_user_pwd_login(self):
         u"""正确修改密码后，用旧密码登录，确定不能登录成功(testlink_ID:894)"""
+        log.debug('061')
         tmp = AccessBusiness(self.driver)
         result = tmp.use_user_pwd_login(data_login['digital_pwd'],\
                                 data_basic['user'],data_login['all'])
@@ -481,6 +530,7 @@ class TestMaintenance(unittest.TestCase):
     def test_062_check_new_user_pwd_login(self):
         u"""正确修改user密码后，用修改后的新密码登录，确认登录成功(testlink_ID:895)"""
         #点击页面上的退出按钮
+        log.debug('062')
         tmp = NavbarBusiness(self.driver)
         tmp.logout()
         #使用新密码登录GWN7610的web界面
@@ -495,6 +545,7 @@ class TestMaintenance(unittest.TestCase):
     #user账号的权限验证(testlink_ID:896)
     def test_063_check_user_range(self):
         u"""user账号的权限验证(testlink_ID:896)"""
+        log.debug('063')
         tmp = AccessBusiness(self.driver)
         result1 = tmp.check_user_range(data_basic['user'],data_login['digital_pwd'])
         #判断是否登录成功
@@ -507,6 +558,7 @@ class TestMaintenance(unittest.TestCase):
     #用admin账号的密码登录user(testlink_ID:897)
     def test_064_adminpwd_to_user(self):
         u"""用admin账号的密码登录user(testlink_ID:897)"""
+        log.debug('064')
         #点击页面上的退出按钮
         tmp1 = NavbarBusiness(self.driver)
         tmp1.logout()
@@ -521,6 +573,7 @@ class TestMaintenance(unittest.TestCase):
     #用user账号的密码登录admin(testlink_ID:898)
     def test_065_userpwd_to_admin(self):
         u"""用user账号的密码登录admin(testlink_ID:898)"""
+        log.debug('065')
         #点击页面上的退出按钮
         tmp1 = NavbarBusiness(self.driver)
         tmp1.logout()
@@ -535,6 +588,7 @@ class TestMaintenance(unittest.TestCase):
     #修改user密码，再用不完整的新密码登录web(testlink_ID:899)
     def test_066_user_incomplete(self):
         u"""修改user密码，再用不完整的新密码登录web(testlink_ID:899)"""
+        log.debug('066')
         #点击页面上的退出按钮
         tmp1 = NavbarBusiness(self.driver)
         tmp1.logout()

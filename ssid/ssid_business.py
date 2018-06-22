@@ -37,6 +37,7 @@ class SSIDBusiness(SSIDControl):
         SSIDControl.set_enable_disable(self)
         #设置ssid
         SSIDControl.set_ssid(self,ssid)
+        SSIDControl.wifi_pagedown1(self)
         #设置wpa的密码
         SSIDControl.wifi_wpa_key(self,key)
         #添加窗口中，点击保存
@@ -78,6 +79,7 @@ class SSIDBusiness(SSIDControl):
             SSIDControl.set_enable_disable(self)
             #设置ssid
             SSIDControl.set_ssid(self,ssid_name)
+            SSIDControl.wifi_pagedown1(self)
             #设置wpa的密码
             SSIDControl.wifi_wpa_key(self,key)
             #添加窗口中，点击保存
@@ -88,27 +90,12 @@ class SSIDBusiness(SSIDControl):
 
      #新建一个ssid，判断界面是否有错误提示
      #作者:蒋甜
-    def check_new_ssid_error(self,ssid,key):
+    def check_new_ssid_error(self):
         #点击ssid菜单
         SSIDBusiness.SSID_menu(self)
-        #点击添加
-        SSIDControl.add_button(self)
-        #设置开启ssid
-        SSIDControl.set_enable_disable(self)
-        #设置ssid
-        SSIDControl.set_ssid(self,ssid)
-        #设置wpa的密码
-        SSIDControl.wifi_wpa_key(self,key)
-        #添加窗口中，点击保存
-        SSIDControl.save(self)
-        result = SSIDControl.new_ssid_tips(self)
-        if result:
-            SSIDControl.ssid_cancel(self)
-            return True
-        else:
-            #弹出窗口中，点击应用
-            SSIDControl.apply(self)
-            return False
+        result = SSIDControl.new_ssid_tips_mesh(self)
+        print(result)
+        return result
 
      #新建一个2.4Gssid，判断界面是否有错误提示
      #作者:蒋甜
@@ -154,6 +141,7 @@ class SSIDBusiness(SSIDControl):
         SSIDControl.set_VLAN(self)
         #输入VLAN ID
         SSIDControl.set_VLANID(self,VID)
+        SSIDControl.wifi_pagedown7(self)
         #设置wpa的密码
         SSIDControl.wifi_wpa_key(self,key)
         #添加窗口中，点击保存
@@ -291,6 +279,7 @@ class SSIDBusiness(SSIDControl):
         #点击编辑第一个ssid
         SSIDControl.click_first_edit(self)
         SSIDControl.set_ssid(self,ssid)
+        SSIDControl.wifi_pagedown1(self)
         #添加窗口中，wifi，输入wpa密码
         SSIDControl.wifi_wpa_key(self,key)
         #点击保存
@@ -379,7 +368,7 @@ class SSIDBusiness(SSIDControl):
         SSIDControl.save(self)
         #弹出窗口中，点击应用
         SSIDControl.apply(self)
-        time.sleep(3)
+        time.sleep(30)
         print "set frequency of ssid to %s successfully!"%mode
 
     #设置第n个ssid频段，然后使用无线网卡连接判断设置是否成功
@@ -394,6 +383,7 @@ class SSIDBusiness(SSIDControl):
         SSIDControl.save(self)
         #弹出窗口中，点击应用
         SSIDControl.apply(self)
+        time.sleep(30)
         print "set frequency of ssid to %s successfully!"%mode
 
     #循环改变n个ssid的频段
@@ -606,6 +596,33 @@ class SSIDBusiness(SSIDControl):
         #点击弹出窗口中的应用
         SSIDControl.apply(self)
 
+        #设置第一个ssid的无线过滤的黑名单--不选择list
+    def wifi_blacklist_backup1(self):
+        #点击ssid菜单
+        SSIDBusiness.SSID_menu(self)
+        #点击编辑第一个ssid
+        SSIDControl.click_first_edit(self)
+        SSIDControl.wifi_pagedown3(self)
+        #添加窗口中，wifi,选择使用mac地址过滤-黑名单
+        SSIDControl.set_mac_filter(self,'Blacklist')
+        #点击保存
+        SSIDControl.save(self)
+        #点击弹出窗口中的应用
+        SSIDControl.apply(self)
+
+    def wifi_blacklist_backup2(self):
+        #点击ssid菜单
+        SSIDBusiness.SSID_menu(self)
+        #点击编辑第一个ssid
+        SSIDControl.click_first_edit(self)
+        SSIDControl.wifi_pagedown6(self)
+        #添加窗口中，wifi,选择使用mac地址过滤-黑名单
+        SSIDControl.set_mac_filter(self,'Blacklist')
+        #点击保存
+        SSIDControl.save(self)
+        #点击弹出窗口中的应用
+        SSIDControl.apply(self)
+
 
 
     #有多个ssid时，设置第n个ssid的无线过滤的黑名单
@@ -685,6 +702,20 @@ class SSIDBusiness(SSIDControl):
         SSIDControl.apply(self)
 
 
+       #有多个ssid时,禁用第n个的无线过滤
+    def disable_macfilter1(self,n):
+        #点击ssid菜单
+        SSIDBusiness.SSID_menu(self)
+        #有多个ssid时，选择特定的一个，点击编辑
+        SSIDControl.edit_n_button(self,n)
+        SSIDControl.wifi_pagedown6(self)
+        #添加窗口中，wifi,选择使用mac地址过滤-禁用
+        SSIDControl.set_mac_filter(self,'Disable')
+        #点击保存
+        SSIDControl.save(self)
+        #点击弹出窗口中的应用
+        SSIDControl.apply(self)
+
      #有多个ssid时,禁用第n个的无线过滤
     def disable_macfilter_backup(self,n):
         #点击ssid菜单
@@ -743,6 +774,35 @@ class SSIDBusiness(SSIDControl):
         SSIDControl.save(self)
         #点击弹出窗口中的应用
         SSIDControl.apply(self)
+
+        #设置第一个ssid的无线过滤的白名单--不选择list
+    def wifi_whitelist_backup1(self):
+        #点击ssid菜单
+        SSIDBusiness.SSID_menu(self)
+        #点击编辑第一个ssid
+        SSIDControl.click_first_edit(self)
+        SSIDControl.wifi_pagedown3(self)
+        #添加窗口中，wifi,选择使用mac地址过滤-白名单
+        SSIDControl.set_mac_filter(self,'Whitelist')
+        #点击保存
+        SSIDControl.save(self)
+        #点击弹出窗口中的应用
+        SSIDControl.apply(self)
+
+            #设置第一个ssid的无线过滤的白名单--不选择list
+    def wifi_whitelist_backup2(self):
+        #点击ssid菜单
+        SSIDBusiness.SSID_menu(self)
+        #点击编辑第一个ssid
+        SSIDControl.click_first_edit(self)
+        SSIDControl.wifi_pagedown6(self)
+        #添加窗口中，wifi,选择使用mac地址过滤-白名单
+        SSIDControl.set_mac_filter(self,'Whitelist')
+        #点击保存
+        SSIDControl.save(self)
+        #点击弹出窗口中的应用
+        SSIDControl.apply(self)
+
 
 
 
@@ -1017,6 +1077,31 @@ class SSIDBusiness(SSIDControl):
         SSIDControl.click_isolation(self)
         #选择客户端隔离模式--网关mac地址
         SSIDControl.wifi_pagedown6(self)
+        SSIDControl.isolation_mode(self,"gateway_mac")
+        #输入网关mac地址
+        SSIDControl.gateway_mac(self,err_mac)
+        #判断输入框下方是否有错误提示,有则返回True，没有则返回False
+        result1 = SSIDControl.check_error(self)
+        time.sleep(5)
+        #点击保存
+        SSIDControl.save(self)
+        #判断是否会弹出提示框,有则返回True，没有则返回False
+        element =self.driver.find_element_by_xpath(".//div[@class='modal-footer']//button[@class='btn btn-primary']")
+        result2 = element.is_displayed()
+        print result1,result2
+        return result1,result2
+
+     #配置第n个ssid的客户端隔离的网关mac为错误的测试
+    def check_wifi_n_isolation_gateway_mac_err_backup(self,n,err_mac):
+        #点击ssid菜单
+        SSIDBusiness.SSID_menu(self)
+        #有多个ssid时，选择特定的一个，点击编辑
+        SSIDControl.edit_n_button(self,n)
+        #添加窗口中，wifi,点击客户端隔离
+        # SSIDControl.wifi_pagedown1(self)
+         #选择客户端隔离模式--网关mac地址
+        SSIDControl.wifi_pagedown6(self)
+        SSIDControl.click_isolation(self)
         SSIDControl.isolation_mode(self,"gateway_mac")
         #输入网关mac地址
         SSIDControl.gateway_mac(self,err_mac)
@@ -1489,6 +1574,7 @@ class SSIDBusiness(SSIDControl):
             SSIDControl.set_VLAN(self)
             #输入VLAN ID
             SSIDControl.set_VLANID(self,"%s"%(i+2))
+            SSIDControl.wifi_pagedown7(self)
             #设置wpa的密码
             SSIDControl.wifi_wpa_key(self,key)
             #添加窗口中，点击保存

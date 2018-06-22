@@ -18,7 +18,7 @@ from overview.overview_business import OVBusiness
 from data import data
 from connect.ssh import SSH
 from navbar.navbar_business import NavbarBusiness
-
+from data.logfile import Log
 
 data_basic = data.data_basic()
 data_login = data.data_login()
@@ -26,7 +26,7 @@ data_wireless = data.data_wireless()
 data_ng = data.data_networkgroup()
 data_AP = data.data_AP()
 data_Client = data.data_Client()
-
+log = Log("Failover")
 class TestFailover(unittest.TestCase):
     u"""测试Failover的用例集(runtime:4h)"""
     def setUp(self):
@@ -43,10 +43,10 @@ class TestFailover(unittest.TestCase):
     #在页面上把AP恢复出厂设置(testlink_ID:773)
     def test_001_factory_reset(self):
         u"""在页面上把AP恢复出厂设置(testlink_ID:773)"""
+        log.debug("001")
         #如果登录没有成功，再次使用默认密码登录;如果登录成功则直接退出
         Lg = LoginBusiness(self.driver)
         Lg.login_again()
-
         tmp = APSBusiness(self.driver)
         #描述：启用无线网卡
         tmp.wlan_enable(data_basic['wlan_pc'])
@@ -62,6 +62,7 @@ class TestFailover(unittest.TestCase):
     #检查failover按钮的有效性-检查failover按钮的名称
     def test_002_check_failover_button_1(self):
         u"""检查failover按钮的有效性-检查failover按钮的名称(testlink_ID:2347-1)"""
+        log.debug("002")
         tmp = APSBusiness(self.driver)
         #检查failover按钮的名称
         result = tmp.check_failover_button_name()
@@ -71,6 +72,7 @@ class TestFailover(unittest.TestCase):
     #检查failover按钮的有效性-按钮是否可以点击
     def test_003_check_failover_button_2(self):
         u"""检查failover按钮的有效性--按钮是否可以点击(testlink_ID:2347-2)"""
+        log.debug("003")
         tmp = APSBusiness(self.driver)
         result = tmp.check_failover_button()
         self.assertTrue(result), "check failover button-2,fail!"
@@ -79,6 +81,7 @@ class TestFailover(unittest.TestCase):
     #没有匹配ap时，检查failover ap的mac list
     def test_004_no_pair_check_failover_AP_num(self):
         u"""没有匹配ap时，检查failover ap的mac list(testlink_ID:2348)"""
+        log.debug("004")
         tmp = APSBusiness(self.driver)
         #检查所有可选择的failover ap的个数--1个
         result = tmp.check_failover_AP_num(1)
@@ -88,6 +91,7 @@ class TestFailover(unittest.TestCase):
     #有一个匹配的ap时，检查failover ap的mac list
     def test_005_one_pair_check_failover_AP_num(self):
         u"""有一个匹配的ap时，检查failover ap的mac list(testlink_ID:2349)"""
+        log.debug("005")
         tmp = APSBusiness(self.driver)
         #多个slave ap时，搜索并配对特定的ap
         tmp.search_pair_special_AP(data_AP['slave:mac2'])
@@ -102,6 +106,7 @@ class TestFailover(unittest.TestCase):
     #有一个匹配的不在线的ap时，检查failover ap的mac list
     def test_006_one_pair_offline_check_failover_AP_num(self):
         u"""有一个匹配的不在线的ap时，检查failover ap的mac list(testlink_ID:2350)"""
+        log.debug("006")
         tmp = APSBusiness(self.driver)
         #重启the last slave ap--backup
         tmp.reboot_slave_ap1_backup()
@@ -117,6 +122,7 @@ class TestFailover(unittest.TestCase):
     #能够搜到一个ap时，检查failover ap的mac list
     def test_007_discover_ap_check_failover_AP_num(self):
         u"""能够搜到一个ap时，检查failover ap的mac list(testlink_ID:2351)"""
+        log.debug("007")
         tmp = APSBusiness(self.driver)
         #搜索AP并判断，是否正确--backup
         result1 = tmp.search_AP_backup(data_AP['slave:mac1'])
@@ -132,6 +138,7 @@ class TestFailover(unittest.TestCase):
     #有多个匹配的ap时，检查failover ap的mac list
     def test_008_multiple_pair_check_failover_AP_num(self):
         u"""有多个匹配的ap时，检查failover ap的mac list(testlink_ID:2352)"""
+        log.debug("008")
         tmp = APSBusiness(self.driver)
         #多个slave ap时，搜索并配对特定的ap
         tmp.search_pair_special_AP(data_AP['slave:mac1'])
@@ -149,6 +156,7 @@ class TestFailover(unittest.TestCase):
     #配置一个特定的slave ap作为failover ap
     def test_009_setup_to_failover_ap(self):
         u"""配置一个特定的slave ap作为failover ap(testlink_ID:2353)"""
+        log.debug("009")
         tmp = APSBusiness(self.driver)
         #设置slave ap为failover ap
         tmp.change_slave_to_failover(data_AP['slave:mac2'])
@@ -161,6 +169,7 @@ class TestFailover(unittest.TestCase):
     #指定failover ap后，确认failover ap的配置立即生效
     def test_010_check_failover_configuration_immediately(self):
         u"""指定failover ap后，确认failover ap的配置立即生效(testlink_ID:2359)"""
+        log.debug("010")
         #slave ap  变为failover 模式
         ssh = SSH(data_basic['slave_ip2'], data_login['all'])
         result1 = ssh.ssh_cmd(data_basic['sshUser'], "uci show controller.main.role")
@@ -175,6 +184,7 @@ class TestFailover(unittest.TestCase):
     #改变failover ap从一个slave ap到另一个slave ap
     def test_011_change_failover_ap(self):
         u"""改变failover ap从一个slave ap到另一个slave ap(testlink_ID:2354)"""
+        log.debug("011")
         tmp = APSBusiness(self.driver)
         #设置slave ap为failover ap
         tmp.change_slave_to_failover(data_AP['slave:mac1'])
@@ -187,6 +197,7 @@ class TestFailover(unittest.TestCase):
     #再次改变failover ap从一个slave ap到另一个slave ap
     def test_012_change_failover_ap_again(self):
         u"""再次改变failover ap从一个slave ap到另一个slave ap(testlink_ID:2355)"""
+        log.debug("012")
         tmp = APSBusiness(self.driver)
         #设置slave ap为failover ap
         tmp.change_slave_to_failover(data_AP['slave:mac2'])
@@ -199,6 +210,7 @@ class TestFailover(unittest.TestCase):
     #重复切换failover ap为不同的slave ap 3次
     def test_013_check_repeatedly_switch_to_failover_AP(self):
         u"""重复切换failover ap为不同的slave ap 3次(testlink_ID:2421)"""
+        log.debug("013")
         tmp = APSBusiness(self.driver)
         result = tmp.check_repeatedly_switch_to_failover_AP(data_AP['slave:mac1'],
             data_AP['slave:mac2'], data_basic['DUT_ip'],
@@ -209,6 +221,7 @@ class TestFailover(unittest.TestCase):
     #unpair the designated failover ap, 检查failover ap的mac list
     def test_014_unpair_ap_check_failover_AP(self):
         u"""unpair the designated failover ap, 检查failover ap的mac list(testlink_ID:2356)"""
+        log.debug("014")
         tmp = APSBusiness(self.driver)
         #解除特定slave AP的配对
         tmp.unpair_special_slave_AP(data_AP['slave:mac2'])
@@ -223,6 +236,7 @@ class TestFailover(unittest.TestCase):
     #确认failover ap和master ap有相同的配置
     def test_015_check_failover_ap_configuation(self):
         u"""确认failover ap和master ap有相同的配置(testlink_ID:2360)"""
+        log.debug("015")
         tmp = APSBusiness(self.driver)
         #多个slave ap时，搜索并配对特定的ap
         tmp.search_pair_special_AP(data_AP['slave:mac2'])
@@ -239,6 +253,7 @@ class TestFailover(unittest.TestCase):
     #master ap做一些改变，确认failover ap和master ap有相同的配置
     def test_016_check_failover_ap_configuation_after_change_master(self):
         u"""master ap做一些改变，确认failover ap和master ap有相同的配置(testlink_ID:2361)"""
+        log.debug("016")
         #修改默认网络组的ssid和密码
         tmp1 = SSIDBusiness(self.driver)
         tmp1.change_wifi_ssid_key(data_wireless['all_ssid'],data_wireless["short_wpa"])
@@ -253,6 +268,7 @@ class TestFailover(unittest.TestCase):
     #指定一个离线的slave ap作为failover ap，检查failover ap的配置是否同步
     def test_017_check_offline_failover_ap(self):
         u"""指定一个离线的slave ap作为failover ap，检查failover ap的配置是否同步(testlink_ID:2362)"""
+        log.debug("017")
         tmp = APSBusiness(self.driver)
         #解除特定slave AP2的配对
         tmp.unpair_special_slave_AP(data_AP['slave:mac2'])
@@ -272,6 +288,7 @@ class TestFailover(unittest.TestCase):
     #reboot ap,检查failover ap的配置是否同步
     def test_018_check_failover_ap_configuation_after_ap(self):
         u"""reboot ap,检查failover ap的配置是否同步(testlink_ID:2363)"""
+        log.debug("018")
         tmp = APSBusiness(self.driver)
         #重启the last slave ap
         tmp.reboot_slave_ap1()
@@ -285,6 +302,7 @@ class TestFailover(unittest.TestCase):
     #准备好master ap的配置及流量，设置好failover ap
     def test_019_config_master_ap_setup_failover_ap(self):
         u"""准备好master ap的配置及流量，设置好failover ap"""
+        log.debug("019")
         tmp = APSBusiness(self.driver)
         #解除特定slave AP1的配对
         tmp.unpair_special_slave_AP(data_AP['slave:mac1'])
@@ -312,6 +330,7 @@ class TestFailover(unittest.TestCase):
     #master ap controller发生故障10分钟内，确认不能访问failover ap的web页面
     def test_020_cannot_access_failover_webUI_in_10mins(self):
         u"""master ap controller发生故障10分钟内，确认不能访问failover ap的web页面(testlink_ID:2375)"""
+        log.debug("020")
         tmp = APSBusiness(self.driver)
         #master ap关闭controller
         tmp.close_master_controller(data_basic['DUT_ip'],
@@ -331,6 +350,7 @@ class TestFailover(unittest.TestCase):
     #master ap controller发生故障10分钟后，确认能访问failover ap的web页面
     def test_021_cannot_access_failover_webUI_in_10mins(self):
         u"""master ap controller发生故障10分钟后，确认能访问failover ap的web页面(testlink_ID:2376)"""
+        log.debug("021")
         tmp = APSBusiness(self.driver)
         #等待10分钟--上一用例已等待6分钟，所以这里只等待4分钟
         time.sleep(240)
@@ -346,6 +366,7 @@ class TestFailover(unittest.TestCase):
     #failover ap上，确认流量是否能够同步master ap
     def test_022_failover_check_flow(self):
         u"""failover ap上，确认流量是否能够同步master ap(testlink_ID:2365)--bug83451"""
+        log.debug("022")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'], "failover", data_login['all'])
@@ -359,6 +380,7 @@ class TestFailover(unittest.TestCase):
     #failover ap上，不能点击任何配置按钮
     def test_023_failover_click_button(self):
         u"""failover ap上，不能点击任何配置按钮(testlink_ID:2407)"""
+        log.debug("023")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'], "failover", data_login['all'])
@@ -370,6 +392,7 @@ class TestFailover(unittest.TestCase):
     #failover ap上，检查切换master按钮-检查failover按钮的名称
     def test_024_check_switch_to_master_button_1(self):
         u"""failover ap上，检查切换master按钮-检查failover按钮的名称(testlink_ID:2358-1)"""
+        log.debug("024")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'], "failover", data_login['all'])
@@ -381,6 +404,7 @@ class TestFailover(unittest.TestCase):
     #failover ap上，检查切换master按钮-点击是否弹出确认框
     def test_025_check_switch_to_master_button_2(self):
         u"""failover ap上，检查切换master按钮-点击是否弹出确认框(testlink_ID:2358-2)"""
+        log.debug("025")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'], "failover", data_login['all'])
@@ -392,6 +416,7 @@ class TestFailover(unittest.TestCase):
     #failover ap上，检查切换master按钮-弹出确认框点击取消
     def test_026_check_switch_to_master_button_3(self):
         u"""failover ap上，检查切换master按钮-弹出确认框点击取消(testlink_ID:2358-3)"""
+        log.debug("026")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'], "failover", data_login['all'])
@@ -405,6 +430,7 @@ class TestFailover(unittest.TestCase):
     #failover ap上，检查切换master按钮-弹出确认框点击确认
     def test_027_check_switch_to_master_button_4(self):
         u"""failover ap上，检查切换master按钮-弹出确认框点击确认(testlink_ID:2358-4)"""
+        log.debug("027")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'], "failover", data_login['all'])
@@ -417,6 +443,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 切换到master ap模式后，能够发现未匹配的ap
     def test_028_failover_master_can_discover_ap(self):
         u"""failover ap 切换到master ap模式后，能够发现未匹配的ap(testlink_ID:2377)"""
+        log.debug("028")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'],
@@ -437,6 +464,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 切换到master ap模式后，能够正常接管ap
     def test_029_failover_master_can_takeover_ap(self):
         u"""failover ap 切换到master ap模式后，能够正常接管ap(testlink_ID:2379)"""
+        log.debug("029")
         tmp = APSBusiness(self.driver)
         #开启master ap的controller
         tmp.open_master_controller(data_basic['DUT_ip'],
@@ -464,6 +492,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 切换到master ap模式后，AP数量不变
     def test_030_failover_master_ap_num(self):
         u"""failover ap 切换到master ap模式后，AP数量不变(testlink_ID:2393)"""
+        log.debug("030")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'],
@@ -478,6 +507,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 切换到master ap模式后，能够修改ap的配置
     def test_031_failover_master_can_modify_ap_configuration(self):
         u"""failover ap 切换到master ap模式后，能够修改ap的配置(testlink_ID:2381)"""
+        log.debug("031")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'],
@@ -499,6 +529,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 切换到master ap模式后，能够修改网络组的配置
     def test_032_failover_master_can_modify_NG_configuration(self):
         u"""failover ap 切换到master ap模式后，能够修改网络组的配置(testlink_ID:2382)"""
+        log.debug("032")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'],
@@ -517,6 +548,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 切换到master ap模式后，能够修改client的配置
     def test_034_failover_master_can_modify_client_configuration(self):
         u"""failover ap 切换到master ap模式后，能够修改client的配置(testlink_ID:2384)"""
+        log.debug("034")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'],
@@ -535,6 +567,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 切换到master ap模式后，能够修改系统设置的配置
     def test_035_failover_master_can_modify_system_configuration(self):
         u"""failover ap 切换到master ap模式后，能够修改系统设置的配置(testlink_ID:2385)"""
+        log.debug("035")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'],
@@ -559,6 +592,7 @@ class TestFailover(unittest.TestCase):
     #指定failover ap后，确定failover ap的功能正常
     def test_036_check_slave_failover_function(self):
         u"""指定failover ap后，确定failover ap的功能正常(testlink_ID:2369)"""
+        log.debug("036")
         #点击网络组，添加一个新的指定VID的网络组
         tmp1 = SSIDBusiness(self.driver)
         tmp1.new_vlan_ssid(data_ng['NG2_ssid'], data_wireless['short_wpa'], "2")
@@ -578,6 +612,7 @@ class TestFailover(unittest.TestCase):
     #failover ap模式下，检查ap流量能正确显示
     def test_037_failover_check_flow(self):
         u"""failover ap 切换到master ap模式后，检查ap流量能正确显示(testlink_ID:2409)"""
+        log.debug("037")
         tmp = APSBusiness(self.driver)
         #master ap关闭controller
         tmp.close_master_controller(data_basic['DUT_ip'],
@@ -590,7 +625,7 @@ class TestFailover(unittest.TestCase):
         tmp1 = OVBusiness(self.driver)
         tmp1.set_AP_download_unload(data_ng['NG2_ssid'],
             data_wireless["short_wpa"], data_basic['wlan_pc'], data_basic['lan_pc'])
-        #作为failover登录AP
+        # 作为failover登录AP
         Lg = LoginBusiness(self.driver)
         Lg.login("failover", data_login['all'])
         #获取第一个ap下载流量
@@ -603,6 +638,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 切换到master ap模式后，客户端不会断开
     def test_038_failover_master_client_keep_connecting(self):
         u"""failover ap 切换到master ap模式后，客户端不会断开(testlink_ID:2391)"""
+        log.debug("038")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'], "failover", data_login['all'])
@@ -616,6 +652,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 切换到master ap模式后，客户端数目不会改变
     def test_039_failover_master_check_client_num(self):
         u"""failover ap 切换到master ap模式后，客户端数目不会改变(testlink_ID:2394)"""
+        log.debug("039")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'],
@@ -631,6 +668,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 切换到master ap模式后，确认failover ap流量能正确更新到新的master ap上
     def test_040_failover_master_check_ap_flow(self):
         u"""failover ap 切换到master ap模式后，确认failover ap流量能正确更新到新的master ap上(testlink_ID:2395)"""
+        log.debug("040")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'],
@@ -645,6 +683,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 切换到master ap模式后，确认failover ap已经切换成master ap模式
     def test_041_failover_master_check_change_success(self):
         u"""failover ap 切换到master ap模式后，确认failover ap已经切换成master ap模式(testlink_ID:2408)"""
+        log.debug("041")
         #slave ap  变为failover 模式
         ssh = SSH(data_basic['slave_ip2'], data_login['all'])
         result1 = ssh.ssh_cmd(data_basic['sshUser'], "uci show controller.main.role")
@@ -656,6 +695,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 切换到master ap模式后，确认client 的流量有效
     def test_042_failover_master_check_client_flow(self):
         u"""failover ap 切换到master ap模式后，确认ap 的流量有效(testlink_ID:2396)"""
+        log.debug("042")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'],
@@ -670,6 +710,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 切换到master ap模式后，指定slave ap1为新的failover ap
     def test_043_failover_master_designate_slave_to_failover(self):
         u"""failover ap 切换到master ap模式后，指定slave ap1为新的failover ap(testlink_ID:2418)"""
+        log.debug("043")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'],
@@ -686,6 +727,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 切换到master ap模式后，当老的master ap回来，确认老master和现在master功能正常
     def test_044_failover_master_check_client_flow(self):
         u"""failover ap 切换到master ap模式后，当老的master ap回来，确认老master和现在master功能正常(testlink_ID:2403)"""
+        log.debug("044")
         tmp = APSBusiness(self.driver)
         #登录failover ap的web界面
         tmp.login_failover_ap(data_basic['slave_web2'],
@@ -719,6 +761,7 @@ class TestFailover(unittest.TestCase):
     #failover ap 能正常切换到failover mode
     def test_045_slave_switch_failover_mode(self):
         u"""failover ap 能正常切换到failover mode(testlink_ID:2371,2374)"""
+        log.debug("045")
         tmp = APSBusiness(self.driver)
         #搜索并配对特定的ap
         tmp.search_pair_AP(data_AP["slave:mac1"],data_AP["slave:mac2"])
@@ -740,6 +783,7 @@ class TestFailover(unittest.TestCase):
     #当老的master ap回来后，failover ap将变回slave ap模式
     def test_046_failover_ruturn_slave(self):
         u"""当老的master ap回来后，failover ap将变回slave ap模式(testlink_ID:2397)"""
+        log.debug("046")
         tmp = APSBusiness(self.driver)
         #开启master ap的controller
         tmp.open_master_controller(data_basic['DUT_ip'],
@@ -753,6 +797,7 @@ class TestFailover(unittest.TestCase):
     #在10分钟后，master ap回来后，确认master 和failover ap正常
     def test_047_master_camebake_over_10mins(self):
         u"""在10分钟后，master ap回来后，确认master 和failover ap正常(testlink_ID:2373)"""
+        log.debug("047")
         #检查master ap
         ssh = SSH(data_basic['DUT_ip'], data_login['all'])
         result = ssh.ssh_cmd(data_basic['sshUser'], "uci show controller.main.role")
@@ -762,6 +807,7 @@ class TestFailover(unittest.TestCase):
     #当老的master ap回来后，failover ap被master ap接管
     def test_048_failover_be_takenover(self):
         u"""当老的master ap回来后，failover ap被master ap接管(testlink_ID:2399)"""
+        log.debug("048")
         tmp = APSBusiness(self.driver)
         #登录后台，判断slave ap是否配对成功
         result = tmp.check_slave_ap_pair(data_basic['DUT_ip'],
@@ -772,6 +818,7 @@ class TestFailover(unittest.TestCase):
     #当老的master ap回来后，老的slave ap能够被接管
     def test_049_old_slave_be_takenover(self):
         u"""当老的master ap回来后，老的slave ap能够被接管(testlink_ID:2400)"""
+        log.debug("049")
         tmp = APSBusiness(self.driver)
         #登录后台，判断slave ap是否配对成功
         result = tmp.check_slave_ap_pair(data_basic['DUT_ip'],
@@ -782,6 +829,7 @@ class TestFailover(unittest.TestCase):
     #当老的master ap回来后，failover ap的webUI不能访问
     def test_050_failover_webUI_cannot_access(self):
         u"""当老的master ap回来后，failover ap的webUI不能访问(testlink_ID:2401)"""
+        log.debug("050")
         tmp = APSBusiness(self.driver)
         #判断failover ap的页面是否能够访问
         result = tmp.check_access_failover_webUI(data_basic['slave_web2'])
@@ -791,6 +839,7 @@ class TestFailover(unittest.TestCase):
     #在10分钟内，master ap回来后，确认master 和failover ap正常
     def test_051_master_camebake_within_10mins(self):
         u"""在10分钟内，master ap回来后，确认master 和failover ap正常(testlink_ID:2372)"""
+        log.debug("051")
         tmp = APSBusiness(self.driver)
         #master ap关闭controller
         tmp.close_master_controller(data_basic['DUT_ip'],
@@ -814,6 +863,7 @@ class TestFailover(unittest.TestCase):
     #当master ap回来后，确认能够修改配置
     def test_052_master_cameback_can_update_configuration(self):
         u"""当master ap回来后，确认能够修改配置(testlink_ID:2406)"""
+        log.debug("052")
         tmp1 = SSIDBusiness(self.driver)
         #删除所有的网络组
         tmp1.del_all_NG()
@@ -839,6 +889,7 @@ class TestFailover(unittest.TestCase):
     #当master ap回来后，确认能够发现ap
     def test_053_master_camebake_can_discover(self):
         u"""当master ap回来后，确认能够发现ap(testlink_ID:2404)"""
+        log.debug("053")
         tmp = APSBusiness(self.driver)
         result = tmp.search_AP(data_AP["slave:mac1"],data_AP["slave:mac2"])
         self.assertTrue(result),"when master ap came back,check can discover ap,test fail!"
@@ -847,6 +898,7 @@ class TestFailover(unittest.TestCase):
     #当master ap回来后，确认能够配对ap
     def test_054_master_camebake_can_pair(self):
         u"""当master ap回来后，确认能够配对ap(testlink_ID:2405)"""
+        log.debug("054")
         tmp = APSBusiness(self.driver)
         result = tmp.check_search_pair_AP(data_basic['DUT_ip'],\
                 data_basic['sshUser'],data_login['all'],data_AP["slave:mac1"],
@@ -857,6 +909,7 @@ class TestFailover(unittest.TestCase):
     #指定failover ap，并断开master ap后，10分钟内，重启failover ap
     def test_055_reboot_failover_switching(self):
         u"""指定failover ap，并断开master ap后，10分钟内，重启failover ap(testlink_ID:2413)"""
+        log.debug("055")
         tmp = APSBusiness(self.driver)
         #设置slave ap2为failover ap
         tmp.change_slave_to_failover(data_AP["slave:mac2"])
@@ -909,6 +962,7 @@ class TestFailover(unittest.TestCase):
     #disable/enable dhcp server when GWN76xx is in unpaired status,fallback IP works fine
     def test_056_check_fallback_IP_function(self):
         u"""disable/enable dhcp server when GWN76xx is in unpaired status,fallback IP works fine(testlink_ID:2335,2343)"""
+        log.debug("056")
         #修改7000网络组的dhcp ipv4的租期时间为2分钟
         tmp = NGBusiness(self.driver)
         tmp.wlan_disable(data_basic['wlan_pc'])
@@ -939,6 +993,7 @@ class TestFailover(unittest.TestCase):
 
         #测试完毕，禁用无线网卡，使pc能够上网
         tmp.dhcp_release_wlan(data_basic['wlan_pc'])
+        tmp.disconnect_ap()
         tmp.wlan_disable(data_basic['wlan_pc'])
         #rsyslog服务器完成工作
         tmp.finish_rsyslog("Failover")

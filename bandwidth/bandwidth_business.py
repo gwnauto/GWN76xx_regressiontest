@@ -6,6 +6,7 @@ from bandwidth_control import BandwidthControl
 import time
 from data import data
 import subprocess
+from connect.ssh import SSH
 d = data.data_basic()
 
 class BandwidthBusiness(BandwidthControl):
@@ -29,12 +30,13 @@ class BandwidthBusiness(BandwidthControl):
         BandwidthControl.check_all_ssid(self)
         #输入上游规则
         BandwidthControl.set_Upstream_Rate(self,upstream)
-        #寝宫之前的下游规则
+        #清空之前的下游规则
         BandwidthControl.clear_Downstream_Rate(self)
         #保存
         BandwidthControl.save(self)
         #应用
         BandwidthControl.apply(self)
+        time.sleep(10)
 
     #添加一条带宽规则，范围选择全部，仅输入下载速率
     def add_bandwidth_rule_downstream(self,downstream):
@@ -54,6 +56,7 @@ class BandwidthBusiness(BandwidthControl):
         BandwidthControl.save(self)
         #应用
         BandwidthControl.apply(self)
+        time.sleep(10)
 
     #添加带宽规则，选择特定的ssid
     def add_bandwidth_rule_range_select_ssid(self,n,upstream,downstream):
@@ -73,6 +76,7 @@ class BandwidthBusiness(BandwidthControl):
         BandwidthControl.save(self)
         #应用
         BandwidthControl.apply(self)
+        time.sleep(10)
 
     #添加一条带宽规则，范围选择全部，输入上游规则和下游规则
     def add_bandwidth_rule_up_downstream(self,upstream,downstream):
@@ -84,6 +88,28 @@ class BandwidthBusiness(BandwidthControl):
         BandwidthControl.enable_dis_Bandwidth(self)
         #选择所有SSID
         BandwidthControl.check_all_ssid(self)
+        #输入上游规则
+        BandwidthControl.set_Upstream_Rate(self,upstream)
+        #输入下游规则
+        BandwidthControl.set_Downstream_Rate(self,downstream)
+        #保存
+        BandwidthControl.save(self)
+        #应用
+        BandwidthControl.apply(self)
+        time.sleep(10)
+
+        #16个ssid的情况，需要添加翻页，添加一条带宽规则，范围选择全部，输入上游规则和下游规则
+    def add_bandwidth_rule_up_downstream_backup(self,upstream,downstream):
+        #点击带宽规则菜单
+        BandwidthControl.Bw_menu(self)
+        #点击带宽规则添加按钮
+        BandwidthControl.add_Bandwidth_Rule_Bt(self)
+        #点击勾选带宽规则
+        BandwidthControl.enable_dis_Bandwidth(self)
+        #选择所有SSID
+        BandwidthControl.check_all_ssid(self)
+        #翻页
+        BandwidthControl.pagedown_16ssid(self)
         #输入上游规则
         BandwidthControl.set_Upstream_Rate(self,upstream)
         #输入下游规则
@@ -275,6 +301,49 @@ class BandwidthBusiness(BandwidthControl):
         BandwidthControl.set_Downstream_Rate(self,downstream)
         BandwidthControl.save(self)
         BandwidthControl.apply(self)
+        time.sleep(20)
+
+    #新增带宽页面的规则
+    def add_bandwidth_ip_rule_upstream(self,type,ip,upstream):
+        BandwidthControl.Bw_menu(self)
+        #编辑第n个带宽规则
+        BandwidthControl.add_Bandwidth_Rule_Bt(self)
+        #点击勾选带宽规则
+        BandwidthControl.enable_dis_Bandwidth(self)
+        #选择所有SSID
+        BandwidthControl.check_all_ssid(self)
+        #选择范围
+        BandwidthControl.select_Range_Constraint(self,type)
+        #填入ip地址
+        BandwidthControl.IP_Address(self,ip)
+        #输入上游规则
+        BandwidthControl.set_Upstream_Rate(self,upstream)
+        #输入下游规则
+        BandwidthControl.clear_Downstream_Rate(self)
+        BandwidthControl.save(self)
+        BandwidthControl.apply(self)
+        time.sleep(10)
+
+       #新增带宽页面的规则
+    def add_bandwidth_ip_rule_downstream(self,type,ip,downstream):
+        BandwidthControl.Bw_menu(self)
+        #编辑第n个带宽规则
+        BandwidthControl.add_Bandwidth_Rule_Bt(self)
+        #点击勾选带宽规则
+        BandwidthControl.enable_dis_Bandwidth(self)
+        #选择所有SSID
+        BandwidthControl.check_all_ssid(self)
+        #选择范围
+        BandwidthControl.select_Range_Constraint(self,type)
+        #填入ip地址
+        BandwidthControl.IP_Address(self,ip)
+        #输入上游规则
+        BandwidthControl.set_Downstream_Rate(self,downstream)
+        #输入下游规则
+        BandwidthControl.clear_Upstream_Rate(self)
+        BandwidthControl.save(self)
+        BandwidthControl.apply(self)
+        time.sleep(10)
 
     ########################################################
     ###############编辑带宽规则################################
@@ -480,11 +549,83 @@ class BandwidthBusiness(BandwidthControl):
         BandwidthControl.bandwidth_cancel(self)
         return result1,result2
 
-    #检查带宽规则
+    #检查页面带宽规则
     def check_bandwidth_n(self,n):
         BandwidthControl.Bw_menu(self)
         result = BandwidthControl.check_edit_button(self,n)
         return result
+
+    #检查设备带宽规则，上行和下行同时
+    def check_bandwidth(self,n,value,host,user,pwd):
+        ssh = SSH(host,pwd)
+        if int(value)<100:
+            value = ("%sM")%value
+        else:
+            value = ("%sK")%value
+        result = ssh.ssh_cmd(user,"uci show grandstream.rule%s.urate"%n)
+        result1 = ssh.ssh_cmd(user,"uci show grandstream.rule%s.drate"%n)
+        result2 = result.strip()
+        result3 = result1.strip()
+        print(result2,result3)
+        if ("grandstream.rule%s.urate='%sbps'"%(n,value)==result2) and \
+                ("grandstream.rule%s.drate='%sbps'"%(n,value)==result3):
+            return True
+        else:
+            return False
+
+    #检查设备带宽规则，上行和下行同时
+    def check_bandwidth_not_set(self,n,host,user,pwd):
+        ssh = SSH(host,pwd)
+        result = ssh.ssh_cmd(user,"uci show grandstream.rule%s.urate"%n)
+        result1 = ssh.ssh_cmd(user,"uci show grandstream.rule%s.drate"%n)
+        result2 = result.strip()
+        result3 = result1.strip()
+        print(result2,result3)
+        if ("uci: Entry not found"==result2) and \
+                ("uci: Entry not found"==result3):
+            return True
+        else:
+            return False
+
+    #检查设备带宽规则，仅上行
+    def check_bandwidth_upstream(self,n,value,host,user,pwd):
+        ssh = SSH(host,pwd)
+        if int(value)<100:
+            value = ("%sM")%value
+        else:
+            value = ("%sK")%value
+        result = ssh.ssh_cmd(user,"uci show grandstream.rule%s.urate"%n)
+        result1 = ssh.ssh_cmd(user,"uci show grandstream.rule%s.drate"%n)
+        result2 = result.strip()
+        result3 = result1.strip()
+        print(result2,result3)
+        if ("grandstream.rule%s.urate='%sbps'"%(n,value)==result2) and \
+                ("uci: Entry not found"==result3):
+            return True
+        else:
+            return False
+
+    #检查设备带宽规则，仅下行
+    def check_bandwidth_downstream(self,n,value,host,user,pwd):
+        ssh = SSH(host,pwd)
+        if int(value)<100:
+            value = ("%sM")%value
+        else:
+            value = ("%sK")%value
+        result = ssh.ssh_cmd(user,"uci show grandstream.rule%s.urate"%n)
+        result1 = ssh.ssh_cmd(user,"uci show grandstream.rule%s.drate"%n)
+        result2 = result.strip()
+        result3 = result1.strip()
+        print(result2,result3)
+        if ("grandstream.rule%s.drate='%sbps'"%(n,value)==result3)and \
+                ("uci: Entry not found"==result2):
+            return True
+        else:
+            return False
+
+
+
+
 
 
     ########################################################
@@ -502,6 +643,7 @@ class BandwidthBusiness(BandwidthControl):
         BandwidthControl.Bw_menu(self)
         BandwidthControl.del_bandwidth_rule_button(self)
         # BandwidthControl.save(self)
+        print("del bandwidth_rule_save successful")
         BandwidthControl.apply(self)
         # BandwidthControl.notice_ok(self)
 
@@ -528,7 +670,7 @@ class BandwidthBusiness(BandwidthControl):
             if tmp == 0:
                 #描述：使用iperf3进行上传
                 try:
-                    tmp1 = subprocess.check_output("iperf3 -c %s -t60"%d['iperf_ip'],shell=True)
+                    tmp1 = subprocess.check_output("iperf3 -c %s -t60 -w5M"%d['iperf_ip'],shell=True)
                     print tmp1
                     a = tmp1.split("\n")
                     print a
@@ -537,7 +679,7 @@ class BandwidthBusiness(BandwidthControl):
                     c = b[0].split(" ")
                     print c
                     print c[-2],c[-1]
-                    if float(c[-2])>500:
+                    if float(c[-2])>100:
                         result1 = float(c[-2])/1000
                         result2 = "%sbits/sec"%c[-1]
                         print result1,result2
@@ -557,8 +699,9 @@ class BandwidthBusiness(BandwidthControl):
                     BandwidthControl.dhcp_release_wlan(self,wlan)
                     #启用有线网卡
                     BandwidthControl.wlan_enable(self,lan)
+                    BandwidthControl.dhcp_wlan(self,wlan)
+                    BandwidthControl.wlan_disable(self,lan)
                     time.sleep(10)
-                    return 500.00
             else:
                 BandwidthControl.dhcp_release_wlan(self,wlan)
                 BandwidthControl.wlan_enable(self,lan)
@@ -567,6 +710,8 @@ class BandwidthBusiness(BandwidthControl):
                 print "run iperf3 fail,try %s again!"%(i+1)
                 i = i+1
                 continue
+        #如果无法ping通iperf服务器，则返回100
+        return 100
 
     #下行流量
     def check_downstream_iperf(self,ssid,password,wlan,lan):
@@ -580,7 +725,7 @@ class BandwidthBusiness(BandwidthControl):
             if tmp == 0:
                 #描述：使用iperf3进行上传
                 try:
-                    tmp1 = subprocess.check_output("iperf3 -c %s -t60 -R"%d['iperf_ip'],shell=True)
+                    tmp1 = subprocess.check_output("iperf3 -c %s -t60 -w5M -R"%d['iperf_ip'],shell=True)
                     print tmp1
                     a = tmp1.split("\n")
                     print a
@@ -589,7 +734,7 @@ class BandwidthBusiness(BandwidthControl):
                     c = b[0].split(" ")
                     print c
                     print c[-2],c[-1]
-                    if float(c[-2])>500:
+                    if float(c[-2])>100:
                         result1 = float(c[-2])/1000
                         result2 = "%sbits/sec"%c[-1]
                         print result1,result2
@@ -608,6 +753,8 @@ class BandwidthBusiness(BandwidthControl):
                     BandwidthControl.dhcp_release_wlan(self,wlan)
                     #启用有线网卡
                     BandwidthControl.wlan_enable(self,lan)
+                    BandwidthControl.dhcp_wlan(self,wlan)
+                    BandwidthControl.wlan_disable(self,lan)
                     time.sleep(10)
             else:
                 BandwidthControl.dhcp_release_wlan(self,wlan)
@@ -617,6 +764,8 @@ class BandwidthBusiness(BandwidthControl):
                 print "run iperf3 fail,try %s again!"%(i+1)
                 i = i+1
                 continue
+        #如果无法ping通iperf服务器，则返回100
+        return 100
 
     #连接wifi后，获取无线网卡的ip
     def get_ip_after_connect(self,ssid,password,wlan):

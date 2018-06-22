@@ -290,6 +290,8 @@ def data_networkgroup():
         data["ssid_wifi_pagedown_id5"] = table.cell_value(46,1)
         #获取额外ssid-编辑-wifi页面-id6
         data["ssid_wifi_pagedown_id6"] = table.cell_value(47,1)
+        #获取额外ssid-编辑-wifi页面-id7
+        data["ssid_wifi_pagedown_id7"] = table.cell_value(48,1)
         return data
     except IOError,e:
         print u"文件信息错误,具体信息：\n%s"%e
@@ -711,7 +713,7 @@ def csv_to_xlsx(csv_name,sheet_name):
         work.save('./data/tmp.xls')
 
 def csv_to_xlsx_back1(i,sheet_name):
-    with open('/home/tjiang/tftp/csv/memdatadigital%s.csv'%i,'r') as f:
+    with open('～/tftp/csv/memdatadigital%s.csv'%i,'r') as f:
         read = csv.reader(f)
         work = xlwt.Workbook()
         sheet = work.add_sheet(sheet_name)
@@ -727,7 +729,7 @@ def csv_to_xlsx_back1(i,sheet_name):
         work.save('./data/tmp.xls')
 
 def csv_to_xlsx_back2(csv_name,sheet_name):
-    with open('/home/tjiang/tftp/csv/memdataletter%s.csv'%csv_name,'r') as f:
+    with open('～/tftp/csv/memdataletter%s.csv'%csv_name,'r') as f:
         read = csv.reader(f)
         work = xlwt.Workbook()
         sheet = work.add_sheet(sheet_name)

@@ -451,7 +451,7 @@ class PublicControl:
     ###################################################
 
     #描述：禁用无线网卡
-    #输入：self
+    #输入：pinself
     #输出：None
     def wlan_disable(self,wlan):
         try:
@@ -1670,25 +1670,12 @@ class PublicControl:
             down = pexpect.spawn('sudo dhclient -r %s'%wlan,timeout=5)
             down.expect([':',pexpect.TIMEOUT,pexpect.EOF])
             down.sendline(d["PC_pwd"])
-            time.sleep(30)
+            time.sleep(10)
+            subprocess.call('echo %s |sudo -S /etc/init.d/network-manager force-reload'%d["PC_pwd"],shell=True)
+            time.sleep(20)
             print "release %s ip successfully!"%wlan
         except Exception,e:
             raise Exception("dhcp release wlan ip address fail! The reason is %s"%e)
-
-    def dhcp_release_wlan_backup(self,wlan):
-        try:
-            self.disconnect_ap()
-            #获取测试主机密码
-            d = data.data_basic()
-            #输入无线网卡获取IP地址的命令
-            down = pexpect.spawn('sudo dhclient -r %s'%wlan,timeout=5)
-            down.expect([':',pexpect.TIMEOUT,pexpect.EOF])
-            down.sendline(d["PC_pwd"])
-            time.sleep(30)
-            print "release %s ip successfully!"%wlan
-        except Exception,e:
-            raise Exception("dhcp release wlan ip address fail! The reason is %s"%e)
-
 
     #判断使用无线网卡能够连接上ssid,并正常使用
     def connect_DHCP_WPA_AP(self,ssid,password,wlan):
@@ -2080,8 +2067,11 @@ class PublicControl:
 
     #判断ap是否是恢复
     def check_ap_factory(self,ip):
-        ping1 = self.get_ping(ip)
-        WebDriverWait(self.driver,1200,60).until(lambda ping:ping1==0)
+        while True:
+            ping1 = self.get_ping(ip)
+            if ping1 == 0:
+                break
+            time.sleep(60)
         ssh = SSH(ip,data_basic['super_defalut_pwd'])
         admin_pwd = ssh.ssh_cmd(data_basic['sshUser'],"uci show grandstream.general.admin_password")
         if "='admin'" in admin_pwd:
@@ -2090,4 +2080,11 @@ class PublicControl:
         else:
             print "false"
             return False
+
+
+    #抓图方法
+    def get_picture(self,picture_name):
+        current_time = time.strftime('%m%d%H%M',time.localtime(time.time()))
+        png = "error_%s_%s.png"%(picture_name,str(current_time))
+        self.driver.get_screenshot_as_file("./data/testresultdata/"+png)
 

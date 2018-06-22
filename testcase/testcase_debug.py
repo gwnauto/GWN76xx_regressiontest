@@ -12,7 +12,7 @@ from login.login_business import LoginBusiness
 from access_points.aps_business import APSBusiness
 from system_settings.debug.ping_traceroute.ping_business import PingBusiness
 from data import data
-
+from data.logfile import Log
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -23,7 +23,7 @@ data_AP = data.data_AP()
 data_ng = data.data_networkgroup()
 data_client = data.data_Client()
 
-
+log = Log("Debug")
 class TestDebug(unittest.TestCase):
     u"""测试调试的用例集(runtime:20m)"""
     def setUp(self):
@@ -40,10 +40,10 @@ class TestDebug(unittest.TestCase):
     #在页面上把AP恢复出厂设置(testlink_ID:773)
     def test_001_factory_reset(self):
         u"""在页面上把AP恢复出厂设置(testlink_ID:773)"""
+        log.debug("001")
         #如果登录没有成功，再次使用默认密码登录;如果登录成功则直接退出
         Lg = LoginBusiness(self.driver)
         Lg.login_again()
-
         tmp = APSBusiness(self.driver)
         #描述：启用无线网卡
         tmp.wlan_enable(data_basic['wlan_pc'])
@@ -57,6 +57,7 @@ class TestDebug(unittest.TestCase):
     #Target输入框内容为空--选择IPv4 Ping(testlink_ID:622_1)
     def test_002_ipv4ping_empty(self):
         u"""Target输入框内容为空--选择IPv4 Ping(testlink_ID:622_1)"""
+        log.debug("002")
         tmp = PingBusiness(self.driver)
         #输入目标地址，点击开始
         tmp.run_ping("IPv4 Ping","")
@@ -69,6 +70,7 @@ class TestDebug(unittest.TestCase):
     #Target输入框内容为空--选择IPv4 Traceroute(testlink_ID:622_2)
     def test_003_ipv4traceroute_empty(self):
         u"""Target输入框内容为空--选择IPv4 Traceroute(testlink_ID:622_2)"""
+        log.debug("003")
         tmp = PingBusiness(self.driver)
         #输入目标地址，点击开始
         tmp.run_ping("IPv4 Traceroute","")
@@ -81,6 +83,7 @@ class TestDebug(unittest.TestCase):
     #Target输入框内容为非法IP地址--选择IPv4 Ping(testlink_ID:623_1)
     def test_004_ipv4ping_illegal(self):
         u"""Target输入框内容为非法IP地址--选择IPv4 Ping(testlink_ID:623_1)"""
+        log.debug("004")
         tmp = PingBusiness(self.driver)
         #输入目标地址，点击开始
         tmp.run_ping("IPv4 Ping",data_AP['validity_fixed_netmask'])
@@ -93,6 +96,7 @@ class TestDebug(unittest.TestCase):
     #Target输入框内容为非法IP地址--选择IPv4 Traceroute(testlink_ID:623_2)
     def test_005_ipv4traceroute_illegal(self):
         u"""Target输入框内容为非法IP地址--选择IPv4 Traceroute(testlink_ID:623_2)"""
+        log.debug("005")
         tmp = PingBusiness(self.driver)
         #输入目标地址，点击开始
         tmp.run_ping("IPv4 Traceroute",data_AP['validity_fixed_netmask'])
@@ -105,6 +109,7 @@ class TestDebug(unittest.TestCase):
     #Target输入框内容为特殊地址--选择IPv4 Ping(testlink_ID:624_1)
     def test_006_ipv4ping_special(self):
         u"""Target输入框内容为特殊地址--选择IPv4 Ping(testlink_ID:624_1)"""
+        log.debug("006")
         tmp = PingBusiness(self.driver)
         #输入目标地址，点击开始
         tmp.run_ping("IPv4 Ping","255.255.255.255")
@@ -116,6 +121,7 @@ class TestDebug(unittest.TestCase):
      #Target输入框内容为特殊地址--选择IPv4 Traceroute(testlink_ID:624_2)
     def test_007_ipv4traceroute_special(self):
         u"""Target输入框内容为特殊地址--选择IPv4 Traceroute(testlink_ID:624_2)"""
+        log.debug("007")
         tmp = PingBusiness(self.driver)
         #输入目标地址，点击开始
         tmp.run_ping("IPv4 Traceroute","255.255.255.255")
@@ -129,6 +135,7 @@ class TestDebug(unittest.TestCase):
     #Target输入框内容为正确的IPv4地址--ping网关IP(testlink_ID:625_1)
     def test_008_ping_network_gateway_v4(self):
         u"""Target输入框内容为正确的IPv4地址--ping网关IP(testlink_ID:625_1)"""
+        log.debug("008")
         tmp = PingBusiness(self.driver)
         #输入目标地址，点击开始
         tmp.run_ping("IPv4 Ping",data_basic['7000_ip'])
@@ -140,6 +147,7 @@ class TestDebug(unittest.TestCase):
     #Target输入框内容为正确的IPv4地址--traceroute网关IP(testlink_ID:625_2)
     def test_009_traceroute_network_gateway_v4(self):
         u"""Target输入框内容为正确的IPv4地址--ping网关IP(testlink_ID:625_2)"""
+        log.debug("009")
         tmp = PingBusiness(self.driver)
         #输入目标地址，点击开始
         tmp.run_ping("IPv4 Traceroute",data_basic['7000_ip'])
@@ -153,6 +161,7 @@ class TestDebug(unittest.TestCase):
     #DUT能访问外网--选择IPv4 Ping(testlink_ID:627_1)
     def test_010_ping_baidu_v4(self):
         u"""DUT能访问外网--选择IPv4 Ping(testlink_ID:627_1)"""
+        log.debug("010")
         tmp = PingBusiness(self.driver)
         #输入目标地址，点击开始
         tmp.run_ping("IPv4 Ping","www.baidu.com")
@@ -164,6 +173,7 @@ class TestDebug(unittest.TestCase):
     #DUT能访问外网--选择IPv4 Traceroute(testlink_ID:627_2)
     def test_011_traceroute_baidu_v4(self):
         u"""DUT能访问外网--选择IPv4 Traceroute(testlink_ID:627_2)"""
+        log.debug("011")
         tmp = PingBusiness(self.driver)
         #输入目标地址，点击开始
         tmp.run_ping("IPv4 Traceroute","www.baidu.com")
@@ -176,6 +186,7 @@ class TestDebug(unittest.TestCase):
     #DUT能访问7000ipv6--选择IPv6 Ping(testlink_ID:627_3)--bug83333
     def test_012_ping_baidu_v6(self):
         u"""DUT能访问7000ipv6--选择IPv6 Ping(testlink_ID:627_3)--bug83333"""
+        log.debug("012")
         #取出7000的lan口的ipv6的地址
         s = SSH(data_basic['7000_ip'],data_login['all'])
         result1 = s.ssh_cmd(data_basic['sshUser'],"ifconfig eth0.1 | grep inet6")
@@ -193,6 +204,7 @@ class TestDebug(unittest.TestCase):
     #DUT能访问外网--选择IPv6 traceroute(testlink_ID:627_4)--bug83333
     def test_013_traceroute_baidu_v6(self):
         u"""DUT能访问外网--选择IPv6 traceroute(testlink_ID:627_4)--bug83333"""
+        log.debug("013")
         tmp = PingBusiness(self.driver)
         #输入目标地址，点击开始
         tmp.run_ping("IPv6 Traceroute",data_AP['BY_ipv6_1'])
@@ -200,9 +212,9 @@ class TestDebug(unittest.TestCase):
         #获取输出的结果
         result = tmp.get_ping_output()
         print "result=%s"%result
-
         #测试完毕，禁用无线网卡，使pc能够上网
         tmp.dhcp_release_wlan(data_basic['wlan_pc'])
+        tmp.disconnect_ap()
         tmp.wlan_disable(data_basic['wlan_pc'])
         #rsyslog服务器完成工作
         tmp.finish_rsyslog("Debug")

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/PycharmProjects/GWN76xx_regressiontest/.idea/GWN76xx_regressiontest.iml" filepath="$USER_HOME$/PycharmProjects/GWN76xx_regressiontest/.idea/GWN76xx_regressiontest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GWN76xx_regressiontest.iml" filepath="$PROJECT_DIR$/.idea/GWN76xx_regressiontest.iml" />
     </modules>
   </component>
 </project>

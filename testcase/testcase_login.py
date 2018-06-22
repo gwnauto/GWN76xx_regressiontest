@@ -10,12 +10,12 @@ from setupwizard.setupwizard_business import SWBusiness
 from connect.ssh import SSH
 from data import data
 from system_settings.maintenance.upgrade.upgrade_business import UpgradeBusiness
-
+from data.logfile import Log
 
 data_basic = data.data_basic()
 data_login = data.data_login()
 data_AP = data.data_AP()
-
+log = Log("Login")
 class TestLogin(unittest.TestCase):
     u"""测试登录的用例集(runtime:8m)"""
     def setUp(self):
@@ -29,6 +29,7 @@ class TestLogin(unittest.TestCase):
     #登录路由后台把AP恢复出厂设置
     def test_001_factory_reset(self):
         u"""登录路由后台把AP恢复出厂设置"""
+        log.debug("001")
         #逻辑类对象，建一个实例
         Lg = LoginBusiness(self.driver)
         #调用实例的登录GWN7610的web界面
@@ -49,6 +50,7 @@ class TestLogin(unittest.TestCase):
     #第一次登录页面需要设置管理员和用户密码
     def test_002_first_login(self):
         u"""第一次登录页面需要设置管理员和用户密码"""
+        log.debug("002")
         #逻辑类对象，建一个实例
         Lg = LoginBusiness(self.driver)
         #调用实例的登录GWN76xx的web界面
@@ -68,6 +70,7 @@ class TestLogin(unittest.TestCase):
     #router mac地址登录web UI（llmnr）
     def test_003_router_mac_login(self):
         u"""router mac地址登录web UI（llmnr）"""
+        log.debug("003")
         #登录AP
         #逻辑类对象，建一个实例
         Lg = LoginBusiness(self.driver)
@@ -88,6 +91,7 @@ class TestLogin(unittest.TestCase):
     #输入管理员的用户名和密码，登录GWN7610的web界面
     def test_004_admin_login(self):
         u"""输入管理员的用户名和密码，登录GWN7610的web界面"""
+        log.debug("004")
         #逻辑类对象，建一个实例
         Lg = LoginBusiness(self.driver)
         #调用实例的登录GWN7610的web界面
@@ -100,6 +104,7 @@ class TestLogin(unittest.TestCase):
     #输入user的用户名和密码，登录GWN7610的web界面
     def test_005_user_login(self):
         u"""输入user的用户名和密码，登录GWN7610的web界面"""
+        log.debug("005")
         #逻辑类对象，建一个实例
         Lg = LoginBusiness(self.driver)
         #调用实例的登录GWN7610的web界面
@@ -108,6 +113,7 @@ class TestLogin(unittest.TestCase):
         result = Lg.login_test()
         #测试完毕，禁用无线网卡，使pc能够上网
         Lg.dhcp_release_wlan(data_basic['wlan_pc'])
+        Lg.disconnect_ap()
         Lg.wlan_disable(data_basic['wlan_pc'])
         assert result ,"login AP webpage,test fail!"
         print "login AP webpage,test pass!"
